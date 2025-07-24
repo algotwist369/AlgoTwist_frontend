@@ -1,0 +1,26 @@
+{
+  "title": "Our Services",
+  "description": "We offer comprehensive software solutions tailored to meet your business needs",
+  "services": [
+    {
+      "title": "Custom Software Development",
+      "description": "Build tailor-made software solutions that perfectly align with your business requirements",
+      "icon": "Code"
+    },
+    {
+      "title": "Cloud Solutions",
+      "description": "Scalable cloud infrastructure and migration services for optimal performance",
+      "icon": "Cloud"
+    },
+    {
+      "title": "Digital Transformation",
+      "description": "Transform your business with cutting-edge digital solutions and strategies",
+      "icon": "Laptop"
+    },
+    {
+      "title": "Enterprise Solutions",
+      "description": "End-to-end enterprise software solutions for large-scale businesses",
+      "icon": "Building"
+    }
+  ]
+}

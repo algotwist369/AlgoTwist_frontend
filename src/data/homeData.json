@@ -1,0 +1,37 @@
+{
+  "hero": {
+    "badge": {
+      "text": "Trusted by 10+ Enterprise Clients",
+      "icon": "Award"
+    },
+    "title": "Where Innovation Meets Impact - ",
+    "subtitle": "India's Premier Hub for Software & Digital Marketing Excellence.",
+    "description": "We deliver scalable, secure, and innovative technology solutions that drive business growth and digital transformation for Fortune 500 companies.",
+    "cta": {
+      "text": "Schedule Consultation",
+      "icon": "ArrowRight"
+    }
+  },
+  "stats": [
+    {
+      "number": "10+",
+      "label": "Projects Delivered",
+      "description": "Successfully completed"
+    },
+    {
+      "number": "10+",
+      "label": "Enterprise Clients",
+      "description": "Fortune 10 companies"
+    },
+    {
+      "number": "3+",
+      "label": "Years Experience",
+      "description": "Industry expertise"
+    },
+    {
+      "number": "99.9%",
+      "label": "Uptime Guarantee",
+      "description": "Service reliability"
+    }
+  ]
+}

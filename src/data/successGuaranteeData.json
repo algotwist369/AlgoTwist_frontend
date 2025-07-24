@@ -1,0 +1,21 @@
+{
+  "title": "30-Day Success Guarantee",
+  "description": "We stand behind our work with a 100% satisfaction guarantee",
+  "features": [
+    {
+      "title": "Money-Back Guarantee",
+      "description": "If you're not satisfied, get a full refund within 30 days",
+      "icon": "Shield"
+    },
+    {
+      "title": "24/7 Support",
+      "description": "Round-the-clock technical support and assistance",
+      "icon": "HeadSet"
+    },
+    {
+      "title": "Quality Assurance",
+      "description": "Rigorous testing and quality control processes",
+      "icon": "Check"
+    }
+  ]
+}

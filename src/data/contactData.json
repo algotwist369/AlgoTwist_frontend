@@ -1,0 +1,31 @@
+{
+  "title": "Contact Us",
+  "description": "Get in touch with our team of experts",
+  "contactInfo": {
+    "email": "contact@algotwist.com",
+    "phone": "+1 (555) 123-4567",
+    "address": "123 Tech Street, Silicon Valley, CA 94025"
+  },
+  "formFields": [
+    {
+      "label": "Full Name",
+      "type": "text",
+      "required": true
+    },
+    {
+      "label": "Email",
+      "type": "email",
+      "required": true
+    },
+    {
+      "label": "Phone",
+      "type": "tel",
+      "required": false
+    },
+    {
+      "label": "Message",
+      "type": "textarea",
+      "required": true
+    }
+  ]
+}

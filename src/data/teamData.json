@@ -1,0 +1,34 @@
+{
+  "title": "Meet Our Team",
+  "description": "A passionate group of professionals driving innovation and excellence.",
+  "members": [
+    {
+      "name": "Ankit Pathak",
+      "role": "Founder & CEO",
+      "bio": "Visionary leader with 10+ years in enterprise software.",
+      "image": "https://img.freepik.com/free-photo/close-up-portrait-handsome-smiling-young-man-white-t-shirt-blurry-outdoor-nature_176420-6305.jpg?semt=ais_hybrid&w=740",
+      "linkedin": "https://linkedin.com/in/ankitsharma"
+    },
+    {
+      "name": "Priya Verma",
+      "role": "CTO",
+      "bio": "Expert in cloud architecture and digital transformation.",
+      "image": "https://t4.ftcdn.net/jpg/03/26/98/51/360_F_326985142_1aaKcEjMQW6ULp6oI9MYuv8lN9f8sFmj.jpg",
+      "linkedin": "https://linkedin.com/in/priyaverma"
+    },
+    {
+      "name": "Rahul Singh",
+      "role": "Lead Developer",
+      "bio": "Full-stack developer specializing in scalable web apps.",
+      "image": "https://t4.ftcdn.net/jpg/02/14/74/61/360_F_214746128_31JkeaP6rU0NzzzdFC4khGkmqc8noe6h.jpg",
+      "linkedin": "https://linkedin.com/in/rahulsingh"
+    },
+    {
+      "name": "Sneha Patel",
+      "role": "Product Manager",
+      "bio": "Drives product vision and user-centric design.",
+      "image": "https://cdn.pixabay.com/photo/2022/03/11/06/14/indian-man-7061278_640.jpg",
+      "linkedin": "https://linkedin.com/in/snehapatel"
+    }
+  ]
+}

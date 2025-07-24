@@ -1,0 +1,27 @@
+{
+  "title": "Latest Insights",
+  "description": "Stay updated with our latest articles and industry insights",
+  "posts": [
+    {
+      "title": "The Future of Cloud Computing",
+      "description": "Exploring emerging trends in cloud technology",
+      "image": "/assets/images/post1.png",
+      "date": "2025-07-01",
+      "author": "John Doe"
+    },
+    {
+      "title": "Digital Transformation Strategy",
+      "description": "A comprehensive guide to digital transformation",
+      "image": "/assets/images/post2.png",
+      "date": "2025-06-28",
+      "author": "Jane Smith"
+    },
+    {
+      "title": "Enterprise Security Best Practices",
+      "description": "Securing your enterprise applications",
+      "image": "/assets/images/post3.png",
+      "date": "2025-06-25",
+      "author": "Mike Johnson"
+    }
+  ]
+}

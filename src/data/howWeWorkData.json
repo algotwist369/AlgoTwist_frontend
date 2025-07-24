@@ -1,0 +1,31 @@
+{
+  "title": "Our Work Process",
+  "description": "Our proven process ensures your project's success from start to finish.",
+  "steps": [
+    {
+      "title": "Discovery & Consultation",
+      "description": "We understand your business goals, challenges, and requirements through in-depth discussions.",
+      "icon": "Search"
+    },
+    {
+      "title": "Strategy & Planning",
+      "description": "We craft a tailored roadmap and strategy, defining milestones and deliverables.",
+      "icon": "Map"
+    },
+    {
+      "title": "Design & Prototyping",
+      "description": "Our team creates wireframes, UI/UX designs, and interactive prototypes for your feedback.",
+      "icon": "Layout"
+    },
+    {
+      "title": "Development & Testing",
+      "description": "We build, iterate, and rigorously test your solution for quality and performance.",
+      "icon": "Code"
+    },
+    {
+      "title": "Deployment & Support",
+      "description": "We launch your project and provide ongoing support and optimization.",
+      "icon": "Rocket"
+    }
+  ]
+}

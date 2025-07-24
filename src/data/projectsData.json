@@ -1,0 +1,62 @@
+{
+  "title": "Our Projects",
+  "description": "Take a look at some of our successful project deliveries",
+  "projects": [
+    {
+      "title": "Enterprise CRM System",
+      "description": "Custom CRM solution for Fortune 500 company",
+      "image": "/assets/images/post1.png",
+      "technologies": ["React", "Node.js", "MongoDB"],
+      "category": "Enterprise Solutions"
+    },
+    {
+      "title": "Cloud Migration Platform",
+      "description": "Automated cloud migration solution",
+      "image": "/assets/images/post2.png",
+      "technologies": ["AWS", "Docker", "Kubernetes"],
+      "category": "Cloud Solutions"
+    },
+    {
+      "title": "AI-Powered Analytics",
+      "description": "Advanced analytics platform with AI capabilities",
+      "image": "/assets/images/post3.png",
+      "technologies": ["Python", "TensorFlow", "React"],
+      "category": "Digital Transformation"
+    },
+    {
+      "title": "Custom ERP Suite",
+      "description": "Integrated ERP for manufacturing enterprise",
+      "image": "/assets/images/post4.png",
+      "technologies": ["Java", "Spring", "PostgreSQL"],
+      "category": "Custom Software Development"
+    },
+    {
+      "title": "AI-Powered Analytics",
+      "description": "Advanced analytics platform with AI capabilities",
+      "image": "/assets/images/post3.png",
+      "technologies": ["Python", "TensorFlow", "React"],
+      "category": "Digital Transformation"
+    },
+    {
+      "title": "Custom ERP Suite",
+      "description": "Integrated ERP for manufacturing enterprise",
+      "image": "/assets/images/post4.png",
+      "technologies": ["Java", "Spring", "PostgreSQL"],
+      "category": "Custom Software Development"
+    },
+    {
+      "title": "AI-Powered Analytics",
+      "description": "Advanced analytics platform with AI capabilities",
+      "image": "/assets/images/post3.png",
+      "technologies": ["Python", "TensorFlow", "React"],
+      "category": "Digital Transformation"
+    },
+    {
+      "title": "Custom ERP Suite",
+      "description": "Integrated ERP for manufacturing enterprise",
+      "image": "/assets/images/post4.png",
+      "technologies": ["Java", "Spring", "PostgreSQL"],
+      "category": "Custom Software Development"
+    }
+  ]
+}
