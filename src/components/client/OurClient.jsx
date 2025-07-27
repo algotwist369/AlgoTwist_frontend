@@ -1,141 +1,99 @@
-import React, { useEffect, useState } from 'react';
-import { testimonials } from '../../data/data.jsx';
+import React from "react";
 
-const clientLogos = [
-    { name: 'Conde Nast', logo: '/logos/conde.png' },
-    { name: 'Disney', logo: '/logos/disney.png' },
-    { name: 'Exchange4Media', logo: '/logos/exchange.png' },
-    { name: 'Exide', logo: '/logos/exide.png' },
-    { name: 'FirstChoice', logo: '/logos/firstchoice.png' },
-    { name: 'HP Gas', logo: '/logos/hp.png' },
-    { name: 'ICICI Bank', logo: '/logos/icici.png' },
-    { name: 'IIHS', logo: '/logos/iihs.png' },
-    { name: 'Instant Mudra', logo: '/logos/instantmudra.png' },
-    { name: 'iProspect', logo: '/logos/iprospect.png' },
-    { name: 'Isobar', logo: '/logos/isobar.png' },
-    { name: 'JSW', logo: '/logos/jsw.png' },
-    { name: 'Kamal Fincap', logo: '/logos/kamal.png' },
-    { name: 'Midtronics', logo: '/logos/midtronics.png' },
-    { name: 'SmartX', logo: '/logos/smartx.png' },
-    { name: 'Conde Nast', logo: '/logos/conde.png' },
-    { name: 'Disney', logo: '/logos/disney.png' },
-    { name: 'Exchange4Media', logo: '/logos/exchange.png' },
-    { name: 'Exide', logo: '/logos/exide.png' },
-    { name: 'FirstChoice', logo: '/logos/firstchoice.png' },
-    { name: 'HP Gas', logo: '/logos/hp.png' },
-    { name: 'ICICI Bank', logo: '/logos/icici.png' },
-    { name: 'IIHS', logo: '/logos/iihs.png' },
-    { name: 'Instant Mudra', logo: '/logos/instantmudra.png' },
-    { name: 'iProspect', logo: '/logos/iprospect.png' },
-    { name: 'Isobar', logo: '/logos/isobar.png' },
-    { name: 'JSW', logo: '/logos/jsw.png' },
-    { name: 'Kamal Fincap', logo: '/logos/kamal.png' },
-    { name: 'Midtronics', logo: '/logos/midtronics.png' },
-    { name: 'SmartX', logo: '/logos/smartx.png' },
+const logos = [
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHKEIyz_zzsKW6fJQ5lpla5IBTsJRWj9exNA&s",
+  "https://static.wixstatic.com/media/7a486b_bf09a3c5beaa436ba832c629837bf1a0~mv2.png/v1/fit/w_2500,h_1330,al_c/7a486b_bf09a3c5beaa436ba832c629837bf1a0~mv2.png",
+  "https://apnaparcha.com/opengraph-image.png?abcf978297f36095",
+  "https://savemax.in/staticfiles/upload/builderlogo/OMAXE_srst098.png",
+  "https://eldecogroup.com/assests/uploads/project/logo/15822781501407518180.png",
+  "https://www.shootic.com/images/shootic-logo.png",
+  "https://janpadnewstimes.com/logo.png",
 ];
 
-const bgColors = [
-    'bg-pink-50', 'bg-green-50', 'bg-yellow-50', 'bg-purple-50',
-    'bg-rose-50', 'bg-lime-50', 'bg-purple-50',
-];
+const getAltFromUrl = (url) => {
+  const name = url
+    .split("/")
+    .pop()
+    .replace(/[-_]/g, " ")
+    .replace(/\..+$/, "")
+    .replace(/\b\w/g, (l) => l.toUpperCase());
+  return name;
+};
+
+// Split logos into two rows (roughly half each)
+const half = Math.ceil(logos.length / 2);
+const row1 = logos.slice(0, half);
+const row2 = logos.slice(half);
 
 const OurClient = () => {
-    const [index, setIndex] = useState(0);
-    const [logoIndex, setLogoIndex] = useState(0); // For logo carousel
-    const logosPerView = 18;
+  return (
+    <section className="relative bg-[#121214] py-20 px-4 sm:px-6 md:px-16 overflow-hidden">
+      {/* Decorative background shapes */}
+      <div className="absolute top-0 left-0 w-60 h-60 bg-primary/10 rounded-full blur-2xl opacity-30 -translate-x-1/2 -translate-y-1/2"></div>
+      <div className="absolute bottom-0 right-0 w-60 h-60 bg-accent/10 rounded-full blur-2xl opacity-30 translate-x-1/2 translate-y-1/2"></div>
 
-    useEffect(() => {
-        const id = setInterval(() => {
-            setIndex((prev) => (prev + 1) % testimonials.length);
-        }, 4000);
-        return () => clearInterval(id);
-    }, []);
+      <div className="relative z-10 max-w-6xl mx-auto text-center">
+        <h2 className="text-3xl md:text-5xl text-textPrimary font-bold text-center mb-6 leading-tight">
+          Trusted by Leading Brands
+        </h2>
+        <p className="text-gray-400 max-w-2xl mx-auto mb-12">
+          We’re proud to have worked with amazing clients who trust us to build
+          modern, reliable, and impactful digital solutions.
+        </p>
 
-    // Auto-slide for client logos
-    useEffect(() => {
-        const logoInterval = setInterval(() => {
-            setLogoIndex((prev) => (prev + 1) % clientLogos.length);
-        }, 3000);
-        return () => clearInterval(logoInterval);
-    }, []);
-
-    // Calculate visible logos
-    const visibleLogos = [];
-    for (let i = 0; i < logosPerView; i++) {
-        visibleLogos.push(clientLogos[(logoIndex + i) % clientLogos.length]);
-    }
-
-    const testimonial = testimonials[index];
-
-    return (
-        <section className="relative bg-white py-20 px-4 md:px-16 overflow-hidden">
-            {/* Decorative blurred background shapes */}
-            <div className="absolute -top-32 -left-32 w-96 h-96 bg-purple-300 opacity-20 rounded-full blur-3xl z-0" />
-            <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-purple-400 opacity-20 rounded-full blur-3xl z-0" />
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start relative z-10">
-                {/* Left: Testimonial */}
-                <div className="p-8 w-[560px]  min-h-[400px] flex flex-col justify-between">
-                    <div>
-                        <h3 className="text-2xl font-bold text-purple-800 mb-4">What Clients Say</h3>
-
-                        <div className="flex items-start gap-6">
-
-                            <div className="flex-1">
-                                <p className="text-lg text-gray-700 italic mb-3 transition-opacity duration-500">
-                                    “{testimonial.text}”
-                                </p>
-
-                                <div className="text-purple-800 font-semibold text-lg">
-                                    {testimonial.name}
-                                </div>
-                                <div className="text-sm text-gray-500">{testimonial.company}</div>
-
-                                <div className="flex items-center mt-2 text-orange-400">
-                                    {'★'.repeat(testimonial.rating)}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Dots */}
-                    <div className="mt-6 flex gap-2 justify-center">
-                        {testimonials.map((_, i) => (
-                            <span
-                                key={i}
-                                className={`w-2.5 h-2.5 rounded-full ${i === index ? 'bg-purple-500' : 'bg-gray-300'
-                                    }`}
-                            ></span>
-                        ))}
-                    </div>
-                </div>
-
-                {/* Right: Scrollable Logo Grid */}
-                <div className="w-full bg-purple-100 p-6 rounded-2xl border border-purple-100">
-                    <h3 className="text-2xl font-bold text-center text-purple-800 mb-1">
-                        Our Prestigious Clients
-                    </h3>
-                    <div className="w-full flex justify-center mb-4">
-                        <span className="block w-16 h-1 bg-purple-200 rounded-full"></span>
-                    </div>
-
-                    <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-4 transition-all duration-500">
-                        {visibleLogos.map((client, i) => (
-                            <div
-                                key={i}
-                                className={`p-4 rounded-xl flex items-center justify-center h-24 ${bgColors[(logoIndex + i) % bgColors.length]} shadow-sm transition-transform duration-200 hover:scale-105 hover:shadow-lg border border-transparent hover:border-purple-200`}
-                            >
-                                <img
-                                    src={client.logo}
-                                    alt={client.name}
-                                    className="h-10 max-w-[80%] object-contain"
-                                />
-                            </div>
-                        ))}
-                    </div>
-                </div>
+        {/* Two scrolling rows container */}
+        <div className="space-y-8">
+          {[row1, row2].map((row, idx) => (
+            <div
+              key={idx}
+              className="overflow-hidden whitespace-nowrap"
+              style={{ animationDuration: `${20 + idx * 5}s` }}
+            >
+              <div
+                className={`inline-flex animate-marquee-${
+                  idx === 0 ? "left" : "right"
+                }`}
+              >
+                {[...row, ...row].map((logo, i) => (
+                  <div
+                    key={i}
+                    className="inline-block mx-8 shadow-sm border border-transparent hover:border-primary/20 transition"
+                  >
+                    <img
+                      src={logo}
+                      alt={getAltFromUrl(logo)}
+                      loading="lazy"
+                      className="h-16 w-32 object-contain rounded-md max-w-none"
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
-        </section>
-    );
+          ))}
+        </div>
+      </div>
+
+      {/* CSS for marquee animation */}
+      <style>{`
+        @keyframes marquee-left {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+        @keyframes marquee-right {
+          0% { transform: translateX(-50%); }
+          100% { transform: translateX(0); }
+        }
+        .animate-marquee-left {
+          animation: marquee-left linear infinite;
+          animation-duration: 20s;
+        }
+        .animate-marquee-right {
+          animation: marquee-right linear infinite;
+          animation-duration: 25s;
+        }
+      `}</style>
+    </section>
+  );
 };
 
 export default OurClient;

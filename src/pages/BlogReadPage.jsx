@@ -206,10 +206,10 @@ export default function BlogReadPage() {
 
     if (isLoading) {
         return (
-            <div className="min-h-screen bg-surface flex items-center justify-center">
+            <div className="min-h-screen bg-surface dark:bg-gray-900 flex items-center justify-center">
                 <div className="text-center">
-                    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
-                    <p className="text-muted">Loading post...</p>
+                    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary dark:border-blue-400 mx-auto mb-4"></div>
+                    <p className="text-muted dark:text-gray-400">Loading post...</p>
                 </div>
             </div>
         );
@@ -217,12 +217,12 @@ export default function BlogReadPage() {
 
     if (!post) {
         return (
-            <div className="min-h-screen bg-surface flex items-center justify-center">
+            <div className="min-h-screen bg-surface dark:bg-gray-900 flex items-center justify-center">
                 <div className="text-center">
                     <div className="mb-6">
-                        <h1 className="text-4xl font-bold text-onBackground mb-4">404</h1>
-                        <h2 className="text-2xl font-semibold text-secondary mb-4">Blog Post Not Found</h2>
-                        <p className="text-muted mb-8">
+                        <h1 className="text-4xl font-bold text-onBackground dark:text-white mb-4">404</h1>
+                        <h2 className="text-2xl font-semibold text-secondary dark:text-gray-300 mb-4">Blog Post Not Found</h2>
+                        <p className="text-muted dark:text-gray-400 mb-8">
                             The blog post you're looking for doesn't exist or has been moved.
                         </p>
                     </div>
@@ -265,10 +265,10 @@ export default function BlogReadPage() {
     };
 
     return (
-        <div className="min-h-screen bg-surface transition-colors duration-300">
+        <div className="min-h-screen bg-surface dark:bg-gray-900 transition-colors duration-300">
             {/* Header */}
             <motion.div 
-                className="bg-background shadow-sm border-b border-border"
+                className="bg-background dark:bg-gray-800 shadow-sm border-b border-border dark:border-gray-700"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
@@ -277,7 +277,7 @@ export default function BlogReadPage() {
                     <div className="flex items-center justify-between mb-6">
                         <motion.button
                             onClick={handleBackToBlog}
-                            className="flex items-center text-primary hover:text-primary/80 font-semibold transition-colors"
+                            className="flex items-center text-primary dark:text-blue-400 hover:text-primary/80 dark:hover:text-blue-300 font-semibold transition-colors"
                             whileHover={{ x: -5 }}
                             whileTap={{ scale: 0.95 }}
                             transition={{ duration: 0.2 }}
@@ -289,7 +289,7 @@ export default function BlogReadPage() {
                         <div className="flex items-center space-x-4">
                             <motion.button
                                 onClick={handleShare}
-                                className="flex items-center text-muted hover:text-primary transition-colors"
+                                className="flex items-center text-muted dark:text-gray-400 hover:text-primary dark:hover:text-blue-400 transition-colors"
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
                                 transition={{ duration: 0.2 }}
@@ -301,8 +301,8 @@ export default function BlogReadPage() {
                                 onClick={toggleBookmark}
                                 className={`flex items-center transition-colors ${
                                     isBookmarked 
-                                        ? 'text-primary' 
-                                        : 'text-muted hover:text-primary'
+                                        ? 'text-primary dark:text-blue-400' 
+                                        : 'text-muted dark:text-gray-400 hover:text-primary dark:hover:text-blue-400'
                                 }`}
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
@@ -337,7 +337,7 @@ export default function BlogReadPage() {
 
                         {/* Title */}
                         <motion.h1 
-                            className="text-4xl lg:text-5xl font-bold text-onBackground mb-6 leading-tight"
+                            className="text-4xl lg:text-5xl font-bold text-onBackground dark:text-white mb-6 leading-tight"
                             variants={itemVariants}
                         >
                             {post.title}
@@ -345,7 +345,7 @@ export default function BlogReadPage() {
 
                         {/* Meta Information */}
                         <motion.div 
-                            className="flex flex-wrap items-center gap-6 text-muted mb-8"
+                            className="flex flex-wrap items-center gap-6 text-muted dark:text-gray-400 mb-8"
                             variants={itemVariants}
                         >
                             <div className="flex items-center">
@@ -388,7 +388,7 @@ export default function BlogReadPage() {
                             {post.tags.map((tag, index) => (
                                 <motion.span
                                     key={index}
-                                    className="bg-surface text-onBackground px-3 py-1 rounded-full text-sm flex items-center"
+                                    className="bg-surface dark:bg-gray-900 text-onBackground dark:text-gray-300 px-3 py-1 rounded-full text-sm flex items-center"
                                     whileHover={{ scale: 1.05 }}
                                     transition={{ duration: 0.2 }}
                                 >
@@ -401,39 +401,39 @@ export default function BlogReadPage() {
 
                     {/* Article Content */}
                     <motion.div 
-                        className="bg-background rounded-xl shadow-sm p-8 mb-12"
+                        className="bg-background dark:bg-gray-800 rounded-xl shadow-sm p-8 mb-12"
                         variants={itemVariants}
                     >
-                        <div className="prose prose-lg max-w-none">
-                            <p className="text-xl text-onBackground leading-relaxed mb-6">
+                        <div className="prose prose-lg max-w-none dark:prose-invert">
+                            <p className="text-xl text-onBackground dark:text-white leading-relaxed mb-6">
                                 {post.content}
                             </p>
                             
                             {/* Extended content for demonstration */}
-                            <p className="text-onBackground leading-relaxed mb-6">
+                            <p className="text-onBackground dark:text-gray-300 leading-relaxed mb-6">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                             </p>
                             
-                            <h2 className="text-2xl font-bold text-onBackground mb-4 mt-8">
+                            <h2 className="text-2xl font-bold text-onBackground dark:text-white mb-4 mt-8">
                                 Key Takeaways
                             </h2>
                             
-                            <ul className="list-disc list-inside text-onBackground space-y-2 mb-6">
+                            <ul className="list-disc list-inside text-onBackground dark:text-gray-300 space-y-2 mb-6">
                                 <li>Understanding the current landscape of enterprise software development</li>
                                 <li>Implementing best practices for scalable architecture</li>
                                 <li>Leveraging modern technologies for competitive advantage</li>
                                 <li>Building robust security measures into your applications</li>
                             </ul>
                             
-                            <p className="text-onBackground leading-relaxed mb-6">
+                            <p className="text-onBackground dark:text-gray-300 leading-relaxed mb-6">
                                 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                             </p>
                             
-                            <blockquote className="border-l-4 border-primary pl-6 italic text-onBackground my-8">
+                            <blockquote className="border-l-4 border-primary pl-6 italic text-onBackground dark:text-gray-300 my-8">
                                 "The future of enterprise software development lies in the ability to adapt quickly to changing business needs while maintaining high quality and security standards."
                             </blockquote>
                             
-                            <p className="text-onBackground leading-relaxed">
+                            <p className="text-onBackground dark:text-gray-300 leading-relaxed">
                                 In conclusion, the landscape of enterprise software development continues to evolve rapidly. Organizations that embrace these changes and invest in modern development practices will be better positioned to succeed in the digital economy.
                             </p>
                         </div>
@@ -441,7 +441,7 @@ export default function BlogReadPage() {
 
                     {/* Author Section */}
                     <motion.div 
-                        className="bg-background rounded-xl shadow-sm p-8 mb-12"
+                        className="bg-background dark:bg-gray-800 rounded-xl shadow-sm p-8 mb-12"
                         variants={itemVariants}
                     >
                         <div className="flex items-center space-x-6">
@@ -451,17 +451,17 @@ export default function BlogReadPage() {
                                 </span>
                             </div>
                             <div>
-                                <h3 className="text-xl font-bold text-onBackground mb-2">
+                                <h3 className="text-xl font-bold text-onBackground dark:text-white mb-2">
                                     {post.author}
                                 </h3>
-                                <p className="text-muted mb-3">
+                                <p className="text-muted dark:text-gray-400 mb-3">
                                     Senior Technology Consultant with over 10 years of experience in enterprise software development and digital transformation.
                                 </p>
                                 <div className="flex items-center space-x-4">
-                                    <button className="text-primary hover:text-primary/80 font-medium">
+                                    <button className="text-primary dark:text-blue-400 hover:text-primary/80 dark:hover:text-blue-300 font-medium">
                                         View Profile
                                     </button>
-                                    <button className="text-primary hover:text-primary/80 font-medium">
+                                    <button className="text-primary dark:text-blue-400 hover:text-primary/80 dark:hover:text-blue-300 font-medium">
                                         More Articles
                                     </button>
                                 </div>
@@ -472,14 +472,14 @@ export default function BlogReadPage() {
                     {/* Related Posts */}
                     {relatedPosts.length > 0 && (
                         <motion.div variants={itemVariants}>
-                            <h2 className="text-2xl font-bold text-onBackground mb-6">
+                            <h2 className="text-2xl font-bold text-onBackground dark:text-white mb-6">
                                 Related Articles
                             </h2>
                             <div className="grid md:grid-cols-3 gap-6">
                                 {relatedPosts.map((relatedPost) => (
                                     <motion.article
                                         key={relatedPost.id}
-                                        className="bg-background rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition-all duration-300 cursor-pointer"
+                                        className="bg-background dark:bg-gray-800 rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition-all duration-300 cursor-pointer border border-transparent dark:border-gray-700"
                                         whileHover={{ y: -5 }}
                                         onClick={() => handleRelatedPostClick(relatedPost.slug)}
                                     >
@@ -491,23 +491,23 @@ export default function BlogReadPage() {
                                             />
                                         </div>
                                         <div className="p-6">
-                                            <div className="flex items-center space-x-2 text-sm text-muted mb-3">
+                                            <div className="flex items-center space-x-2 text-sm text-muted dark:text-gray-400 mb-3">
                                                 <Calendar className="w-4 h-4" />
                                                 <span>{relatedPost.date}</span>
                                                 <Clock className="w-4 h-4 ml-2" />
                                                 <span>{relatedPost.readTime}</span>
                                             </div>
-                                            <h3 className="text-lg font-bold text-onBackground mb-2 leading-tight">
+                                            <h3 className="text-lg font-bold text-onBackground dark:text-white mb-2 leading-tight">
                                                 {relatedPost.title}
                                             </h3>
-                                            <p className="text-muted text-sm mb-4">
+                                            <p className="text-muted dark:text-gray-400 text-sm mb-4">
                                                 {relatedPost.excerpt}
                                             </p>
                                             <div className="flex items-center justify-between">
-                                                <span className="text-sm text-muted">
+                                                <span className="text-sm text-muted dark:text-gray-400">
                                                     {relatedPost.author}
                                                 </span>
-                                                <ArrowRight className="w-4 h-4 text-primary" />
+                                                <ArrowRight className="w-4 h-4 text-primary dark:text-blue-400" />
                                             </div>
                                         </div>
                                     </motion.article>
@@ -518,18 +518,18 @@ export default function BlogReadPage() {
 
                     {/* Comments Section */}
                     <motion.div 
-                        className="bg-background rounded-xl shadow-sm p-8 mt-12"
+                        className="bg-background dark:bg-gray-800 rounded-xl shadow-sm p-8 mt-12"
                         variants={itemVariants}
                     >
                         <div className="flex items-center space-x-2 mb-6">
-                            <MessageCircle className="w-5 h-5 text-muted" />
-                            <h2 className="text-xl font-bold text-onBackground">
+                            <MessageCircle className="w-5 h-5 text-muted dark:text-gray-400" />
+                            <h2 className="text-xl font-bold text-onBackground dark:text-white">
                                 Comments (0)
                             </h2>
                         </div>
                         
                         <div className="text-center py-8">
-                            <p className="text-muted mb-4">
+                            <p className="text-muted dark:text-gray-400 mb-4">
                                 Be the first to share your thoughts on this article.
                             </p>
                             <button className="bg-primary text-onPrimary px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors">

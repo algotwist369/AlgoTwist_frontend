@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { motion } from 'framer-motion';
+// Removed framer-motion
 import { Calendar, User, ArrowRight, Clock, Tag, Search, Filter, ChevronLeft, ChevronRight, ArrowLeft } from 'lucide-react';
 import { blogPosts } from '../data/data';
 
@@ -84,81 +84,38 @@ export default function BlogPage() {
         navigate(`/blog/${postSlug}`);
     };
 
-    const containerVariants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.1,
-                delayChildren: 0.1
-            }
-        }
-    };
 
-    const itemVariants = {
-        hidden: { opacity: 0, y: 20 },
-        visible: {
-            opacity: 1,
-            y: 0,
-            transition: {
-                duration: 0.6,
-                ease: "easeOut"
-            }
-        }
-    };
+
 
     return (
-        <div className="min-h-screen bg-surface transition-colors duration-300">
+        <div className="min-h-screen bg-surface dark:bg-gray-900 transition-colors duration-300">
             {/* Header */}
-            <motion.div 
-                className="bg-background shadow-sm border-b border-border"
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-            >
+            <div className="bg-background dark:bg-gray-800 shadow-sm border-b border-border dark:border-gray-700  pt-[5rem]">
                 <div className="max-w-7xl mx-auto px-6 py-8">
                     <div className="flex items-center justify-between mb-6">
-                        <motion.button
+                        <button
                             onClick={handleBackToHome}
-                            className="flex items-center text-primary hover:text-primary/80 font-semibold transition-colors"
-                            whileHover={{ x: -5 }}
-                            whileTap={{ scale: 0.95 }}
-                            transition={{ duration: 0.2 }}
+                            className="flex items-center text-primary dark:text-blue-400 hover:text-primary/80 dark:hover:text-blue-300 font-semibold transition-colors"
                         >
                             <ArrowLeft className="w-5 h-5 mr-2" />
                             Back to Home
-                        </motion.button>
+                        </button>
                     </div>
                     <div className="text-center">
-                        <motion.h1 
-                            className="text-4xl lg:text-5xl font-bold text-onBackground mb-4"
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.2, duration: 0.6 }}
-                        >
+                        <h1 className="text-4xl lg:text-5xl font-bold text-onBackground dark:text-white mb-4">
                             Our Blog
-                        </motion.h1>
-                        <motion.p 
-                            className="text-xl text-muted max-w-3xl mx-auto"
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.3, duration: 0.6 }}
-                        >
+                        </h1>
+                        <p className="text-xl text-muted dark:text-gray-400 max-w-3xl mx-auto">
                             Discover insights, trends, and best practices in enterprise software development,
                             digital transformation, and technology innovation.
-                        </motion.p>
+                        </p>
                     </div>
                 </div>
-            </motion.div>
+            </div>
 
             <div className="max-w-7xl mx-auto px-6 py-12">
                 {/* Search and Filter Section */}
-                <motion.div 
-                    className="bg-background rounded-xl shadow-sm p-6 mb-8 border border-border"
-                    variants={itemVariants}
-                    initial="hidden"
-                    animate="visible"
-                >
+                <div className="bg-background dark:bg-gray-800 rounded-xl shadow-sm p-6 mb-8 border border-border dark:border-gray-700">
                     <div className="grid lg:grid-cols-4 gap-6">
                         {/* Search */}
                         <div className="lg:col-span-2">
@@ -206,106 +163,63 @@ export default function BlogPage() {
 
                     {/* Active Filters */}
                     {(searchTerm || selectedCategory !== 'All') && (
-                        <motion.div 
-                            className="mt-4 flex items-center justify-between"
-                            initial={{ opacity: 0, y: 10 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.3 }}
-                        >
+                        <div className="mt-4 flex items-center justify-between">
                             <div className="flex items-center space-x-2">
-                                <span className="text-sm text-muted">Active filters:</span>
+                                <span className="text-sm text-muted dark:text-gray-400">Active filters:</span>
                                 {searchTerm && (
-                                    <motion.span 
-                                        className="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm"
-                                        initial={{ scale: 0 }}
-                                        animate={{ scale: 1 }}
-                                        transition={{ duration: 0.3 }}
-                                    >
+                                    <span className="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">
                                         Search: "{searchTerm}"
-                                    </motion.span>
+                                    </span>
                                 )}
                                 {selectedCategory !== 'All' && (
-                                    <motion.span 
-                                        className="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm"
-                                        initial={{ scale: 0 }}
-                                        animate={{ scale: 1 }}
-                                        transition={{ duration: 0.3, delay: 0.1 }}
-                                    >
+                                    <span className="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">
                                         Category: {selectedCategory}
-                                    </motion.span>
+                                    </span>
                                 )}
                             </div>
-                            <motion.button
+                            <button
                                 onClick={clearFilters}
-                                className="text-primary hover:text-primary/80 text-sm font-medium"
-                                whileHover={{ scale: 1.05 }}
-                                whileTap={{ scale: 0.95 }}
-                                transition={{ duration: 0.2 }}
+                                className="text-primary dark:text-blue-400 hover:text-primary/80 dark:hover:text-blue-300 text-sm font-medium"
                             >
                                 Clear all filters
-                            </motion.button>
-                        </motion.div>
+                            </button>
+                        </div>
                     )}
-                </motion.div>
+                </div>
 
                 {/* Results Count */}
-                <motion.div 
-                    className="flex items-center justify-between mb-6"
-                    variants={itemVariants}
-                    initial="hidden"
-                    animate="visible"
-                >
-                    <p className="text-muted">
+                <div className="flex items-center justify-between mb-6">
+                    <p className="text-muted dark:text-gray-400">
                         Showing {filteredPosts.length} of {blogPosts.length} posts
                     </p>
                     {filteredPosts.length === 0 && (
                         <p className="text-red-600 font-medium">No posts found matching your criteria</p>
                     )}
-                </motion.div>
+                </div>
 
                 {/* Blog Posts Grid */}
                 {filteredPosts.length > 0 && (
-                    <motion.div 
-                        className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12"
-                        variants={containerVariants}
-                        initial="hidden"
-                        animate="visible"
-                    >
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
                         {currentPosts.map((post, index) => (
-                            <motion.article
+                            <article
                                 key={post.id}
-                                className="bg-background rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 group cursor-pointer"
-                                variants={itemVariants}
-                                whileHover={{ 
-                                    y: -10,
-                                    boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)"
-                                }}
-                                transition={{ duration: 0.3 }}
+                                className="bg-background dark:bg-gray-800 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 group cursor-pointer border border-transparent dark:border-gray-700"
                                 onClick={() => handlePostClick(post.slug)}
                             >
-                                <motion.div 
-                                    className="relative h-48"
-                                    whileHover={{ scale: 1.05 }}
-                                    transition={{ duration: 0.3 }}
-                                >
+                                <div className="relative h-48">
                                     <img
                                         src={post.image}
                                         alt={post.title}
                                         className="w-full h-full object-cover"
                                     />
-                                    <motion.div 
-                                        className="absolute top-4 left-4"
-                                        initial={{ scale: 0 }}
-                                        animate={{ scale: 1 }}
-                                        transition={{ delay: index * 0.1, duration: 0.3 }}
-                                    >
+                                    <div className="absolute top-4 left-4">
                                         <span className="bg-primary text-white px-3 py-1 rounded-full text-sm font-medium">
                                             {post.category}
                                         </span>
-                                    </motion.div>
-                                </motion.div>
+                                    </div>
+                                </div>
                                 <div className="p-6">
-                                    <div className="flex items-center space-x-4 text-sm text-muted mb-3">
+                                    <div className="flex items-center space-x-4 text-sm text-muted dark:text-gray-400 mb-3">
                                         <div className="flex items-center">
                                             <Calendar className="w-4 h-4 mr-1" />
                                             {post.date}
@@ -315,21 +229,19 @@ export default function BlogPage() {
                                             {post.readTime}
                                         </div>
                                     </div>
-                                    <h3 className="text-xl font-bold text-onBackground mb-3 leading-tight group-hover:text-primary transition-colors">
+                                    <h3 className="text-xl font-bold text-onBackground dark:text-white mb-3 leading-tight group-hover:text-primary dark:group-hover:text-blue-400 transition-colors">
                                         {post.title}
                                     </h3>
-                                    <p className="text-muted mb-4 leading-relaxed">
+                                    <p className="text-muted dark:text-gray-300 mb-4 leading-relaxed">
                                         {post.excerpt}
                                     </p>
                                     <div className="flex items-center justify-between mb-4">
-                                        <div className="flex items-center text-sm text-muted">
+                                        <div className="flex items-center text-sm text-muted dark:text-gray-400">
                                             <User className="w-4 h-4 mr-2" />
                                             {post.author}
                                         </div>
-                                        <motion.button 
-                                            className="text-primary hover:text-primary/80 font-semibold flex items-center"
-                                            whileHover={{ x: 5 }}
-                                            transition={{ duration: 0.2 }}
+                                        <button 
+                                            className="text-primary dark:text-blue-400 hover:text-primary/80 dark:hover:text-blue-300 font-semibold flex items-center"
                                             onClick={(e) => {
                                                 e.stopPropagation();
                                                 handlePostClick(post.slug);
@@ -337,45 +249,35 @@ export default function BlogPage() {
                                         >
                                             Read More
                                             <ArrowRight className="ml-1 w-4 h-4" />
-                                        </motion.button>
+                                        </button>
                                     </div>
                                     <div className="flex flex-wrap gap-2">
                                         {post.tags.map((tag, index) => (
-                                            <motion.span
+                                            <span
                                                 key={index}
-                                                className="bg-background text-muted px-2 py-1 rounded-full text-xs flex items-center"
-                                                whileHover={{ scale: 1.1 }}
-                                                transition={{ duration: 0.2 }}
+                                                className="bg-background dark:bg-gray-900 text-muted dark:text-gray-300 px-2 py-1 rounded-full text-xs flex items-center"
                                             >
                                                 <Tag className="w-3 h-3 mr-1" />
                                                 {tag}
-                                            </motion.span>
+                                            </span>
                                         ))}
                                     </div>
                                 </div>
-                            </motion.article>
+                            </article>
                         ))}
-                    </motion.div>
+                    </div>
                 )}
 
                 {/* Pagination */}
                 {totalPages > 1 && (
-                    <motion.div 
-                        className="flex items-center justify-center space-x-2"
-                        variants={itemVariants}
-                        initial="hidden"
-                        animate="visible"
-                    >
-                        <motion.button
+                    <div className="flex items-center justify-center space-x-2">
+                        <button
                             onClick={() => handlePageChange(currentPage - 1)}
                             disabled={currentPage === 1}
-                            className="p-2 rounded-lg border border-border hover:bg-background disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
-                            whileHover={{ scale: 1.1 }}
-                            whileTap={{ scale: 0.9 }}
-                            transition={{ duration: 0.2 }}
+                            className="p-2 rounded-lg border border-border dark:border-gray-700 hover:bg-background dark:hover:bg-gray-800 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
                         >
-                            <ChevronLeft className="w-5 h-5 text-muted" />
-                        </motion.button>
+                            <ChevronLeft className="w-5 h-5 text-muted dark:text-gray-400" />
+                        </button>
 
                         {Array.from({ length: totalPages }, (_, index) => {
                             const pageNumber = index + 1;
@@ -386,74 +288,56 @@ export default function BlogPage() {
                                 (pageNumber >= currentPage - 1 && pageNumber <= currentPage + 1)
                             ) {
                                 return (
-                                    <motion.button
+                                    <button
                                         key={pageNumber}
                                         onClick={() => handlePageChange(pageNumber)}
                                         className={`px-4 py-2 rounded-lg border transition-colors ${
                                             currentPage === pageNumber
                                                 ? 'bg-primary text-white border-primary'
-                                                : 'border-border hover:bg-background text-muted'
+                                                : 'border-border dark:border-gray-700 hover:bg-background dark:hover:bg-gray-800 text-muted dark:text-gray-400'
                                         }`}
-                                        whileHover={{ scale: 1.05 }}
-                                        whileTap={{ scale: 0.95 }}
-                                        transition={{ duration: 0.2 }}
                                     >
                                         {pageNumber}
-                                    </motion.button>
+                                    </button>
                                 );
                             } else if (
                                 pageNumber === currentPage - 2 ||
                                 pageNumber === currentPage + 2
                             ) {
-                                return <span key={pageNumber} className="px-2 text-muted">...</span>;
+                                return <span key={pageNumber} className="px-2 text-muted dark:text-gray-400">...</span>;
                             }
                             return null;
                         })}
 
-                        <motion.button
+                        <button
                             onClick={() => handlePageChange(currentPage + 1)}
                             disabled={currentPage === totalPages}
-                            className="p-2 rounded-lg border border-border hover:bg-background disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
-                            whileHover={{ scale: 1.1 }}
-                            whileTap={{ scale: 0.9 }}
-                            transition={{ duration: 0.2 }}
+                            className="p-2 rounded-lg border border-border dark:border-gray-700 hover:bg-background dark:hover:bg-gray-800 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
                         >
-                            <ChevronRight className="w-5 h-5 text-muted" />
-                        </motion.button>
-                    </motion.div>
+                            <ChevronRight className="w-5 h-5 text-muted dark:text-gray-400" />
+                        </button>
+                    </div>
                 )}
 
                 {/* No Results Message */}
                 {filteredPosts.length === 0 && (
-                    <motion.div 
-                        className="text-center py-12"
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6 }}
-                    >
+                    <div className="text-center py-12">
                         <div className="max-w-md mx-auto">
-                            <motion.div 
-                                className="w-16 h-16 bg-background rounded-full flex items-center justify-center mx-auto mb-4"
-                                whileHover={{ scale: 1.1 }}
-                                transition={{ duration: 0.2 }}
-                            >
-                                <Search className="w-8 h-8 text-muted" />
-                            </motion.div>
-                            <h3 className="text-xl font-semibold text-onBackground mb-2">No posts found</h3>
-                            <p className="text-muted mb-6">
+                            <div className="w-16 h-16 bg-background dark:bg-gray-800 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <Search className="w-8 h-8 text-muted dark:text-gray-400" />
+                            </div>
+                            <h3 className="text-xl font-semibold text-onBackground dark:text-white mb-2">No posts found</h3>
+                            <p className="text-muted dark:text-gray-400 mb-6">
                                 Try adjusting your search terms or filters to find what you're looking for.
                             </p>
-                            <motion.button
+                            <button
                                 onClick={clearFilters}
                                 className="bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-dark transition-colors"
-                                whileHover={{ scale: 1.05 }}
-                                whileTap={{ scale: 0.95 }}
-                                transition={{ duration: 0.2 }}
                             >
                                 Clear all filters
-                            </motion.button>
+                            </button>
                         </div>
-                    </motion.div>
+                    </div>
                 )}
             </div>
         </div>

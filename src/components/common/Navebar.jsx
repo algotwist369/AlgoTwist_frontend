@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Menu, X, Code, Cloud, Laptop, Building, Globe, Rocket, TrendingUp, Users, Star, Shield, Layers, PenTool, Search, BarChart3, Palette } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { servicesData } from '../../data/pricingData';
+import WhatsAppButton from './WhatsAppButton';
 
 const Navebar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,17 +21,17 @@ const Navebar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const url1 = "https://res.cloudinary.com/djdrpfhdz/image/upload/v1751983381/Algo_Twist_Logo_pnunw4.png";
-  const url2 = "https://res.cloudinary.com/djdrpfhdz/image/upload/v1751983396/Algo_Twist_Logo_1_yi4ged.png";
+  const url1 = "https://res.cloudinary.com/djdrpfhdz/image/upload/v1753618879/ALGO_TWIST_1_ck6jxd.png";
+  const url2 = "https://res.cloudinary.com/djdrpfhdz/image/upload/v1753618879/ALGO_TWIST_1_ck6jxd.png";
 
   const menuItems = [
-    { to: "/", text: "Home" },
-    { to: "/services", text: "Services" },
-    { to: "/pricing", text: "Pricing" },
-    { to: "/projects", text: "Portfolio" },
-    { to: "/our-team", text: "Our Team" },
-    { to: "/about-us", text: "About" },
-    { to: "/blog", text: "Blog" }
+    // { to: "/", text: "Home" },
+    // { to: "/services", text: "Services" },
+    // { to: "/pricing", text: "Pricing" },
+    // { to: "/projects", text: "Portfolio" },
+    // { to: "/our-team", text: "Our Team" },
+    // { to: "/about-us", text: "About" },
+    // { to: "/blog", text: "Blog" }
   ];
 
   const serviceIcons = {
@@ -66,7 +67,7 @@ const Navebar = () => {
   }, [servicesDropdown, pricingDropdown]);
 
   return (
-    <nav className={`fixed w-full z-50 transition-colors duration-300 ${scrollY > 0 ? 'bg-[#EFEEEA]' : 'bg-transparent'}`}>
+    <nav className={`fixed w-full z-50 transition-colors duration-300 ${scrollY > 0 ? 'bg-backgroundPrimary border-b border-borderColor' : 'bg-backgroundSecondary/80'}`}>
 
       <div className="max-w-[89rem] mx-auto px-4 sm:px-6 py-3 sm:py-4">
         <div className="flex items-center justify-between">
@@ -82,8 +83,8 @@ const Navebar = () => {
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
             {menuItems.map((item) => {
-              const baseColor = scrollY > 0 ? 'text-black' : 'text-white';
-              const hoverColor = scrollY > 0 ? 'hover:text-black' : 'hover:text-white';
+              const baseColor = 'text-textPrimary';
+              const hoverColor = 'hover:text-accent';
               if (item.text === 'Services') {
                 return (
                   <div
@@ -206,10 +207,7 @@ const Navebar = () => {
           </div>
 
           {/* CTA Button */}
-          <button className="bg-purple-600 text-onPrimary px-6 py-2 rounded-lg hover:bg-primary/90 transition-colors font-medium hidden md:block">
-            Get Quote
-          </button>
-
+          <WhatsAppButton text={"Get Started"} />
           {/* Mobile Menu Toggle */}
           <div className="md:hidden flex items-center space-x-2">
             <button className="p-2" onClick={() => setIsMenuOpen(!isMenuOpen)}>

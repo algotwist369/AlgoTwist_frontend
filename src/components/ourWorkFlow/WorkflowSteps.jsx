@@ -1,145 +1,114 @@
-import React from "react";
-import { motion } from "framer-motion";
-import {
-  FaSearch,
-  FaLightbulb,
-  FaPalette,
-  FaCogs,
-  FaRocket,
-  FaChartLine,
-  FaVial,
-  FaCloudUploadAlt,
-  FaHeadset,
-} from "react-icons/fa";
+import React, { useEffect, useRef } from "react";
+import { FaRegHandshake, FaCheckCircle } from "react-icons/fa";
+import { BsFillLightningChargeFill } from "react-icons/bs";
+import { GiProgression } from "react-icons/gi";
+import "./WorkflowAnimation.css";
+import MouseGlowCard from "../common/MouseGlowCard";
 
-const steps = [
+const workflowItems = [
   {
-    icon: <FaSearch />,
-    title: "Client Discovery & Requirement Gathering",
+    icon: <FaRegHandshake className="text-4xl text-primary mb-4 mx-auto" />,
+    title: "Client Onboarding",
     description:
-      "Understand your business, goals, and technical/marketing needs. Define KPIs and gather all requirements.",
+      "We begin by understanding your business, goals, and challenges. This helps us craft tailored digital solutions that align perfectly with your vision.",
   },
   {
-    icon: <FaLightbulb />,
-    title: "Strategic Planning",
+    icon: (
+      <BsFillLightningChargeFill className="text-4xl text-accent mb-4 mx-auto" />
+    ),
+    title: "Strategy & Execution",
     description:
-      "Craft tailored strategies for development & marketing. Assign roles, tools, and finalize timelines.",
+      "From creative design to clean coding, we follow a clear roadmap. You get regular updates, so you're always in control and informed.",
   },
   {
-    icon: <FaPalette />,
-    title: "Creative Ideation",
+    icon: <GiProgression className="text-4xl text-primary mb-4 mx-auto" />,
+    title: "Launch & Support",
     description:
-      "Design wireframes, campaign ideas, keywords, and branding concepts. Tech team plans system architecture.",
-  },
-  {
-    icon: <FaCogs />,
-    title: "Design & Development",
-    description:
-      "Build UI/UX, develop backend/frontend features, perform on-page SEO. QA and iteration cycles run here.",
-  },
-  {
-    icon: <FaChartLine />,
-    title: "Digital Marketing & Optimization",
-    description:
-      "Launch campaigns, monitor KPIs, refine strategy. Weekly reports and data-driven optimization.",
-  },
-  {
-    icon: <FaVial />,
-    title: "Testing & Quality Assurance",
-    description:
-      "Ensure cross-device compatibility, performance, SEO readiness, and security checks.",
-  },
-  {
-    icon: <FaCloudUploadAlt />,
-    title: "Launch & Delivery",
-    description:
-      "Deploy final product, integrate tools, deliver documentation, and monitor for initial feedback.",
-  },
-  {
-    icon: <FaHeadset />,
-    title: "Support & Growth",
-    description:
-      "Offer support, implement growth strategies, continuous monitoring, and scaling opportunities.",
+      "Once launched, we continue to monitor and optimize. Our team stays available for ongoing support, updates, and scaling when needed.",
   },
 ];
 
-const WorkflowSteps = () => {
+const WorkflowPage = () => {
+  const bgRef = useRef(null);
+
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      const { clientX, clientY } = e;
+      const centerX = window.innerWidth / 2;
+      const centerY = window.innerHeight / 2;
+      const moveX = (clientX - centerX) * 0.02;
+      const moveY = (clientY - centerY) * 0.02;
+
+      if (bgRef.current) {
+        bgRef.current.style.transform = `translate(${moveX}px, ${moveY}px)`;
+      }
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, []);
+
   return (
-    <section className="py-20 bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white w-full overflow-x-auto">
-      <div className="text-center mb-16 px-4">
-        <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-4 drop-shadow-lg">
-          Team Workflow
-        </h2>
-        <p className="text-white/70 max-w-2xl mx-auto">
-          Our proven step-by-step process ensures transparency, strategy, and
-          success from planning to delivery.
-        </p>
+    <section className="py-20 relative overflow-hidden bg-[#0e0e10] text-white">
+      {/* Background shapes that follow the mouse */}
+      <div
+        ref={bgRef}
+        className="absolute inset-0 z-0 pointer-events-none transition-transform duration-100"
+      >
+        {[...Array(25)].map((_, i) => {
+          const size = 8 + Math.random() * 32;
+          const delay = Math.random() * 15;
+          const duration = 10 + Math.random() * 20;
+          const left = Math.random() * 100;
+          const top = Math.random() * 100;
+          const isCircle = i % 2 === 0;
+
+          return (
+            <div
+              key={i}
+              className={`shape-${isCircle ? "circle" : "square"}`}
+              style={{
+                width: `${size}px`,
+                height: `${size}px`,
+                left: `${left}%`,
+                top: `${top}%`,
+                animationDelay: `${delay}s`,
+                animationDuration: `${duration}s`,
+                backgroundColor: isCircle ? "#ff4d4f" : "#40a9ff",
+              }}
+            />
+          );
+        })}
       </div>
 
-      <div className="relative w-full min-w-[1200px] flex flex-col items-center px-8">
-        {/* Dotted Horizontal Timeline Line */}
-        <div className="absolute top-1/2 transform -translate-y-1/2 w-full h-0 z-0">
-          <div className="border-t-2 border-dotted border-white/30 w-full"></div>
+      {/* Foreground Content */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4">
+        <h2 className="text-3xl md:text-5xl font-bold text-center mb-6 leading-tight">
+          Our Simple 3-Step Workflow
+        </h2>
+
+        <div className="flex items-center justify-center mb-16 gap-3 text-green-400 text-lg md:text-xl font-semibold">
+          <FaCheckCircle className="text-3xl" />
+          <span>
+            30 Days Success Guarantee - We're confident in delivering measurable
+            results!
+          </span>
         </div>
-
-        {/* Step Cards */}
-        <div className="relative z-10 flex flex-row flex-wrap justify-center items-center gap-x-6">
-          {steps.map((step, index) => {
-            const isTop = index % 2 === 0;
-
-            return (
-              <div
-                key={index}
-                className="relative flex flex-col items-center w-[160px] md:w-[200px] mx-2"
-              >
-                {/* Card above or below */}
-                <div
-                  className={`absolute left-1/2 -translate-x-1/2 ${
-                    isTop ? "-top-[13rem]" : "-bottom-[13rem]"
-                  } flex flex-col items-center`}
-                  style={{ zIndex: 2 }}
-                >
-                  {/* Vertical connector */}
-                  <div
-                    className={`w-1 h-8 border-l-2 border-dotted border-white/60 mb-2 ${
-                      isTop ? "" : "rotate-180"
-                    }`}
-                  ></div>
-
-                  {/* Step Card */}
-                  <motion.div
-                    initial={{ opacity: 0, y: isTop ? -40 : 40 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{
-                      type: "spring",
-                      stiffness: 60,
-                      damping: 15,
-                      delay: index * 0.1,
-                    }}
-                    className="bg-white text-blue-900 rounded-2xl shadow-lg p-4 w-[180px] md:w-[220px] border border-transparent hover:border-purple-400 hover:shadow-purple-300 hover:scale-[1.03] transition-all duration-300 text-center"
-                  >
-                    <div className="text-2xl text-purple-600 mb-2">
-                      {step.icon}
-                    </div>
-                    <h4 className="font-semibold text-sm md:text-base mb-1">
-                      {step.title}
-                    </h4>
-                    <p className="text-xs text-gray-700">{step.description}</p>
-                  </motion.div>
-                </div>
-
-                {/* Timeline Dot Number */}
-                <div className="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-br from-purple-500 to-blue-600 text-white text-sm font-bold shadow-lg border-2 border-white z-20">
-                  {index + 1}
-                </div>
-              </div>
-            );
-          })}
+        <div className="grid gap-8 md:grid-cols-3">
+          {workflowItems.map((item, index) => (
+            <MouseGlowCard
+              key={index}
+              className="bg-[#1a1a1d] border border-gray-700 rounded-2xl p-8 text-center hover:bg-[#202024] transition-all duration-300 shadow-md"
+            >
+              {item.icon}
+              <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
+              <p className="text-gray-400 text-sm">{item.description}</p>
+            </MouseGlowCard>
+          ))}
         </div>
       </div>
     </section>
   );
 };
 
-export default WorkflowSteps;
+export default WorkflowPage;
