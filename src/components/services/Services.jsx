@@ -54,28 +54,12 @@ const services = [
       "Brand identities, illustrations, and marketing creatives that stand out.",
   },
   {
-    title: "Web/App Maintenance",
-    link: "/web-development",
-    startingPrice: 1500,
-    icon: <FaTools size={28} className="text-accent" />,
-    description:
-      "Proactive monitoring and updates to keep your digital platforms running smoothly.",
-  },
-  {
     title: "Social Media Marketing",
     link: "/social-media-marketing",
     startingPrice: 3500,
     icon: <TiMessages size={28} className="text-accent" />,
     description:
       "Engaging content creation and community management, marketing to boost your online presence.",
-  },
-  {
-    title: "Photography, 360° Photo Shoot & Videography",
-    link: "/photography",
-    startingPrice: 6000,
-    icon: <GrDocumentVideo size={28} className="text-accent" />,
-    description:
-      "Premium visuals through photography, 360° shoots, and videography for standout branding.",
   },
 ];
 

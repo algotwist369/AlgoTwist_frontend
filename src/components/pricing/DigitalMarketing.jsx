@@ -3,7 +3,7 @@ import WhatsAppButton from "../common/WhatsAppButton";
 
 const digitalMarketingPlans = [
   {
-    type: "Advertisement (All Platforms)",
+    type: "Paid Advertisement (All Platforms)",
     price: "Starting at ₹8000",
     features: [
       "Campaign Strategy & Planning",
@@ -91,7 +91,7 @@ const DigitalMarketingPricing = () => {
                   <li key={i}>{feature}</li>
                 ))}
               </ul>
-              <p className="text-sm italic text-gray-400">
+              <p className="text-sm italic text-textPrimary">
                 Ideal for: <span className="text-white">{plan.idealFor}</span>
               </p>
             </div>

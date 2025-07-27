@@ -58,7 +58,7 @@ const LeadGeneration = () => {
         </div>
 
         <div className="mt-10 text-center">
-          <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+          <p className="text-lg text-textPrimary max-w-3xl mx-auto">
             Our lead generation campaigns are focused on real-time conversions, CRM-ready leads, and maximum ROI.
             Launch your lead engine with us today.
           </p>

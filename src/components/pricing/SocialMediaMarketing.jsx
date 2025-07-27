@@ -73,7 +73,7 @@ const SocialMediaMarketing = () => {
                   <li key={i}>✅ {feature}</li>
                 ))}
               </ul>
-              <p className="text-sm italic text-gray-400">
+              <p className="text-sm italic text-textPrimary">
                 Ideal for: <span className="text-white">{plan.idealFor}</span>
               </p>
             </div>

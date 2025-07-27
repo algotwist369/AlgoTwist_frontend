@@ -71,7 +71,7 @@ const UiUxDesign = () => {
                   <li key={i}>{feature}</li>
                 ))}
               </ul>
-              <p className="text-sm italic text-gray-400">
+              <p className="text-sm italic text-textPrimary">
                 Ideal for: <span className="text-white">{plan.idealFor}</span>
               </p>
             </div>
@@ -82,7 +82,7 @@ const UiUxDesign = () => {
           <h2 className="text-2xl font-bold text-white mb-2">
             Why Our UI/UX Design Stands Out?
           </h2>
-          <p className="text-gray-400 max-w-3xl mx-auto mb-6">
+          <p className="text-textPrimary max-w-3xl mx-auto mb-6">
             We blend creativity with strategy to design intuitive, elegant, and
             accessible user interfaces that users love.
           </p>

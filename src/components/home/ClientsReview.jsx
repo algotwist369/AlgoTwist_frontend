@@ -64,14 +64,14 @@ const ClientsReview = () => {
               animate={{ x: 0, y: 0, opacity: 1 }}
               exit={animationDirections[idx]}
               transition={{ duration: 0.8, ease: "easeInOut" }}
-              className="bg-white rounded-2xl border shadow-xl p-6 text-gray-700 relative transform hover:scale-105 transition-all duration-300"
+              className="bg-white rounded-2xl border shadow-xl p-6 text-textPrimary relative transform hover:scale-105 transition-all duration-300"
               style={{
                 rotate: idx === 0 ? "-2deg" : idx === 2 ? "2deg" : "0deg",
                 backgroundImage: "url('/assets/images/sticker-bg.png')",  
                 backgroundSize: "cover",
               }}
             >
-              <p className="italic text-base mb-4">"{review.review}"</p>
+              <p className="italic text-textSecondary mb-4">"{review.review}"</p>
               <h4 className="text-lg font-semibold text-gray-900">- {review.name}</h4>
               <span className="absolute top-2 right-4 text-xs bg-pink-100 text-pink-600 px-2 py-1 rounded-full">
                 Verified

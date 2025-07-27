@@ -36,7 +36,7 @@ const WhatDefineUS = () => {
                             <span className="text-5xl text-purple-400 mr-3">❝</span>
                             <h3 className="text-2xl font-extrabold text-purple-700 tracking-wide">Our Belief</h3>
                         </div>
-                        <p className="text-lg text-gray-700 font-medium leading-relaxed">
+                        <p className="text-lg text-textPrimary font-medium leading-relaxed">
                             We don't follow trends — we build what lasts.<br />
                             Our focus is on creating <span className="text-purple-700 font-semibold">practical, timeless, and scalable</span> solutions that solve real problems — not just for today, but for the future.
                         </p>
@@ -46,7 +46,7 @@ const WhatDefineUS = () => {
                 {/* Right: Features */}
                 <div>
                     <h2 className="text-5xl font-extrabold mb-6 text-purple-700 drop-shadow-lg tracking-tight">What Defines Us</h2>
-                    <p className="text-xl text-gray-700 mb-10 max-w-xl">
+                    <p className="text-xl text-textPrimary mb-10 max-w-xl">
                         Our team brings <span className="text-purple-700 font-semibold">experience, creativity, and strategy</span> together. We believe in clarity, consistency, and delivering results that matter.
                     </p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-7">

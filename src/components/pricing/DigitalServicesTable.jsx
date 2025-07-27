@@ -22,7 +22,7 @@ const DigitalServicesTable = () => {
                 <th className="border p-3 text-left">Ideal For</th>
               </tr>
             </thead>
-            <tbody className="bg-white text-gray-700">
+            <tbody className="bg-white text-textPrimary">
               {digitalServices.map((item, index) => (
                 <tr key={index} className="hover:bg-gray-50">
                   <td className="border p-3 font-medium">{item.service}</td>

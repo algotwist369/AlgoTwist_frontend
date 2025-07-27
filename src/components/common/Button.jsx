@@ -15,7 +15,7 @@ const Button = ({
   const variants = {
     primary: 'bg-primary-600 text-white hover:bg-primary-700 active:bg-primary-800 focus:ring-primary-500',
     secondary: 'bg-light-button-secondary-bg text-light-button-secondary-text hover:bg-light-button-secondary-hover active:bg-light-button-secondary-active',
-    outline: 'bg-transparent text-primary-600 border border-primary-600 hover:bg-primary-100 focus:ring-primary-500',
+    outline: 'bg-transparent text-textPrimary-600 border border-primary-600 hover:bg-primary-100 focus:ring-primary-500',
     ghost: 'bg-transparent text-light-button-ghost-text hover:bg-light-button-ghost-hover active:bg-light-button-ghost-active',
     success: 'bg-success-600 text-white hover:bg-success-700 active:bg-success-800 focus:ring-success-500',
     warning: 'bg-warning-600 text-white hover:bg-warning-700 active:bg-warning-800 focus:ring-warning-500',

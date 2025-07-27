@@ -58,7 +58,7 @@ const PerformanceMarketing = () => {
                 </div>
 
                 <div className="mt-10 text-center">
-                    <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+                    <p className="text-lg text-textPrimary max-w-3xl mx-auto">
                         We don't just run ads — we drive measurable ROI through intelligent audience targeting,
                         creative testing, and conversion optimization. Book a free strategy call today.
                     </p>

@@ -70,7 +70,7 @@ const GraphicDesigning = () => {
                   <li key={i}>{feature}</li>
                 ))}
               </ul>
-              <p className="text-sm italic text-gray-400">
+              <p className="text-sm italic text-textPrimary">
                 Ideal for: <span className="text-white">{plan.idealFor}</span>
               </p>
             </div>
@@ -81,7 +81,7 @@ const GraphicDesigning = () => {
           <h2 className="text-2xl font-bold mb-3 text-blue-400">
             Why Choose Us?
           </h2>
-          <p className="text-gray-400 max-w-3xl mx-auto mb-6">
+          <p className="text-textPrimary max-w-3xl mx-auto mb-6">
             Our graphic designs don’t just look good — they tell a story. We
             design with purpose, focus on branding, and make sure your visuals
             capture attention across digital and print platforms.

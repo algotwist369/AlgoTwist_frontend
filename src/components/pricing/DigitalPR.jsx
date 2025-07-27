@@ -58,7 +58,7 @@ const DigitalPR = () => {
         </div>
 
         <div className="mt-10 text-center">
-          <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+          <p className="text-lg text-textPrimary max-w-3xl mx-auto">
             Get featured in India’s most trusted media houses and create an impact that builds brand trust.
             Let's position your brand where it matters the most.
           </p>

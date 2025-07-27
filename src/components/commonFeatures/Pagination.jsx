@@ -14,7 +14,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
   return (
     <div className="flex justify-center mt-8 gap-2">
       <button
-        className="px-3 py-1 rounded-l bg-gray-200 text-gray-700 font-semibold disabled:opacity-50"
+        className="px-3 py-1 rounded-l bg-gray-200 text-textPrimary font-semibold disabled:opacity-50"
         onClick={() => onPageChange(currentPage - 1)}
         disabled={currentPage === 1}
       >
@@ -30,7 +30,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
         </button>
       ))}
       <button
-        className="px-3 py-1 rounded-r bg-gray-200 text-gray-700 font-semibold disabled:opacity-50"
+        className="px-3 py-1 rounded-r bg-gray-200 text-textPrimary font-semibold disabled:opacity-50"
         onClick={() => onPageChange(currentPage + 1)}
         disabled={currentPage === totalPages}
       >

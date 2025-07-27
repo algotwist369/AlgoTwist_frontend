@@ -95,7 +95,7 @@ const WebDevelopment = () => {
             <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-2 text-textPrimary">
               Service-wise Pricing Breakdown
             </h2>
-            <p className="text-gray-400 max-w-xl mx-auto text-xs md:text-base">
+            <p className="text-textPrimary max-w-xl mx-auto text-xs md:text-base">
               Detailed breakdown of our web development services. Get exactly
               what you need, nothing you don’t.
             </p>
@@ -126,7 +126,7 @@ const WebDevelopment = () => {
                       <td className="p-2 md:p-4 border-b border-gray-700 text-green-400 font-semibold">
                         {item.price}
                       </td>
-                      <td className="p-2 md:p-4 border-b border-gray-700 text-gray-400">
+                      <td className="p-2 md:p-4 border-b border-gray-700 text-textPrimary">
                         {item.includedIn.join(", ")}
                       </td>
                     </tr>
@@ -141,7 +141,7 @@ const WebDevelopment = () => {
             <h3 className="text-lg md:text-xl lg:text-2xl font-semibold text-white mb-2">
               Ready to build your dream website?
             </h3>
-            <p className="text-gray-400 mb-4 text-xs md:text-base">
+            <p className="text-textPrimary mb-4 text-xs md:text-base">
               Contact us today for a free consultation and personalized quote.
             </p>
             <WhatsAppButton text={"Book a Free Design Consultation"} />

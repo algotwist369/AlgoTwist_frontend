@@ -13,7 +13,7 @@ const Footer = () => {
             </div>
             <span className="text-2xl font-bold">AlgoTwist</span>
           </div>
-          <p className="text-center md:text-left text-gray-400 max-w-xl text-sm">
+          <p className="text-center md:text-left text-textPrimary max-w-xl text-sm">
             We build scalable, secure, and high-performance digital solutions to
             elevate your business.
           </p>
@@ -24,7 +24,7 @@ const Footer = () => {
           <p className="text-sm text-gray-500">
             &copy; 2025 AlgoTwist. All rights reserved.
           </p>
-          <div className="flex space-x-6 mt-4 md:mt-0 text-sm text-gray-400">
+          <div className="flex space-x-6 mt-4 md:mt-0 text-sm text-textPrimary">
             {["Privacy", "Terms", "Security"].map((link, index) => (
               <a
                 key={index}

@@ -208,8 +208,8 @@ export default function BlogReadPage() {
         return (
             <div className="min-h-screen bg-surface dark:bg-gray-900 flex items-center justify-center">
                 <div className="text-center">
-                    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary dark:border-blue-400 mx-auto mb-4"></div>
-                    <p className="text-muted dark:text-gray-400">Loading post...</p>
+                    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-textPrimary dark:border-blue-400 mx-auto mb-4"></div>
+                    <p className="text-muted dark:text-textPrimary">Loading post...</p>
                 </div>
             </div>
         );
@@ -221,14 +221,14 @@ export default function BlogReadPage() {
                 <div className="text-center">
                     <div className="mb-6">
                         <h1 className="text-4xl font-bold text-onBackground dark:text-white mb-4">404</h1>
-                        <h2 className="text-2xl font-semibold text-secondary dark:text-gray-300 mb-4">Blog Post Not Found</h2>
-                        <p className="text-muted dark:text-gray-400 mb-8">
+                        <h2 className="text-2xl font-semibold text-textPrimary dark:text-gray-300 mb-4">Blog Post Not Found</h2>
+                        <p className="text-muted dark:text-textPrimary mb-8">
                             The blog post you're looking for doesn't exist or has been moved.
                         </p>
                     </div>
                     <motion.button
                         onClick={handleBackToBlog}
-                        className="bg-primary text-onPrimary px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors flex items-center mx-auto"
+                        className="bg-textPrimary text-ontextPrimary px-6 py-3 rounded-lg font-semibold hover:bg-textPrimary/90 transition-colors flex items-center mx-auto"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         transition={{ duration: 0.2 }}
@@ -277,7 +277,7 @@ export default function BlogReadPage() {
                     <div className="flex items-center justify-between mb-6">
                         <motion.button
                             onClick={handleBackToBlog}
-                            className="flex items-center text-primary dark:text-blue-400 hover:text-primary/80 dark:hover:text-blue-300 font-semibold transition-colors"
+                            className="flex items-center text-textPrimary dark:text-blue-400 hover:text-textPrimary/80 dark:hover:text-blue-300 font-semibold transition-colors"
                             whileHover={{ x: -5 }}
                             whileTap={{ scale: 0.95 }}
                             transition={{ duration: 0.2 }}
@@ -289,7 +289,7 @@ export default function BlogReadPage() {
                         <div className="flex items-center space-x-4">
                             <motion.button
                                 onClick={handleShare}
-                                className="flex items-center text-muted dark:text-gray-400 hover:text-primary dark:hover:text-blue-400 transition-colors"
+                                className="flex items-center text-muted dark:text-textPrimary hover:text-textPrimary dark:hover:text-blue-400 transition-colors"
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
                                 transition={{ duration: 0.2 }}
@@ -301,8 +301,8 @@ export default function BlogReadPage() {
                                 onClick={toggleBookmark}
                                 className={`flex items-center transition-colors ${
                                     isBookmarked 
-                                        ? 'text-primary dark:text-blue-400' 
-                                        : 'text-muted dark:text-gray-400 hover:text-primary dark:hover:text-blue-400'
+                                        ? 'text-textPrimary dark:text-blue-400' 
+                                        : 'text-muted dark:text-textPrimary hover:text-textPrimary dark:hover:text-blue-400'
                                 }`}
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
@@ -330,7 +330,7 @@ export default function BlogReadPage() {
                             animate={{ scale: 1 }}
                             transition={{ delay: 0.2, duration: 0.3 }}
                         >
-                            <span className="bg-primary text-onPrimary px-4 py-2 rounded-full text-sm font-medium">
+                            <span className="bg-textPrimary text-ontextPrimary px-4 py-2 rounded-full text-sm font-medium">
                                 {post.category}
                             </span>
                         </motion.div>
@@ -345,7 +345,7 @@ export default function BlogReadPage() {
 
                         {/* Meta Information */}
                         <motion.div 
-                            className="flex flex-wrap items-center gap-6 text-muted dark:text-gray-400 mb-8"
+                            className="flex flex-wrap items-center gap-6 text-muted dark:text-textPrimary mb-8"
                             variants={itemVariants}
                         >
                             <div className="flex items-center">
@@ -429,7 +429,7 @@ export default function BlogReadPage() {
                                 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                             </p>
                             
-                            <blockquote className="border-l-4 border-primary pl-6 italic text-onBackground dark:text-gray-300 my-8">
+                            <blockquote className="border-l-4 border-textPrimary pl-6 italic text-onBackground dark:text-gray-300 my-8">
                                 "The future of enterprise software development lies in the ability to adapt quickly to changing business needs while maintaining high quality and security standards."
                             </blockquote>
                             
@@ -445,8 +445,8 @@ export default function BlogReadPage() {
                         variants={itemVariants}
                     >
                         <div className="flex items-center space-x-6">
-                            <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center">
-                                <span className="text-onPrimary font-bold text-xl">
+                            <div className="w-16 h-16 bg-textPrimary rounded-full flex items-center justify-center">
+                                <span className="text-ontextPrimary font-bold text-xl">
                                     {post.author.split(' ').map(n => n[0]).join('')}
                                 </span>
                             </div>
@@ -454,14 +454,14 @@ export default function BlogReadPage() {
                                 <h3 className="text-xl font-bold text-onBackground dark:text-white mb-2">
                                     {post.author}
                                 </h3>
-                                <p className="text-muted dark:text-gray-400 mb-3">
+                                <p className="text-muted dark:text-textPrimary mb-3">
                                     Senior Technology Consultant with over 10 years of experience in enterprise software development and digital transformation.
                                 </p>
                                 <div className="flex items-center space-x-4">
-                                    <button className="text-primary dark:text-blue-400 hover:text-primary/80 dark:hover:text-blue-300 font-medium">
+                                    <button className="text-textPrimary dark:text-blue-400 hover:text-textPrimary/80 dark:hover:text-blue-300 font-medium">
                                         View Profile
                                     </button>
-                                    <button className="text-primary dark:text-blue-400 hover:text-primary/80 dark:hover:text-blue-300 font-medium">
+                                    <button className="text-textPrimary dark:text-blue-400 hover:text-textPrimary/80 dark:hover:text-blue-300 font-medium">
                                         More Articles
                                     </button>
                                 </div>
@@ -491,7 +491,7 @@ export default function BlogReadPage() {
                                             />
                                         </div>
                                         <div className="p-6">
-                                            <div className="flex items-center space-x-2 text-sm text-muted dark:text-gray-400 mb-3">
+                                            <div className="flex items-center space-x-2 text-sm text-muted dark:text-textPrimary mb-3">
                                                 <Calendar className="w-4 h-4" />
                                                 <span>{relatedPost.date}</span>
                                                 <Clock className="w-4 h-4 ml-2" />
@@ -500,14 +500,14 @@ export default function BlogReadPage() {
                                             <h3 className="text-lg font-bold text-onBackground dark:text-white mb-2 leading-tight">
                                                 {relatedPost.title}
                                             </h3>
-                                            <p className="text-muted dark:text-gray-400 text-sm mb-4">
+                                            <p className="text-muted dark:text-textPrimary text-sm mb-4">
                                                 {relatedPost.excerpt}
                                             </p>
                                             <div className="flex items-center justify-between">
-                                                <span className="text-sm text-muted dark:text-gray-400">
+                                                <span className="text-sm text-muted dark:text-textPrimary">
                                                     {relatedPost.author}
                                                 </span>
-                                                <ArrowRight className="w-4 h-4 text-primary dark:text-blue-400" />
+                                                <ArrowRight className="w-4 h-4 text-textPrimary dark:text-blue-400" />
                                             </div>
                                         </div>
                                     </motion.article>
@@ -522,17 +522,17 @@ export default function BlogReadPage() {
                         variants={itemVariants}
                     >
                         <div className="flex items-center space-x-2 mb-6">
-                            <MessageCircle className="w-5 h-5 text-muted dark:text-gray-400" />
+                            <MessageCircle className="w-5 h-5 text-muted dark:text-textPrimary" />
                             <h2 className="text-xl font-bold text-onBackground dark:text-white">
                                 Comments (0)
                             </h2>
                         </div>
                         
                         <div className="text-center py-8">
-                            <p className="text-muted dark:text-gray-400 mb-4">
+                            <p className="text-muted dark:text-textPrimary mb-4">
                                 Be the first to share your thoughts on this article.
                             </p>
-                            <button className="bg-primary text-onPrimary px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors">
+                            <button className="bg-textPrimary text-ontextPrimary px-6 py-3 rounded-lg font-semibold hover:bg-textPrimary/90 transition-colors">
                                 Add Comment
                             </button>
                         </div>

@@ -19,11 +19,8 @@ import About from "./components/about/About";
 import WebDevelopment from "./components/pricing/WebDevelopment";
 import DigitalServicesTable from "./components/pricing/DigitalServicesTable";
 import AppDevelopment from "./components/pricing/AppDevelopment";
-import SeoServices from "./components/pricing/SeoServices";
 import DigitalMarketing from "./components/pricing/DigitalMarketing";
-import PerformanceMarketing from "./components/pricing/PerformanceMarketing";
-import DigitalPR from "./components/pricing/DigitalPR";
-import LeadGeneration from "./components/pricing/LeadGeneration";
+ 
 import GraphicDesigning from "./components/pricing/GraphicDesigning ";
 import Photography from "./components/pricing/Photography";
 import SocialMediaMarketing from "./components/pricing/SocialMediaMarketing";

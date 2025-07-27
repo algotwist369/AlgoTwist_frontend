@@ -45,7 +45,7 @@ const AppDevelopment = () => {
 
         <div className="mt-16 bg-[#1c1c1c] border border-gray-700 rounded-xl p-8 text-center">
           <h2 className="text-2xl font-bold text-white mb-2">Why Choose Us?</h2>
-          <p className="text-gray-400 max-w-3xl mx-auto mb-6">
+          <p className="text-textPrimary max-w-3xl mx-auto mb-6">
             Unlike most agencies, we don't just build apps — we build
             experiences. Our designs are intuitive, our tech stack is modern,
             and we ensure your app is deployment-ready with proper testing,

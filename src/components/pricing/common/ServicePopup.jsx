@@ -6,7 +6,7 @@ const ServicePopup = ({ show, onClose }) => {
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-40 animate-fadeIn">
       <div className="bg-white rounded-2xl shadow-2xl p-10 max-w-md w-full text-center relative border border-purple-100">
         <button
-          className="absolute top-3 right-3 text-gray-400 hover:text-gray-700 text-2xl font-bold focus:outline-none"
+          className="absolute top-3 right-3 text-textPrimary hover:text-textPrimary text-2xl font-bold focus:outline-none"
           onClick={onClose}
           aria-label="Close"
         >

@@ -12,8 +12,8 @@ const Heading = ({
   const baseClasses = 'font-bold leading-tight animate-fade-in'
   
   const variants = {
-    primary: 'text-light-text-primary',
-    secondary: 'text-light-text-secondary',
+    primary: 'text-light-text-textPrimary',
+    secondary: 'text-light-text-textPrimary',
     tertiary: 'text-light-text-tertiary',
     accent: 'text-accent-600',
     success: 'text-success-600',

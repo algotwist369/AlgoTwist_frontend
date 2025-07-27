@@ -36,7 +36,7 @@ const OurClient = () => {
         <h2 className="text-3xl md:text-5xl text-textPrimary font-bold text-center mb-6 leading-tight">
           Trusted by Leading Brands
         </h2>
-        <p className="text-gray-400 max-w-2xl mx-auto mb-12">
+        <p className="text-textPrimary max-w-2xl mx-auto mb-12">
           We’re proud to have worked with amazing clients who trust us to build
           modern, reliable, and impactful digital solutions.
         </p>

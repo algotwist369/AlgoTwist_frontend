@@ -47,7 +47,7 @@ const Photography = () => {
         <h1 className="text-4xl md:text-5xl font-bold text-center text-white mb-4">
           Photography & Videography Services
         </h1>
-        <p className="text-lg text-gray-400 text-center max-w-3xl mx-auto mb-10">
+        <p className="text-lg text-textPrimary text-center max-w-3xl mx-auto mb-10">
           From stunning visuals to 360° product shoots, we provide high-end
           photography and video solutions tailored for brands, events, and
           e-commerce.
@@ -82,7 +82,7 @@ const Photography = () => {
           <h2 className="text-2xl font-bold text-white mb-2">
             Why Choose Our Creative Team?
           </h2>
-          <p className="text-gray-400 max-w-3xl mx-auto mb-6">
+          <p className="text-textPrimary max-w-3xl mx-auto mb-6">
             We blend creativity with cutting-edge equipment to deliver
             compelling visuals that elevate your brand, product, or personal
             presence.

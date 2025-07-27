@@ -7,7 +7,7 @@ import MouseGlowCard from "../common/MouseGlowCard";
 
 const workflowItems = [
   {
-    icon: <FaRegHandshake className="text-4xl text-primary mb-4 mx-auto" />,
+    icon: <FaRegHandshake className="text-4xl text-textPrimary mb-4 mx-auto" />,
     title: "Client Onboarding",
     description:
       "We begin by understanding your business, goals, and challenges. This helps us craft tailored digital solutions that align perfectly with your vision.",
@@ -21,7 +21,7 @@ const workflowItems = [
       "From creative design to clean coding, we follow a clear roadmap. You get regular updates, so you're always in control and informed.",
   },
   {
-    icon: <GiProgression className="text-4xl text-primary mb-4 mx-auto" />,
+    icon: <GiProgression className="text-4xl text-textPrimary mb-4 mx-auto" />,
     title: "Launch & Support",
     description:
       "Once launched, we continue to monitor and optimize. Our team stays available for ongoing support, updates, and scaling when needed.",
@@ -90,7 +90,7 @@ const WorkflowPage = () => {
         <div className="flex items-center justify-center mb-16 gap-3 text-green-400 text-lg md:text-xl font-semibold">
           <FaCheckCircle className="text-3xl" />
           <span>
-            30 Days Success Guarantee - We're confident in delivering measurable
+            Success Guarantee - We're confident in delivering measurable
             results!
           </span>
         </div>
@@ -102,7 +102,7 @@ const WorkflowPage = () => {
             >
               {item.icon}
               <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
-              <p className="text-gray-400 text-sm">{item.description}</p>
+              <p className="text-textPrimary text-sm">{item.description}</p>
             </MouseGlowCard>
           ))}
         </div>

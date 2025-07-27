@@ -35,11 +35,11 @@ const Contact = () => {
               Open to:
             </span>
           </div>
-          <p className="text-lg sm:text-xl max-w-2xl mx-auto text-gray-600 dark:text-gray-300">
+          <p className="text-lg sm:text-xl max-w-2xl mx-auto text-textSecondary  ">
             Conversations, collaborations, creative challenges, and innovative
             projects.
           </p>
-          <p className="mt-3 text-base sm:text-lg max-w-2xl mx-auto text-gray-500 dark:text-gray-400">
+          <p className="mt-3 text-base sm:text-lg max-w-2xl mx-auto text-textSecondary  ">
             Let's connect and explore how we can work together to create
             something impactful.
           </p>
@@ -50,7 +50,7 @@ const Contact = () => {
           {contactInfo.map((info, index) => (
             <MouseGlowCard
               key={index}
-              className="flex flex-col sm:flex-row items-center gap-6 p-7 rounded-2xl bg-white/40 dark:bg-backgroundPrimary/60 backdrop-blur-md border border-gray-200 dark:border-white/10 shadow-lg transition-transform duration-300 hover:scale-105"
+              className="flex flex-col sm:flex-row items-center gap-6 p-7 rounded-2xl bg-backgroundPrimary  backdrop-blur-md border border-borderColor shadow-lg transition-transform duration-300 hover:scale-105"
             >
               <div className="flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-primary to-accent dark:from-primary dark:to-secondary shadow-md">
                 {info.icon}

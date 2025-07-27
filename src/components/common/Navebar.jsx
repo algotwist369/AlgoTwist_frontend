@@ -126,10 +126,10 @@ const Navebar = () => {
                                   onClick={() => setServicesDropdown(false)}
                                 >
                                   <div className="flex items-center gap-3 mb-2">
-                                    <Icon className="w-6 h-6 text-primary group-hover:scale-110 transition-transform" />
+                                    <Icon className="w-6 h-6 text-textPrimary group-hover:scale-110 transition-transform" />
                                     <span className="font-semibold text-white text-lg">{service.title}</span>
                                   </div>
-                                  <p className="text-gray-400 text-sm leading-snug min-h-[40px]">{service.description}</p>
+                                  <p className="text-textPrimary text-sm leading-snug min-h-[40px]">{service.description}</p>
                                 </Link>
                               );
                             })}
@@ -174,10 +174,10 @@ const Navebar = () => {
                                   onClick={() => setPricingDropdown(false)}
                                 >
                                   <div className="flex items-center gap-3 mb-2">
-                                    <Icon className="w-6 h-6 text-primary group-hover:scale-110 transition-transform" />
+                                    <Icon className="w-6 h-6 text-textPrimary group-hover:scale-110 transition-transform" />
                                     <span className="font-semibold text-white text-lg">{service.title}</span>
                                   </div>
-                                  <p className="text-gray-400 text-sm leading-snug min-h-[40px]">{service.description}</p>
+                                  <p className="text-textPrimary text-sm leading-snug min-h-[40px]">{service.description}</p>
                                 </Link>
                               );
                             })}
@@ -263,7 +263,7 @@ const Navebar = () => {
                                   setMobileServicesOpen(false);
                                 }}
                               >
-                                <Icon className="w-4 h-4 text-primary" />
+                                <Icon className="w-4 h-4 text-textPrimary" />
                                 <span className="font-semibold text-white text-base">{service.title}</span>
                               </Link>
                             );
@@ -300,7 +300,7 @@ const Navebar = () => {
                                   setMobilePricingOpen(false);
                                 }}
                               >
-                                <Icon className="w-4 h-4 text-primary" />
+                                <Icon className="w-4 h-4 text-textPrimary" />
                                 <span className="font-semibold text-white text-base">{service.title}</span>
                               </Link>
                             );

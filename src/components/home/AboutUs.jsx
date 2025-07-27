@@ -47,7 +47,7 @@ const AboutUs = () => {
             className="text-textSecondary text-lg mb-4"
             style={noCopyStyle}
           >
-            AlgoTwist is a leading digital agency powered by a team of{" "}
+            AlgoTwist is a leading digital agency marketing powered by a team of{" "}
             <span className="text-accent font-semibold">MNC experts</span>,
             creative visionaries, and technology enthusiasts. We are recognized
             for delivering world-class digital solutions that drive real
@@ -123,9 +123,9 @@ const AboutUs = () => {
           style={noCopyStyle}
         >
           <img
-            src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1000&q=80"
+            src="https://res.cloudinary.com/djdrpfhdz/image/upload/v1753622172/ChatGPT_Image_Jul_27_2025_06_45_29_PM_x77udo.png"
             alt="Our Team"
-            className="w-full h-full object-cover grayscale-[0.2] brightness-90 select-none"
+            className="w-full h-full object-cover"
             draggable={false}
           />
           {/* Badge or overlay for credibility */}
