@@ -14,7 +14,7 @@ const workflowItems = [
   },
   {
     icon: (
-      <BsFillLightningChargeFill className="text-4xl text-accent mb-4 mx-auto" />
+      <BsFillLightningChargeFill className="text-4xl text-highlightText mb-4 mx-auto" />
     ),
     title: "Strategy & Execution",
     description:

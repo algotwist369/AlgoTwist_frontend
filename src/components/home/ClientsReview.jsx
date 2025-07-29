@@ -3,82 +3,103 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const reviews = [
   {
-    name: "Priya Sharma",
-    review: "Amazing service! I felt truly relaxed and pampered. Highly recommended.",
+    name: "Karan Malhotra",
+    review:
+      "Algotwist helped streamline our internal processes with a custom software solution. Excellent support and delivery.",
   },
   {
-    name: "Rahul Verma",
-    review: "One of the best spa experiences I've ever had. Clean and professional.",
+    name: "Neha Rajput",
+    review:
+      "Super impressed with their web development team. The UI/UX was modern, clean, and exactly what we envisioned.",
   },
   {
-    name: "Sneha Patil",
-    review: "The massage was rejuvenating. Definitely visiting again!",
+    name: "Amit Kulkarni",
+    review:
+      "Their digital transformation strategies really helped our business grow online. Highly professional team.",
   },
   {
-    name: "Ankit Joshi",
-    review: "Wonderful ambiance and expert staff. Loved it!",
+    name: "Tanvi Deshmukh",
+    review:
+      "Smooth onboarding, timely delivery, and great communication throughout the project. Kudos to the Algotwist team!",
   },
   {
-    name: "Riya Mehta",
-    review: "Great service and reasonable prices. A perfect weekend treat!",
+    name: "Vikram Sinha",
+    review:
+      "We hired Algotwist for an e-commerce platform and they nailed it. Fast, responsive, and scalable tech stack.",
+  },
+  {
+    name: "Ishita Bansal",
+    review:
+      "What stood out was their attention to detail and willingness to iterate till we were satisfied. Highly recommended!",
   },
 ];
 
 const ClientsReview = () => {
-  const [index, setIndex] = useState(0);
+  const [current, setCurrent] = useState(0);
 
+  // Auto-change reviews every 4s
   useEffect(() => {
     const interval = setInterval(() => {
-      setIndex((prev) => (prev + 1) % reviews.length);
-    }, 3000);
+      setCurrent((prev) => (prev + 1) % reviews.length);
+    }, 4000);
     return () => clearInterval(interval);
   }, []);
 
-  // 3 reviews, rotated
-  const visibleReviews = [
-    reviews[index],
-    reviews[(index + 1) % reviews.length],
-    reviews[(index + 2) % reviews.length],
-  ];
-
-  const animationDirections = [
-    { x: -50, opacity: 0 },
-    { y: 50, opacity: 0 },
-    { x: 50, opacity: 0 },
-  ];
+  const variants = {
+    enter: (direction) => ({
+      x: direction > 0 ? 300 : -300,
+      opacity: 0,
+      scale: 0.95,
+    }),
+    center: {
+      x: 0,
+      opacity: 1,
+      scale: 1,
+    },
+    exit: (direction) => ({
+      x: direction < 0 ? 300 : -300,
+      opacity: 0,
+      scale: 0.95,
+    }),
+  };
 
   return (
-    <div className="max-w-6xl min-h-screen mx-auto py-16 px-4 text-center">
-      <h2 className="text-3xl font-bold text-textPrimary mb-10">
+    <div className="max-w-5xl mx-auto px-4 py-20 text-center">
+      <h2 className="text-3xl md:text-4xl font-bold mb-4 text-textPrimary">
         What Our Clients Say
       </h2>
-      <p className="text-lg text-textSecondary mb-8">
-        Our clients love us! Here's what they have to say about their experience.
+      <p className="text-textSecondary text-md md:text-lg mb-10">
+        Our clients love us! Here’s what they have to say.
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {visibleReviews.map((review, idx) => (
-          <AnimatePresence key={idx}>
-            <motion.div
-              key={review.name + index}
-              initial={animationDirections[idx]}
-              animate={{ x: 0, y: 0, opacity: 1 }}
-              exit={animationDirections[idx]}
-              transition={{ duration: 0.8, ease: "easeInOut" }}
-              className="bg-white rounded-2xl border shadow-xl p-6 text-textPrimary relative transform hover:scale-105 transition-all duration-300"
-              style={{
-                rotate: idx === 0 ? "-2deg" : idx === 2 ? "2deg" : "0deg",
-                backgroundImage: "url('/assets/images/sticker-bg.png')",  
-                backgroundSize: "cover",
-              }}
-            >
-              <p className="italic text-textSecondary mb-4">"{review.review}"</p>
-              <h4 className="text-lg font-semibold text-gray-900">- {review.name}</h4>
-              <span className="absolute top-2 right-4 text-xs bg-pink-100 text-pink-600 px-2 py-1 rounded-full">
+
+      <div className="relative w-full h-[250px] md:h-[220px] overflow-hidden">
+        <AnimatePresence initial={false} custom={1}>
+          <motion.div
+            key={current}
+            custom={1}
+            variants={variants}
+            initial="enter"
+            animate="center"
+            exit="exit"
+            transition={{
+              x: { type: "spring", stiffness: 300, damping: 30 },
+              opacity: { duration: 0.4 },
+            }}
+            className="absolute w-full px-6"
+          >
+            <div className="bg-white shadow-lg border rounded-2xl p-6 md:p-8 mx-auto max-w-3xl text-center relative">
+              <p className="text-gray-600 italic text-md md:text-lg">
+                “{reviews[current].review}”
+              </p>
+              <h4 className="text-lg md:text-xl mt-4 font-semibold text-gray-900">
+                - {reviews[current].name}
+              </h4>
+              <span className="absolute top-3 right-4 text-xs bg-green-100 text-green-600 px-2 py-1 rounded-full">
                 Verified
               </span>
-            </motion.div>
-          </AnimatePresence>
-        ))}
+            </div>
+          </motion.div>
+        </AnimatePresence>
       </div>
     </div>
   );

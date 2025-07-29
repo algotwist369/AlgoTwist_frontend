@@ -20,16 +20,19 @@ import WebDevelopment from "./components/pricing/WebDevelopment";
 import DigitalServicesTable from "./components/pricing/DigitalServicesTable";
 import AppDevelopment from "./components/pricing/AppDevelopment";
 import DigitalMarketing from "./components/pricing/DigitalMarketing";
- 
+
 import GraphicDesigning from "./components/pricing/GraphicDesigning ";
 import Photography from "./components/pricing/Photography";
 import SocialMediaMarketing from "./components/pricing/SocialMediaMarketing";
 import UiUxDesign from "./components/pricing/UiUxDesign";
+import NotFound from "./components/common/NotFound";
+import ServicePopup from "./components/pricing/common/ServicePopup";
 
 const AppContent = () => {
   return (
     <div className="min-h-screen bg-backgroundPrimary">
       <Navebar />
+      <ServicePopup />
       <Routes>
         {/* Home and Main Pages */}
         <Route path="/" element={<HomePage />} />
@@ -60,6 +63,8 @@ const AppContent = () => {
         />
         <Route path="/pricing/ui-ux-design" element={<UiUxDesign />} />
         <Route path="/pricing" element={<DigitalServicesTable />} />
+
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </div>

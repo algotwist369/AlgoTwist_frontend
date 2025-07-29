@@ -1,40 +1,90 @@
 import React from "react";
-import { Code } from "lucide-react";
+import {
+  FaInstagram,
+  FaTwitter,
+  FaFacebookF,
+  FaLinkedinIn,
+} from "react-icons/fa";
+import { FaArrowUpLong } from "react-icons/fa6";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#1F1F1F] text-white py-12">
+    <footer className="bg-[#1F1F1F] text-white pt-12 pb-8">
       <div className="w-11/12 max-w-7xl mx-auto px-4 sm:px-6">
-        {/* Logo + Description */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6 mb-8">
-          <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-              <Code className="w-6 h-6 text-white" />
-            </div>
-            <span className="text-2xl font-bold">AlgoTwist</span>
+        {/* Logo & Description */}
+        <div className="flex flex-col md:flex-row justify-between items-center gap-6 mb-10">
+          <div className="flex items-center space-x-4">
+            <img
+              src="https://res.cloudinary.com/djdrpfhdz/image/upload/v1753774027/ALGO_TWIST_fiprfh.png"
+              alt="Logo"
+              className="h-12 sm:h-16 w-auto object-contain"
+            />
           </div>
-          <p className="text-center md:text-left text-textPrimary max-w-xl text-sm">
-            We build scalable, secure, and high-performance digital solutions to
-            elevate your business.
+          <p className="text-center md:text-left text-gray-400 text-sm max-w-xl leading-relaxed">
+            We craft scalable, secure, and high-performance digital services to
+            grow your brand and business globally.
           </p>
         </div>
 
-        {/* Footer Bottom */}
-        <div className="border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-sm text-gray-500">
-            &copy; 2025 AlgoTwist. All rights reserved.
-          </p>
-          <div className="flex space-x-6 mt-4 md:mt-0 text-sm text-textPrimary">
-            {["Privacy", "Terms", "Security"].map((link, index) => (
+        {/* Links & Social */}
+        {/* <div className="flex flex-col md:flex-row justify-between items-center border-t border-gray-700 pt-6 pb-6 gap-6">
+          <div className="flex space-x-6 text-sm">
+            {["Privacy", "Terms", "Security", "Contact"].map((link, i) => (
               <a
-                key={index}
+                key={i}
                 href="#"
-                className="hover:text-white transition-colors"
+                className="text-gray-400 hover:text-white transition-colors duration-200"
               >
                 {link}
               </a>
             ))}
           </div>
+
+          <div className="flex space-x-4">
+            <a
+              href="#"
+              className="text-gray-400 hover:text-[#E1306C] transition duration-300"
+              aria-label="Instagram"
+            >
+              <FaInstagram size={20} />
+            </a>
+            <a
+              href="#"
+              className="text-gray-400 hover:text-[#1DA1F2] transition duration-300"
+              aria-label="Twitter"
+            >
+              <FaTwitter size={20} />
+            </a>
+            <a
+              href="#"
+              className="text-gray-400 hover:text-[#1877F2] transition duration-300"
+              aria-label="Facebook"
+            >
+              <FaFacebookF size={20} />
+            </a>
+            <a
+              href="#"
+              className="text-gray-400 hover:text-[#0A66C2] transition duration-300"
+              aria-label="LinkedIn"
+            >
+              <FaLinkedinIn size={20} />
+            </a>
+          </div>
+        </div> */}
+
+        {/* Bottom Bar */}
+        <div className="border-t border-gray-700 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-sm text-gray-500 text-center">
+            &copy; 2025 <span className="font-semibold">AlgoTwist</span>. All
+            rights reserved.
+          </p>
+          <a
+            href="#top"
+            className="flex items-center text-sm text-gray-400 hover:text-white scroll-smooth transition"
+          >
+            <FaArrowUpLong className="mr-2" />
+            Back to top
+          </a>
         </div>
       </div>
     </footer>

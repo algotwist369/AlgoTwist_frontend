@@ -17,10 +17,16 @@ export default {
         textAccent: "#F778BA", // Animated/highlighted text — Pink Flamingo
         disabledText: "#6E7681", // Disabled text — Dusty Gray
 
+        // Highlight Text Colors
+        highlightText: "#eb0520",
+        highlightTextSecondary: "#db4242",
+        rgbHighlight: "rgb(235, 5, 32)",
+
+
         // Button Colors
-        buttonPrimary: "#d16c2c", // Main call-to-action button — Emerald Green
+        buttonPrimary: "#eb0520", // Main call-to-action button — Emerald Green
         buttonSecondary: "#8B949E", // Secondary/outlined button — Dark Gray
-        buttonHover: "#f0650e", // Button hover state — Bright Green
+        buttonHover: "#c40a0a", // Button hover state — Bright Green
         buttonText: "#FFFFFF", // Button text — White
 
         // Borders & UI

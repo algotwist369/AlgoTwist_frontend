@@ -18,7 +18,7 @@ const AboutUs = () => {
       onContextMenu={(e) => e.preventDefault()}
     >
       {/* Blurred Background Circles */}
-      <div className="absolute top-0 left-0 w-72 h-72 bg-accent/30 rounded-full blur-3xl opacity-40 -translate-x-1/2 -translate-y-1/2" />
+      <div className="absolute top-0 left-0 w-72 h-72 bg-backgroundSecondary rounded-full blur-3xl opacity-40 -translate-x-1/2 -translate-y-1/2" />
       <div className="absolute bottom-0 right-0 w-72 h-72 rounded-full blur-3xl opacity-40 translate-x-1/2 translate-y-1/2" />
 
       <motion.div
@@ -48,10 +48,12 @@ const AboutUs = () => {
             style={noCopyStyle}
           >
             AlgoTwist is a leading digital agency marketing powered by a team of{" "}
-            <span className="text-accent font-semibold">MNC experts</span>,
-            creative visionaries, and technology enthusiasts. We are recognized
-            for delivering world-class digital solutions that drive real
-            business growth.
+            <span className="text-highlightText font-semibold">
+              MNC experts
+            </span>
+            , creative visionaries, and technology enthusiasts. We are
+            recognized for delivering world-class digital solutions that drive
+            real business growth.
           </motion.p>
 
           <MouseGlowCard>
@@ -78,13 +80,18 @@ const AboutUs = () => {
                 </li>
                 <li>
                   Cutting-edge strategies in{" "}
-                  <span className="text-accent">SEO</span>,{" "}
-                  <span className="text-white">performance marketing</span>, and{" "}
-                  <span className="text-accent">social media</span>.
+                  <span className="text-highlightText">SEO</span>,{" "}
+                  <span className="text-textPrimary">
+                    performance marketing
+                  </span>
+                  , and <span className="text-highlightText">social media</span>
+                  .
                 </li>
                 <li>
                   Client-centric approach:{" "}
-                  <span className="text-white">Your success is our mission.</span>
+                  <span className="text-textPrimary">
+                    Your success is our mission.
+                  </span>
                 </li>
               </ul>
             </motion.div>
@@ -106,7 +113,7 @@ const AboutUs = () => {
             initial={{ opacity: 0, x: -40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 1.1, duration: 0.8 }}
-            className="text-white text-md font-semibold"
+            className="text-textPrimary text-md font-semibold"
             style={noCopyStyle}
           >
             Partner with the best-partner with AlgoTwist. Experience the
@@ -119,7 +126,7 @@ const AboutUs = () => {
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="relative rounded-xl overflow-hidden shadow-[5px_5px_rgba(0,_98,_90,_0.4),_10px_10px_rgba(0,_98,_90,_0.3),_15px_15px_rgba(0,_98,_90,_0.2),_20px_20px_rgba(0,_98,_90,_0.1),_25px_25px_rgba(0,_98,_90,_0.05)]"
+          className="relative rounded-xl overflow-hidden shadow-[5px_5px_rgba(255,_0,_0,_0.2),_10px_10px_rgba(255,_0,_0,_0.15),_15px_15px_rgba(255,_0,_0,_0.1),_20px_20px_rgba(255,_0,_0,_0.08),_25px_25px_rgba(255,_0,_0,_0.05),_0_0_30px_rgba(255,_0,_0,_0.1)]"
           style={noCopyStyle}
         >
           <img
@@ -129,7 +136,7 @@ const AboutUs = () => {
             draggable={false}
           />
           {/* Badge or overlay for credibility */}
-          <div className="absolute bottom-4 left-4 bg-backgroundMuted/90 text-white px-4 py-1 rounded-full text-sm font-semibold shadow-md border border-white">
+          <div className="absolute bottom-4 left-4 bg-backgroundMuted/90 text-textPrimary px-4 py-1 rounded-full text-sm font-semibold shadow-md border border-white">
             MNC Experts
           </div>
         </motion.div>

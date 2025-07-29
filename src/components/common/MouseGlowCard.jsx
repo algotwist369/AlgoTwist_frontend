@@ -25,9 +25,9 @@ const MouseGlowCard = ({ children, className = "" }) => {
     >
       {/* Glow border effect */}
       <motion.div
-        className="pointer-events-none absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-cyan-400 z-10"
+        className="pointer-events-none absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-highlightTextSecondary z-10"
         style={{
-          background: `radial-gradient(circle at ${coords.x}% ${coords.y}%, rgba(0,255,255,0.2), transparent 60%)`,
+          background: `radial-gradient(circle at ${coords.x}% ${coords.y}%, rgba(145, 32, 22), transparent 60%)`,
           maskImage: "linear-gradient(white, white)",
           WebkitMaskImage: "linear-gradient(white, white)",
         }}

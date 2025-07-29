@@ -23,7 +23,7 @@ const uiuxPlans = [
       "Design System & Components",
       "UX Audit + Suggestions",
     ],
-    idealFor: "Startups & Growing Products",
+    idealFor: "Startups & Growing services",
   },
   {
     type: "Enterprise Design System",
@@ -35,7 +35,7 @@ const uiuxPlans = [
       "Developer Handoff Files",
       "Brand Consistency & Accessibility",
     ],
-    idealFor: "Large Applications & SaaS Products",
+    idealFor: "Large Applications & SaaS services",
   },
 ];
 

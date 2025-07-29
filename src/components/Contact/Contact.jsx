@@ -30,8 +30,8 @@ const Contact = () => {
             Great things start with a conversation!
           </h2>
           <div className="flex justify-center items-center gap-2 mb-2">
-            <span className="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
-            <span className="text-blue-600 font-medium uppercase tracking-wider text-sm">
+            <span className="w-2 h-2 rounded-full bg-highlightText animate-pulse"></span>
+            <span className="text-highlightText font-medium uppercase tracking-wider text-sm">
               Open to:
             </span>
           </div>
@@ -59,7 +59,7 @@ const Contact = () => {
                 <div className="text-xl font-bold text-textPrimary dark:text-white mb-1">
                   {info.title}
                 </div>
-                <div className="text-textSecondary dark:text-gray-300 text-base font-medium">
+                <div className="text-textSecondary dark:text-textSecondary text-base font-medium">
                   {info.subtitle}
                 </div>
               </div>

@@ -455,7 +455,7 @@ export const mergedWebsitePackages = [
     features:
       "Product catalog, shopping cart, secure checkout, multiple payment gateways, inventory management, user login, order tracking, mobile optimization, PWA upgrade, admin panel, analytics dashboard, WhatsApp order notifications, custom branding, SEO & speed optimized, and much more...",
     idealFor:
-      "Online stores, D2C brands, fashion, electronics, local deliveries, handcrafted products, startups entering e-commerce, and expanding retail businesses.",
+      "Online stores, D2C brands, fashion, electronics, local deliveries, handcrafted services, startups entering e-commerce, and expanding retail businesses.",
     bonusServices: [
       "Admin Panel",
       "Payment Gateway Integration",
@@ -684,7 +684,7 @@ export const appPlans = [
       "Basic UI design",
       "No backend (local data only)",
     ],
-    idealFor: "MVPs, small tools, basic products",
+    idealFor: "MVPs, small tools, basic services",
   },
   {
     type: "Standard App",
@@ -867,7 +867,7 @@ export const digitalServices = [
     service: "Influencer Marketing",
     price: "₹10,000 – ₹2,00,000+",
     details: "Collaboration with micro/macro influencers across platforms",
-    idealFor: "Fashion, lifestyle, food, tech products",
+    idealFor: "Fashion, lifestyle, food, tech services",
   },
   {
     service: "Logo & Brand Design",

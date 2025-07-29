@@ -27,24 +27,14 @@ const TableRow = ({ pkg }) => (
 );
 
 const WebDevelopment = () => {
-  const [showPopup, setShowPopup] = useState(false);
-
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-    const timer = setTimeout(() => {
-      setShowPopup(true);
-    }, 15000);
-    return () => clearTimeout(timer);
   }, []);
 
   return (
     <section className="bg-[#0e0e0e] text-white pt-20">
       {/* Popup */}
-      <ServicePopup show={showPopup} onClose={() => setShowPopup(false)} />
+      <ServicePopup/>
       {/* <BannerImage /> */}
 
       <div className="py-10 md:py-16 px-2 md:px-4">
@@ -56,8 +46,8 @@ const WebDevelopment = () => {
             </h2>
 
             <div className="w-full min-w-[600px] md:min-w-0">
-              <table className="min-w-full bg-[#1a1a1a] border border-gray-700 rounded-lg shadow-lg text-xs md:text-sm">
-                <thead className="bg-blue-900 text-textPrimary">
+              <table className="min-w-full bg-backgroundPrimary border border-borderColor rounded-lg shadow-lg text-xs md:text-sm">
+                <thead className="bg-highlightText text-textPrimary">
                   <tr>
                     <th className="p-2 md:p-3 text-left font-semibold">
                       Package Type
@@ -104,7 +94,7 @@ const WebDevelopment = () => {
           <div className="overflow-x-auto mb-8">
             <div className="bg-[#1a1a1a] rounded-xl shadow-lg border border-gray-700 overflow-hidden min-w-[500px] md:min-w-0">
               <table className="min-w-full text-xs md:text-sm">
-                <thead className="bg-blue-900 text-left font-semibold text-textPrimary">
+                <thead className="bg-highlightText text-left font-semibold text-textPrimary">
                   <tr>
                     <th className="p-2 md:p-4 border-b border-gray-600">
                       Service

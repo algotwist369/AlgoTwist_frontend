@@ -17,7 +17,7 @@ const services = [
     title: "Web Development",
     link: "/web-development",
     startingPrice: 4000,
-    icon: <FaCode size={28} className="text-accent" />,
+    icon: <FaCode size={28} className="text-highlightText" />,
     description:
       "Robust, scalable, and SEO-optimized websites tailored to your business goals.",
   },
@@ -25,7 +25,7 @@ const services = [
     title: "App Development",
     link: "/app-development",
     startingPrice: 5000,
-    icon: <FaMobileAlt size={28} className="text-accent" />,
+    icon: <FaMobileAlt size={28} className="text-highlightText" />,
     description:
       "Cutting-edge native and cross-platform mobile apps built for performance.",
   },
@@ -33,7 +33,7 @@ const services = [
     title: "Digital Marketing",
     link: "/digital-marketing",
     startingPrice: 3000,
-    icon: <FaRocket size={28} className="text-accent" />,
+    icon: <FaRocket size={28} className="text-highlightText" />,
     description:
       "Full-funnel digital strategies that maximize your brand's reach and ROI.",
   },
@@ -41,7 +41,7 @@ const services = [
     title: "UI/UX Design",
     link: "/ui-ux-design",
     startingPrice: 2500,
-    icon: <FaPaintBrush size={28} className="text-accent" />,
+    icon: <FaPaintBrush size={28} className="text-highlightText" />,
     description:
       "User-centered, visually compelling interfaces for intuitive navigation.",
   },
@@ -49,7 +49,7 @@ const services = [
     title: "Graphic Designing",
     link: "/graphic-designing",
     startingPrice: 2000,
-    icon: <FaPenNib size={28} className="text-accent" />,
+    icon: <FaPenNib size={28} className="text-highlightText" />,
     description:
       "Brand identities, illustrations, and marketing creatives that stand out.",
   },
@@ -57,7 +57,7 @@ const services = [
     title: "Social Media Marketing",
     link: "/social-media-marketing",
     startingPrice: 3500,
-    icon: <TiMessages size={28} className="text-accent" />,
+    icon: <TiMessages size={28} className="text-highlightText" />,
     description:
       "Engaging content creation and community management, marketing to boost your online presence.",
   },
@@ -89,13 +89,13 @@ const ServicesPage = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-secondary_bg rounded-2xl p-6 shadow-md hover:shadow-lg hover:shadow-accent/40 transition duration-300 group border border-borderColor cursor-pointer"
+              className="bg-secondary_bg rounded-2xl p-6 shadow-md hover:shadow-lg hover:shadow-highlightText/40 transition duration-300 group border border-borderColor cursor-pointer"
             >
               <div className="flex items-center gap-4 mb-4">
                 <div className="p-3 bg-hover_bg rounded-full transition group-hover:scale-105">
                   {service.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-white group-hover:text-accent transition">
+                <h3 className="text-xl font-semibold text-white group-hover:text-highlightText transition">
                   {service.title}
                 </h3>
               </div>

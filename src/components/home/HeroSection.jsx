@@ -8,7 +8,7 @@ const heroSlide = {
   title: "All-in-one IT services for the modern enterprise",
   description:
     "Empower your business with future-ready digital solutions. From automation to cloud integration, we deliver strategies that scale.",
-  cta: { text: "Explore Solutions" },
+  cta: { text: "Get Started" },
 };
 
 const HeroSection = () => {
