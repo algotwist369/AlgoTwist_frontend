@@ -1,4 +1,158 @@
-// websitePricingData
+export const serviceTypes = [
+  {
+    type: "Website Development",
+    subType: [
+      {
+        type: "Static Website",
+      },
+      {
+        type: "Business Website",
+      },
+      {
+        type: "E-commerce Website",
+      },
+      {
+        type: "Portfolio Website",
+      },
+      {
+        type: "Landing Page",
+      },
+      {
+        type: "Educational / LMS Website",
+      },
+      {
+        type: "NGO Website",
+      },
+      {
+        type: "News / Magazine Site",
+      },
+      {
+        type: "Real Estate Website",
+      },
+      {
+        type: "Marketplace / SaaS Platform",
+      },
+      {
+        type: "Custom Web Application",
+      },
+      {
+        type: "AI-Powered Website",
+      },
+      {
+        type: "Performance & Accessibility Optimized Site",
+      },
+      {
+        type: "Admin Panel",
+      },
+      {
+        type: "Payment Gateway Integration",
+      },
+      {
+        type: "User Authentication (Login/Signup)",
+      },
+      {
+        type: "Blog/News Module",
+      },
+    ]
+  },
+  {
+    type: "App Development",
+    subType: [
+      {
+        type: "Mobile App",
+      },
+      {
+        type: "Web App",
+      },
+      {
+        type: "Desktop App",
+      },
+    ]
+  },
+  {
+    type: "Digital Marketing",
+    subType: [
+      {
+        type: "Search Engine Optimization (SEO)",
+      },
+      {
+        type: "Pay-per-Click (PPC) Advertising",
+      },
+      {
+        type: "Social Media Marketing",
+      },
+      {
+        type: "Email Marketing",
+      },
+      {
+        type: "Content Marketing",
+      },
+      {
+        type: "Video Marketing",
+      },
+    ]
+  },
+  {
+    type: "Social Media Management",
+    subType: [
+      {
+        type: "Facebook Management",
+      },
+      {
+        type: "Twitter Management",
+      },
+      {
+        type: "Instagram Management",
+      },
+      {
+        type: "LinkedIn Management",
+      },
+      {
+        type: "YouTube Management",
+      },
+      {
+        type: "Pinterest Management",
+      },
+    ]
+  },
+  {
+    type: "UI/UX Design",
+    subType: [
+      {
+        type: "User Interface (UI) Design",
+      },
+      {
+        type: "User Experience (UX) Design",
+      },
+    ]
+  },
+  {
+    type: "Graphical Design",
+    subType: [
+      {
+        type: "Logo Design",
+      },
+      {
+        type: "Banner Design",
+      },
+      {
+        type: "Infographic Design",
+      },
+      {
+        type: "Print Design",
+      },
+      {
+        type: "Web Design",
+      },
+      {
+        type: "Branding Design",
+      },
+    ]
+  },
+]
+
+
+
 export const websiteTypes = [
   {
     type: "Static Website",
@@ -99,323 +253,6 @@ export const websiteTypes = [
     idealFor: "All businesses valuing speed and SEO",
   },
 ];
-
-// export const mergedWebsitePackages = [
-//   {
-//     type: "Static Website",
-//     price: "₹5,000 – ₹12,000",
-//     features: "1–5 pages, responsive design, basic contact form",
-//     idealFor: "Portfolio, brochure, personal websites",
-//     additionalServices: [
-//       "SEO Optimization (On-page)",
-//       "Hosting & Domain Setup",
-//       "Free SSL & Security Setup",
-//       "Free Website Audit & Consultation",
-//       "Accessibility Optimization",
-//       "Performance Optimization (Speed)",
-//       "Custom Branding & Logo Design",
-//       "Google Analytics & Tag Manager Setup",
-//       "Ongoing Maintenance (1st Year Free)",
-//       "AI Chatbot Integration"
-//     ]
-//   },
-//   {
-//     type: "Business Website",
-//     price: "₹12,000 – ₹30,000",
-//     features: "5–10 pages, service pages, inquiry form, map, blog",
-//     idealFor: "Local businesses, startups",
-//     additionalServices: [
-//       "Blog/News Module",
-//       "WhatsApp Chat Integration",
-//       "SEO Optimization (On-page)",
-//       "Hosting & Domain Setup",
-//       "Free SSL & Security Setup",
-//       "Free Website Audit & Consultation",
-//       "Accessibility Optimization",
-//       "Performance Optimization (Speed)",
-//       "Custom Branding & Logo Design",
-//       "Google Analytics & Tag Manager Setup",
-//       "Ongoing Maintenance (1st Year Free)",
-//       "AI Chatbot Integration",
-//       "Multi-language Support"
-//     ]
-//   },
-//   {
-//     type: "E-commerce Website",
-//     price: "₹30,000 – ₹1,20,000+",
-//     features: "Product listing, cart, checkout, user login",
-//     idealFor: "Online stores, D2C brands",
-//     additionalServices: [
-//       "Admin Panel",
-//       "Payment Gateway Integration",
-//       "WhatsApp Chat Integration",
-//       "SEO Optimization (On-page)",
-//       "Hosting & Domain Setup",
-//       "Free SSL & Security Setup",
-//       "Free Website Audit & Consultation",
-//       "Accessibility Optimization",
-//       "Performance Optimization (Speed)",
-//       "Custom Branding & Logo Design",
-//       "Google Analytics & Tag Manager Setup",
-//       "Ongoing Maintenance (1st Year Free)",
-//       "AI Chatbot Integration",
-//       "Multi-language Support",
-//       "PWA (Progressive Web App) Upgrade"
-//     ]
-//   },
-//   {
-//     type: "Portfolio Website",
-//     price: "₹8,000 – ₹20,000",
-//     features: "Projects, gallery, testimonials, resume download",
-//     idealFor: "Freelancers, photographers, designers",
-//     additionalServices: [
-//       "WhatsApp Chat Integration",
-//       "SEO Optimization (On-page)",
-//       "Hosting & Domain Setup",
-//       "Free SSL & Security Setup",
-//       "Free Website Audit & Consultation",
-//       "Accessibility Optimization",
-//       "Performance Optimization (Speed)",
-//       "Custom Branding & Logo Design",
-//       "Google Analytics & Tag Manager Setup",
-//       "Ongoing Maintenance (1st Year Free)",
-//       "AI Chatbot Integration"
-//     ]
-//   },
-//   {
-//     type: "Landing Page",
-//     price: "₹3,000 – ₹9,000",
-//     features: "One scrollable section, CTA, form, animation",
-//     idealFor: "Ad campaigns, new product launches",
-//     additionalServices: [
-//       "SEO Optimization (On-page)",
-//       "Hosting & Domain Setup",
-//       "Free SSL & Security Setup",
-//       "Free Website Audit & Consultation",
-//       "Accessibility Optimization",
-//       "Performance Optimization (Speed)",
-//       "Custom Branding & Logo Design",
-//       "Google Analytics & Tag Manager Setup",
-//       "Ongoing Maintenance (1st Year Free)",
-//       "AI Chatbot Integration"
-//     ]
-//   },
-//   {
-//     type: "Educational Website",
-//     price: "₹25,000 – ₹1,00,000",
-//     features: "Course listing, student login, quiz, videos",
-//     idealFor: "Institutes, coaching centers, LMS platforms",
-//     additionalServices: [
-//       "User Authentication (Login/Signup)",
-//       "Blog/News Module",
-//       "Basic Admin Analytics Dashboard",
-//       "SEO Optimization (On-page)",
-//       "Hosting & Domain Setup",
-//       "Free SSL & Security Setup",
-//       "Free Website Audit & Consultation",
-//       "Accessibility Optimization",
-//       "Performance Optimization (Speed)",
-//       "Custom Branding & Logo Design",
-//       "Google Analytics & Tag Manager Setup",
-//       "Ongoing Maintenance (1st Year Free)",
-//       "AI Chatbot Integration",
-//       "Multi-language Support"
-//     ]
-//   },
-//   {
-//     type: "NGO Website",
-//     price: "₹10,000 – ₹25,000",
-//     features: "About cause, donation, volunteer form, gallery",
-//     idealFor: "NGOs, non-profits",
-//     additionalServices: [
-//       "Payment Gateway Integration",
-//       "SEO Optimization (On-page)",
-//       "Hosting & Domain Setup",
-//       "Free SSL & Security Setup",
-//       "Free Website Audit & Consultation",
-//       "Accessibility Optimization",
-//       "Performance Optimization (Speed)",
-//       "Custom Branding & Logo Design",
-//       "Google Analytics & Tag Manager Setup",
-//       "Ongoing Maintenance (1st Year Free)",
-//       "AI Chatbot Integration"
-//     ]
-//   },
-//   {
-//     type: "News / Magazine Site",
-//     price: "₹20,000 – ₹60,000",
-//     features: "Categories, CMS, search, comments",
-//     idealFor: "News portals, bloggers",
-//     additionalServices: [
-//       "Blog/News Module",
-//       "SEO Optimization (On-page)",
-//       "Hosting & Domain Setup",
-//       "Free SSL & Security Setup",
-//       "Free Website Audit & Consultation",
-//       "Accessibility Optimization",
-//       "Performance Optimization (Speed)",
-//       "Custom Branding & Logo Design",
-//       "Google Analytics & Tag Manager Setup",
-//       "Ongoing Maintenance (1st Year Free)",
-//       "AI Chatbot Integration"
-//     ]
-//   },
-//   {
-//     type: "Job Portal",
-//     price: "₹40,000 – ₹1,50,000",
-//     features: "Job listings, resumes, filters, admin approval",
-//     idealFor: "Recruitment agencies, career platforms",
-//     additionalServices: [
-//       "Admin Panel",
-//       "User Authentication (Login/Signup)",
-//       "SEO Optimization (On-page)",
-//       "Hosting & Domain Setup",
-//       "Free SSL & Security Setup",
-//       "Free Website Audit & Consultation",
-//       "Accessibility Optimization",
-//       "Performance Optimization (Speed)",
-//       "Custom Branding & Logo Design",
-//       "Google Analytics & Tag Manager Setup",
-//       "Ongoing Maintenance (1st Year Free)",
-//       "AI Chatbot Integration"
-//     ]
-//   },
-//   {
-//     type: "Real Estate Website",
-//     price: "₹30,000 – ₹1,20,000",
-//     features: "Property listings, filters, contact agent",
-//     idealFor: "Builders, realtors, agencies",
-//     additionalServices: [
-//       "SEO Optimization (On-page)",
-//       "Hosting & Domain Setup",
-//       "Free SSL & Security Setup",
-//       "Free Website Audit & Consultation",
-//       "Accessibility Optimization",
-//       "Performance Optimization (Speed)",
-//       "Custom Branding & Logo Design",
-//       "Google Analytics & Tag Manager Setup",
-//       "Ongoing Maintenance (1st Year Free)",
-//       "AI Chatbot Integration"
-//     ]
-//   },
-//   {
-//     type: "Multi-Vendor Marketplace",
-//     price: "₹80,000 – ₹3,00,000",
-//     features: "Vendor login, commissions, cart, payouts",
-//     idealFor: "Amazon-style e-commerce platforms",
-//     additionalServices: [
-//       "Admin Panel",
-//       "Payment Gateway Integration",
-//       "User Authentication (Login/Signup)",
-//       "Basic Admin Analytics Dashboard",
-//       "SEO Optimization (On-page)",
-//       "Hosting & Domain Setup",
-//       "Free SSL & Security Setup",
-//       "Free Website Audit & Consultation",
-//       "Accessibility Optimization",
-//       "Performance Optimization (Speed)",
-//       "Custom Branding & Logo Design",
-//       "Google Analytics & Tag Manager Setup",
-//       "Ongoing Maintenance (1st Year Free)",
-//       "AI Chatbot Integration"
-//     ]
-//   },
-//   {
-//     type: "Custom Web Application",
-//     price: "₹1,00,000 – ₹5,00,000+",
-//     features: "Tailor-made features, dashboard, APIs",
-//     idealFor: "SaaS, platforms, startups",
-//     additionalServices: [
-//       "Admin Panel",
-//       "Payment Gateway Integration",
-//       "User Authentication (Login/Signup)",
-//       "Basic Admin Analytics Dashboard",
-//       "SEO Optimization (On-page)",
-//       "Hosting & Domain Setup",
-//       "Free SSL & Security Setup",
-//       "Free Website Audit & Consultation",
-//       "Accessibility Optimization",
-//       "Performance Optimization (Speed)",
-//       "Custom Branding & Logo Design",
-//       "Google Analytics & Tag Manager Setup",
-//       "Ongoing Maintenance (1st Year Free)",
-//       "AI Chatbot Integration"
-//     ]
-//   },
-//   {
-//     type: "AI-Powered Website",
-//     price: "₹40,000 – ₹2,00,000",
-//     features: "AI chatbot, personalized content, smart recommendations, analytics dashboard",
-//     idealFor: "Businesses seeking automation, customer support, and engagement",
-//     additionalServices: [
-//       "AI Chatbot Integration",
-//       "SEO Optimization (On-page)",
-//       "Hosting & Domain Setup",
-//       "Free SSL & Security Setup",
-//       "Free Website Audit & Consultation",
-//       "Accessibility Optimization",
-//       "Performance Optimization (Speed)",
-//       "Custom Branding & Logo Design",
-//       "Google Analytics & Tag Manager Setup",
-//       "Ongoing Maintenance (1st Year Free)"
-//     ]
-//   },
-//   {
-//     type: "Multi-Language Website",
-//     price: "₹20,000 – ₹80,000",
-//     features: "Multi-language support, language switcher, localized SEO",
-//     idealFor: "Global businesses, educational platforms, NGOs",
-//     additionalServices: [
-//       "Multi-language Support",
-//       "SEO Optimization (On-page)",
-//       "Hosting & Domain Setup",
-//       "Free SSL & Security Setup",
-//       "Free Website Audit & Consultation",
-//       "Accessibility Optimization",
-//       "Performance Optimization (Speed)",
-//       "Custom Branding & Logo Design",
-//       "Google Analytics & Tag Manager Setup",
-//       "Ongoing Maintenance (1st Year Free)",
-//       "AI Chatbot Integration"
-//     ]
-//   },
-//   {
-//     type: "Accessible Website",
-//     price: "₹15,000 – ₹60,000",
-//     features: "ADA/WCAG compliance, screen reader support, keyboard navigation",
-//     idealFor: "Public sector, NGOs, inclusive brands",
-//     additionalServices: [
-//       "Accessibility Optimization",
-//       "SEO Optimization (On-page)",
-//       "Hosting & Domain Setup",
-//       "Free SSL & Security Setup",
-//       "Free Website Audit & Consultation",
-//       "Performance Optimization (Speed)",
-//       "Custom Branding & Logo Design",
-//       "Google Analytics & Tag Manager Setup",
-//       "Ongoing Maintenance (1st Year Free)",
-//       "AI Chatbot Integration"
-//     ]
-//   },
-//   {
-//     type: "Performance-Optimized Website",
-//     price: "₹10,000 – ₹40,000",
-//     features: "Lightning-fast load, image optimization, code minification, CDN integration",
-//     idealFor: "All businesses valuing speed and SEO",
-//     additionalServices: [
-//       "Performance Optimization (Speed)",
-//       "SEO Optimization (On-page)",
-//       "Hosting & Domain Setup",
-//       "Free SSL & Security Setup",
-//       "Free Website Audit & Consultation",
-//       "Accessibility Optimization",
-//       "Custom Branding & Logo Design",
-//       "Google Analytics & Tag Manager Setup",
-//       "Ongoing Maintenance (1st Year Free)",
-//       "AI Chatbot Integration"
-//     ]
-//   }
-// ];
 
 export const mergedWebsitePackages = [
   {

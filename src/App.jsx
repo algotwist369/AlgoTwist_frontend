@@ -1,11 +1,8 @@
-import React, { createContext, useContext, useState, useEffect } from "react";
 import {
   BrowserRouter as Router,
   Routes,
   Route,
-  useLocation,
 } from "react-router-dom";
-import { motion, AnimatePresence } from "framer-motion";
 import HomePage from "./pages/HomePage";
 import BlogPage from "./pages/BlogPage";
 import BlogReadPage from "./pages/BlogReadPage";

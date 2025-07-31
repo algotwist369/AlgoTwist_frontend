@@ -12,7 +12,6 @@ import WorkflowSteps from "../ourWorkFlow/WorkflowSteps";
 import AboutUs from "./AboutUs";
 import SocialMedia from "../social/SocialMedia";
 import ClientsReview from "./ClientsReview";
-import TechnologiesSection from "../services/TechnologiesSection";
 
 const Home = () => {
   useEffect(() => {
@@ -24,7 +23,6 @@ const Home = () => {
       <HeroSection />
       <AboutUs />
       <Services />
-      {/* <TechnologiesSection /> */}
       <WorkflowSteps />
       <OurClient />
       <SocialMedia />

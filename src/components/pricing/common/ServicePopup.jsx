@@ -8,7 +8,7 @@ const ServicePopup = () => {
     window.scrollTo(0, 0);
     const timer = setTimeout(() => {
       setShowPopup(true);
-    }, 8000);
+    }, 10000);
     return () => clearTimeout(timer);
   }, []);
 

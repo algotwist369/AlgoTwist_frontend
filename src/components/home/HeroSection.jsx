@@ -14,14 +14,11 @@ const heroSlide = {
 const HeroSection = () => {
   return (
     <section
-      className="relative w-full h-screen flex items-center justify-center bg-cover bg-center overflow-hidden"
+      className="relative w-full min-h-[60vh] md:min-h-screen flex items-center justify-center bg-cover bg-center overflow-hidden"
       style={{
         backgroundImage: `url('${heroSlide.image}')`,
-        /* Disable text selection */
         userSelect: "none",
-        /* Disable touch callout on iOS */
         WebkitTouchCallout: "none",
-        /* Disable context menu on right-click */
       }}
       onContextMenu={(e) => e.preventDefault()}
     >

@@ -18,7 +18,7 @@ const MilestoneBanner = () => {
       <div className="flex items-center gap-2">
         <MdOutlineCelebration className="text-2xl text-highlightText animate-bounce" />
         <h1 className="font-semibold">
-          We’ve just crossed 75+ Projects Delivered!
+          We’ve just crossed 100+ Projects Delivered!
         </h1>
       </div>
       <button onClick={handleClick}>

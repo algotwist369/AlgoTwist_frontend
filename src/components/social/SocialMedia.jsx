@@ -30,14 +30,14 @@ const socialLinks = [
     type: "iframe",
     color: "bg-backgroundPrimary ",
   },
-  {
-    name: "Pinterest",
-    icon: <FaPinterestP />,
-    embedUrl: "https://www.pinterest.com/algotwist/",
-    profileUrl: "https://www.pinterest.com/algotwist/",
-    type: "pinterest",
-    color: "bg-red-500  ",
-  },
+  // {
+  //   name: "Pinterest",
+  //   icon: <FaPinterestP />,
+  //   embedUrl: "https://www.pinterest.com/algotwist/",
+  //   profileUrl: "https://www.pinterest.com/algotwist/",
+  //   type: "pinterest",
+  //   color: "bg-red-500  ",
+  // },
 ];
 
 const SocialMedia = () => {
@@ -59,7 +59,7 @@ const SocialMedia = () => {
         {/* Carousel container */}
         <div className="relative">
           <div className="overflow-hidden" ref={emblaRef}>
-            <div className="flex gap-6">
+            <div className="flex gap-14">
               {socialLinks.map((platform, index) => (
                 <div
                   key={index}

@@ -13,7 +13,6 @@ import {
   Palette,
 } from "lucide-react";
 import { Link } from "react-router-dom";
-import { servicesData } from "../../data/pricingData";
 import WhatsAppButton from "./WhatsAppButton";
 import MilestoneBanner from "./MilestoneBanner";
 
@@ -23,9 +22,7 @@ const Navebar = () => {
   const [pricingDropdown, setPricingDropdown] = useState(false);
   const servicesDropdownRef = useRef(null);
   const pricingDropdownRef = useRef(null);
-  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
-  const [mobilePricingOpen, setMobilePricingOpen] = useState(false);
-
+ 
   const url1 =
     "https://res.cloudinary.com/djdrpfhdz/image/upload/v1753774027/ALGO_TWIST_fiprfh.png";
 
@@ -99,11 +96,9 @@ const Navebar = () => {
           </div>
 
           {isMenuOpen && (
-            <div className="md:hidden mt-4 pb-4 border-t border-border bg-slate-700">
+            <div className="md:hidden mt-4 pb-4 border-t border-border bg-backgroundPrimary">
               <div className="flex flex-col space-y-2 mt-4">
-                <button className="bg-primary text-onPrimary px-6 py-2 rounded-lg w-fit font-medium mt-2 ml-2 shadow hover:bg-primary/90 transition-colors border-2 border-primary hover:scale-105 active:scale-95 duration-150">
-                  Get Quote
-                </button>
+                <WhatsAppButton active={false} text={"Free Consultation"} />
               </div>
             </div>
           )}
