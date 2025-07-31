@@ -4,6 +4,36 @@ import { FaTimes } from "react-icons/fa";
 import { serviceTypes } from "../../data/pricingData.js";
 import Button from "../common/Button.jsx";
 
+// ✅ Reusable input component
+const FormInput = ({
+  label,
+  type = "text",
+  name,
+  value,
+  onChange,
+  placeholder,
+  required = false,
+  autoComplete,
+  optional = false,
+}) => (
+  <div>
+    <label className="block text-textPrimary mb-2">
+      {label}{" "}
+      {optional && <span className="text-sm text-gray-400">(Optional)</span>}
+    </label>
+    <input
+      type={type}
+      name={name}
+      value={value}
+      onChange={onChange}
+      required={required}
+      autoComplete={autoComplete}
+      placeholder={placeholder}
+      className="w-full bg-backgroundHover border border-borderColor rounded-md px-4 py-3 text-sm sm:text-base text-textPrimary focus:outline-none focus:ring-2 focus:ring-highlightText/50"
+    />
+  </div>
+);
+ 
 const PricingForm = ({
   selectedService,
   formData,
@@ -13,12 +43,12 @@ const PricingForm = ({
   setShowForm,
 }) => {
   return (
-    <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 p-4">
+    <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 px-4 py-6 overflow-y-auto ">
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         exit={{ opacity: 0, scale: 0.9 }}
-        className="bg-backgroundSecondary rounded-2xl p-6 md:p-8 w-full max-w-3xl max-h-[90vh]  border border-borderColor shadow-xl"
+        className="bg-backgroundSecondary rounded-2xl p-5 sm:p-6 md:p-8 w-full max-w-3xl border border-borderColor shadow-xl overflow-auto lg:overflow-y-hidden max-h-[90vh]"
       >
         <div className="flex justify-between items-center mb-6">
           <h3 className="text-2xl font-bold text-textPrimary">
@@ -29,6 +59,7 @@ const PricingForm = ({
           <button
             onClick={() => setShowForm(false)}
             className="p-2 hover:bg-backgroundHover rounded-full transition"
+            aria-label="Close form"
           >
             <FaTimes className="text-textPrimary" />
           </button>
@@ -64,46 +95,38 @@ const PricingForm = ({
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="space-y-5">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-              <div>
-                <label className="block text-textPrimary mb-2">Name</label>
-                <input
-                  type="text"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                  placeholder="Enter your name"
-                  className="w-full bg-backgroundHover border border-borderColor rounded-lg px-4 py-3 text-textPrimary focus:outline-none focus:ring-2 focus:ring-highlightText/50"
-                />
-              </div>
-              <div>
-                <label className="block text-textPrimary mb-2">Email</label>
-                <input
-                  type="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                  placeholder="youremail@gmail.com"
-                  className="w-full bg-backgroundHover border border-borderColor rounded-lg px-4 py-3 text-textPrimary focus:outline-none focus:ring-2 focus:ring-highlightText/50"
-                />
-              </div>
-            </div>
-
-            <div>
-              <label className="block text-textPrimary mb-2">
-                Phone (Optional)
-              </label>
-              <input
-                type="tel"
-                name="phone"
-                value={formData.phone}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <FormInput
+                label="Name"
+                name="name"
+                value={formData.name}
                 onChange={handleChange}
-                placeholder="+91 91******18"
-                className="w-full bg-backgroundHover border border-borderColor rounded-lg px-4 py-3 text-textPrimary focus:outline-none focus:ring-2 focus:ring-highlightText/50"
+                required
+                autoComplete="name"
+                placeholder="Enter your name"
+              />
+              <FormInput
+                label="Email"
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+                autoComplete="email"
+                placeholder="youremail@gmail.com"
               />
             </div>
+
+            <FormInput
+              label="Phone"
+              name="phone"
+              type="tel"
+              value={formData.phone}
+              onChange={handleChange}
+              autoComplete="tel"
+              optional
+              placeholder="+91 91******18"
+            />
 
             <div>
               <label className="block text-textPrimary mb-2">
@@ -114,7 +137,7 @@ const PricingForm = ({
                 value={formData.businessType}
                 onChange={handleChange}
                 required
-                className="w-full bg-backgroundHover border border-borderColor rounded-lg px-4 py-3 text-textPrimary focus:outline-none focus:ring-2 focus:ring-highlightText/50"
+                className="w-full bg-backgroundHover border border-borderColor rounded-md px-4 py-3 text-sm sm:text-base text-textPrimary focus:outline-none focus:ring-2 focus:ring-highlightText/50"
               >
                 <option value="">Select your business type</option>
                 {serviceTypes.map((type, index) => (
@@ -136,12 +159,12 @@ const PricingForm = ({
                   value={formData.subType}
                   onChange={handleChange}
                   required
-                  className="w-full bg-backgroundHover border border-borderColor rounded-lg px-4 py-3 text-textPrimary focus:outline-none focus:ring-2 focus:ring-highlightText/50"
+                  className="w-full bg-backgroundHover border border-borderColor rounded-md px-4 py-3 text-sm sm:text-base text-textPrimary focus:outline-none focus:ring-2 focus:ring-highlightText/50"
                 >
                   <option value="">Select service sub-type</option>
                   {serviceTypes
-                    .find(type => type.type === formData.businessType)?.subType
-                    .map((subType, index) => (
+                    .find((type) => type.type === formData.businessType)
+                    ?.subType.map((subType, index) => (
                       <option key={index} value={subType.type}>
                         {subType.type}
                       </option>
@@ -160,12 +183,12 @@ const PricingForm = ({
                 onChange={handleChange}
                 required
                 rows="4"
-                className="w-full bg-backgroundHover border border-borderColor rounded-lg px-4 py-3 text-textPrimary focus:outline-none focus:ring-2 focus:ring-highlightText/50"
+                className="w-full bg-backgroundHover border border-borderColor rounded-md px-4 py-3 text-sm sm:text-base text-textPrimary focus:outline-none focus:ring-2 focus:ring-highlightText/50"
                 placeholder="Tell us about your project requirements..."
               ></textarea>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
                 <label className="block text-textPrimary mb-2">
                   Budget Range
@@ -175,7 +198,7 @@ const PricingForm = ({
                   value={formData.budget}
                   onChange={handleChange}
                   required
-                  className="w-full bg-backgroundHover border border-borderColor rounded-lg px-4 py-3 text-textPrimary focus:outline-none focus:ring-2 focus:ring-highlightText/50"
+                  className="w-full bg-backgroundHover border border-borderColor rounded-md px-4 py-3 text-sm sm:text-base text-textPrimary focus:outline-none focus:ring-2 focus:ring-highlightText/50"
                 >
                   <option value="">Select budget range</option>
                   <option value="₹5,000 - ₹15,000">₹5,000 - ₹15,000</option>
@@ -194,7 +217,7 @@ const PricingForm = ({
                   value={formData.timeline}
                   onChange={handleChange}
                   required
-                  className="w-full bg-backgroundHover border border-borderColor rounded-lg px-4 py-3 text-textPrimary focus:outline-none focus:ring-2 focus:ring-highlightText/50"
+                  className="w-full bg-backgroundHover border border-borderColor rounded-md px-4 py-3 text-sm sm:text-base text-textPrimary focus:outline-none focus:ring-2 focus:ring-highlightText/50"
                 >
                   <option value="">Select timeline</option>
                   <option value="Less than 2 weeks">Less than 2 weeks</option>
@@ -204,8 +227,9 @@ const PricingForm = ({
                 </select>
               </div>
             </div>
+
             <div className="pt-4">
-              <Button type="submit" children={"Submit Request"} />
+              <Button type="submit">Submit Request</Button>
             </div>
           </form>
         )}
