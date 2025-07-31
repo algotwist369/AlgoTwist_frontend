@@ -1,8 +1,5 @@
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-} from "react-router-dom";
+import { useEffect, useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import BlogPage from "./pages/BlogPage";
 import BlogReadPage from "./pages/BlogReadPage";
@@ -24,8 +21,25 @@ import SocialMediaMarketing from "./components/pricing/SocialMediaMarketing";
 import UiUxDesign from "./components/pricing/UiUxDesign";
 import NotFound from "./components/common/NotFound";
 import ServicePopup from "./components/pricing/common/ServicePopup";
+import StartAnimation from "./components/common/StartAnimation";
 
 const AppContent = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Show loading for 5 seconds
+    const timer = setTimeout(() => setLoading(false), 3000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="bg-backgroundPrimary h-screen w-full flex items-center justify-center">
+        <StartAnimation />
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-backgroundPrimary">
       <Navebar />
