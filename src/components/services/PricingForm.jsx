@@ -33,7 +33,7 @@ const FormInput = ({
     />
   </div>
 );
- 
+
 const PricingForm = ({
   selectedService,
   formData,
@@ -128,50 +128,52 @@ const PricingForm = ({
               placeholder="+91 91******18"
             />
 
-            <div>
-              <label className="block text-textPrimary mb-2">
-                Business Type
-              </label>
-              <select
-                name="businessType"
-                value={formData.businessType}
-                onChange={handleChange}
-                required
-                className="w-full bg-backgroundHover border border-borderColor rounded-md px-4 py-3 text-sm sm:text-base text-textPrimary focus:outline-none focus:ring-2 focus:ring-highlightText/50"
-              >
-                <option value="">Select your business type</option>
-                {serviceTypes.map((type, index) => (
-                  <option key={index} value={type.type}>
-                    {type.type}
-                  </option>
-                ))}
-                <option value="Other">Other (Please specify)</option>
-              </select>
-            </div>
-
-            {formData.businessType && formData.businessType !== "Other" && (
-              <div>
+            <div className="flex justify-between ">
+              <div >
                 <label className="block text-textPrimary mb-2">
-                  Service Sub-Type
+                  Business Type
                 </label>
                 <select
-                  name="subType"
-                  value={formData.subType}
+                  name="businessType"
+                  value={formData.businessType}
                   onChange={handleChange}
                   required
                   className="w-full bg-backgroundHover border border-borderColor rounded-md px-4 py-3 text-sm sm:text-base text-textPrimary focus:outline-none focus:ring-2 focus:ring-highlightText/50"
                 >
-                  <option value="">Select service sub-type</option>
-                  {serviceTypes
-                    .find((type) => type.type === formData.businessType)
-                    ?.subType.map((subType, index) => (
-                      <option key={index} value={subType.type}>
-                        {subType.type}
-                      </option>
-                    ))}
+                  <option value="">Select your business type</option>
+                  {serviceTypes.map((type, index) => (
+                    <option key={index} value={type.type}>
+                      {type.type}
+                    </option>
+                  ))}
+                  <option value="Other">Other (Please specify)</option>
                 </select>
               </div>
-            )}
+
+              {formData.businessType && formData.businessType !== "Other" && (
+                <div>
+                  <label className="block text-textPrimary mb-2">
+                    Service Sub-Type
+                  </label>
+                  <select
+                    name="subType"
+                    value={formData.subType}
+                    onChange={handleChange}
+                    required
+                    className="w-full bg-backgroundHover border border-borderColor rounded-md px-4 py-3 text-sm sm:text-base text-textPrimary focus:outline-none focus:ring-2 focus:ring-highlightText/50"
+                  >
+                    <option value="">Select service sub-type</option>
+                    {serviceTypes
+                      .find((type) => type.type === formData.businessType)
+                      ?.subType.map((subType, index) => (
+                        <option key={index} value={subType.type}>
+                          {subType.type}
+                        </option>
+                      ))}
+                  </select>
+                </div>
+              )}
+            </div>
 
             <div>
               <label className="block text-textPrimary mb-2">

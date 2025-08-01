@@ -13,7 +13,7 @@ const AboutUs = () => {
 
   return (
     <section
-      className="relative bg-backgroundPrimary text-textPrimary py-20 px-4 md:px-16 overflow-hidden"
+      className=" relative bg-backgroundPrimary text-textPrimary py-20 overflow-hidden"
       style={noCopyStyle}
       onContextMenu={(e) => e.preventDefault()}
     >
@@ -25,7 +25,7 @@ const AboutUs = () => {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, ease: "easeOut" }}
-        className="relative z-10 max-w-6xl mx-auto grid md:grid-cols-2 items-center gap-16"
+        className="relative z-10 max-w-[80rem] w-full mx-auto grid md:grid-cols-2 items-center gap-16"
         style={noCopyStyle}
       >
         {/* Text Content */}

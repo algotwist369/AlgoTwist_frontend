@@ -27,18 +27,7 @@ const Navebar = () => {
     "https://res.cloudinary.com/djdrpfhdz/image/upload/v1753774027/ALGO_TWIST_fiprfh.png";
 
   const menuItems = [];
-
-  const serviceIcons = {
-    "Web Development": Code,
-    "App Development": Rocket,
-    "Performance Marketing": TrendingUp,
-    "Digital PR": Globe,
-    "Lead Generation": Users,
-    "SEO Services": Search,
-    "Social Media Marketing": BarChart3,
-    "Logo Design & Branding": Palette,
-  };
-
+ 
   useEffect(() => {
     function handleClickOutside(event) {
       if (
@@ -65,8 +54,8 @@ const Navebar = () => {
   return (
     <>
       <nav className="w-full z-50 bg-backgroundPrimary">
-        <MilestoneBanner />
-        <div className="max-w-[89rem] mx-auto px-4 sm:px-6 py-3 sm:py-4">
+        {/* <MilestoneBanner /> */}
+        <div className="max-w-[90rem] w-full mx-auto px-4 sm:px-6 py-3 sm:py-4">
           <div className="flex items-center justify-between">
             <Link to="/" className="flex items-center space-x-3">
               <img
