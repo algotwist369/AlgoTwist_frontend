@@ -27,7 +27,7 @@ const AppContent = () => {
   return (
     <div className="bg-backgroundPrimary">
       <Navebar />
-      <ServicePopup />
+      {/* <ServicePopup /> */}
       <Routes>
         {/* Home and Main Pages */}
         <Route path="/" element={<HomePage />} />

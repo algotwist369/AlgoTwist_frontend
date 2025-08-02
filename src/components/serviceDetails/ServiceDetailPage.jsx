@@ -5,6 +5,9 @@ import ProposalForm from "./ProposalForm";
 import WhatsAppButton from "../common/WhatsAppButton";
 import ServicesSection from "./ServicesSection";
 import AboutCompanySection from "./AboutCompanySection";
+import IndustryServices from "./IndustryServices";
+import Technologies from "./CoreTechnologies";
+import OurClient from "../client/OurClient";
 
 const ServiceDetailPage = () => {
   useEffect(() => {
@@ -41,6 +44,9 @@ const ServiceDetailPage = () => {
       <AboutCompanySection />
       <div className="py-2"></div>
       <ServicesSection />
+      <IndustryServices />
+      <Technologies />
+      <OurClient />
     </div>
   );
 };
