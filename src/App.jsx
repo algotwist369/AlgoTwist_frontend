@@ -24,6 +24,7 @@ import ServicePopup from "./components/pricing/common/ServicePopup";
 
 //Service details page
 import WedServiceDetailPage from "./components/serviceDetails/wevDevelopment/WedServiceDetailPage";
+import AppServiceDetailPage from "./components/serviceDetails/appDevelopment/AppServiceDetailPage";
 
 const AppContent = () => {
   return (
@@ -63,6 +64,7 @@ const AppContent = () => {
 
         {/* Service Details route */}
         <Route path="/servie/web-development" element={<WedServiceDetailPage />} />
+        <Route path="/servie/app-development" element={<AppServiceDetailPage />} />
 
         <Route path="*" element={<NotFound />} />
       </Routes>
