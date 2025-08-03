@@ -25,6 +25,10 @@ import ServicePopup from "./components/pricing/common/ServicePopup";
 //Service details page
 import WedServiceDetailPage from "./components/serviceDetails/wevDevelopment/WedServiceDetailPage";
 import AppServiceDetailPage from "./components/serviceDetails/appDevelopment/AppServiceDetailPage";
+import DigitalMarketingPage from "./components/serviceDetails/DigitalMarketing/DigitalMarketingPage";
+import SocialMediaPage from "./components/serviceDetails/SocialMedia/SocialMediaPage";
+import UiUxPage from "./components/serviceDetails/uiUx/UiUxPage";
+import GraphicDesignPage from "./components/serviceDetails/GraphicDesignPage/GraphicDesignPage";
 
 const AppContent = () => {
   return (
@@ -65,6 +69,10 @@ const AppContent = () => {
         {/* Service Details route */}
         <Route path="/servie/web-development" element={<WedServiceDetailPage />} />
         <Route path="/servie/app-development" element={<AppServiceDetailPage />} />
+        <Route path="/servie/digital-marketing" element={<DigitalMarketingPage />} />
+        <Route path="/servie/social-media-marketing" element={<SocialMediaPage />} />
+        <Route path="/servie/ui-ux-design" element={<UiUxPage />} />
+        <Route path="/servie/graphic-designing" element={<GraphicDesignPage />} />
 
         <Route path="*" element={<NotFound />} />
       </Routes>

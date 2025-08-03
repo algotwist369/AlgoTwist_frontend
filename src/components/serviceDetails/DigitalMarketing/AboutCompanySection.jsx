@@ -11,26 +11,25 @@ const AboutCompanySection = () => {
             {/* Image */}
             <div className="flex justify-center">
               <img
-                src="https://res.cloudinary.com/dxpxcptn4/image/upload/v1754222081/programmer-night_syy5sd.jpg" 
+                src="https://res.cloudinary.com/dxpxcptn4/image/upload/v1754220904/5476534_row30j.jpg"
                 alt="Devices showing website"
-                className="rounded-lg max-w-full h-auto"
+                className="rounded-lg max-w-[550px] max-h-[500px] h-full w-full object-cover"
               />
             </div>
 
             {/* Text Content */}
             <div>
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold mb-4">
-                ALGOTWIST – Expert Website Development Company Driving Digital
-                Innovation
+                ALGOTWIST - Strategic Digital Marketing Company Fueling Online
+                Growth
               </h2>
               <p className="text-textSecondary mb-6 leading-relaxed">
-                At AlgoTwist, we blend innovation, creativity, and advanced
-                technology to craft high-performing websites aligned with your
-                business objectives. Our focus goes beyond web development - we
-                create powerful digital growth engines that drive success for
-                startups, enterprises, and global brands. Partner with us to
-                transform your online presence and achieve lasting digital
-                impact.
+                At AlgoTwist, we combine strategy, creativity, and analytics to
+                deliver digital marketing solutions that make an impact. From
+                increasing visibility to driving conversions, our team builds
+                custom strategies tailored to your brand’s goals. Whether you're
+                a startup or a global brand, we help you dominate the digital
+                landscape with campaigns that generate real, measurable results.
               </p>
 
               <ul className="space-y-2 text-sm sm:text-base mb-6">
@@ -58,18 +57,17 @@ const AboutCompanySection = () => {
           {/* Bottom Section */}
           <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-10">
             {/* Stats */}
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid grid-cols-2 gap-3">
               {[
-                { value: "17+", label: "Developers" },
-                { value: "165+", label: "Projects Delivered" },
-                // { value: "3+", label: "Years Of Experience" },
-                { value: "64+", label: "Clients" },
+                { value: "32+", label: "Digital Marketing Specialist" },
+                { value: "157+", label: "Projects Delivered" },
+                { value: "98+", label: "Clients" },
               ].map((stat, idx) => (
                 <div key={idx} className="text-center sm:text-left">
                   <h3 className="text-4xl font-extrabold text-highlightText mb-1">
                     {stat.value}
                   </h3>
-                  <p className="text-textPrimary-700 text-lg font-semibold">
+                  <p className="text-textPrimary text-lg font-semibold">
                     {stat.label}
                   </p>
                 </div>
@@ -79,9 +77,9 @@ const AboutCompanySection = () => {
             {/* Collage Image */}
             <div className="flex justify-center">
               <img
-                src="https://res.cloudinary.com/dxpxcptn4/image/upload/v1754221817/programming-background-with-person-working-with-codes-computer_iykczp.jpg" 
+                src="https://res.cloudinary.com/dxpxcptn4/image/upload/v1754220905/29973_qgoipt.jpg"
                 alt="Work showcase"
-                className="rounded-lg max-w-full h-auto"
+                className="rounded-lg max-w-[550px] max-h-[500px] h-full w-full object-cover"
               />
             </div>
           </div>

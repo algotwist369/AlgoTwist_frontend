@@ -4,14 +4,14 @@ import { FaCheckCircle } from "react-icons/fa";
 const AboutCompanySection = () => {
   return (
     <div>
-      <section className="py-16 px-6 bg-backgroundSecondary text-textPrimary">
+      <section className="py-16 px-6 bg-backgroundPrimary text-textPrimary">
         <div className="max-w-7xl mx-auto">
           {/* Top Section */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
             {/* Image */}
             <div className="flex justify-center">
               <img
-                src="https://res.cloudinary.com/dxpxcptn4/image/upload/v1754222081/programmer-night_syy5sd.jpg" 
+                src="https://res.cloudinary.com/dxpxcptn4/image/upload/v1754223164/5757453_xfgx1x.jpg"
                 alt="Devices showing website"
                 className="rounded-lg max-w-full h-auto"
               />
@@ -20,24 +20,24 @@ const AboutCompanySection = () => {
             {/* Text Content */}
             <div>
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold mb-4">
-                ALGOTWIST – Expert Website Development Company Driving Digital
-                Innovation
+                ALGOTWIST – Where Design Meets Digital Innovation
               </h2>
               <p className="text-textSecondary mb-6 leading-relaxed">
-                At AlgoTwist, we blend innovation, creativity, and advanced
-                technology to craft high-performing websites aligned with your
-                business objectives. Our focus goes beyond web development - we
-                create powerful digital growth engines that drive success for
-                startups, enterprises, and global brands. Partner with us to
-                transform your online presence and achieve lasting digital
-                impact.
+                At AlgoTwist, we don’t just build websites — we design
+                meaningful digital experiences. By blending creativity,
+                usability, and modern technology, we create interfaces that not
+                only look stunning but work beautifully. Whether you're a
+                growing startup or an established brand, we design platforms
+                that feel effortless to use and impossible to forget. Let’s
+                craft a website that tells your story, connects with users, and
+                drives real growth.
               </p>
 
               <ul className="space-y-2 text-sm sm:text-base mb-6">
                 {[
-                  "Tailored to Your Goals",
-                  "Innovation-Driven",
-                  "For All Businesses",
+                  "Designed Around Your Vision",
+                  "Driven by Creativity & Innovation",
+                  "Solutions for Startups to Enterprises",
                 ].map((item, idx) => (
                   <li
                     key={idx}
@@ -60,7 +60,7 @@ const AboutCompanySection = () => {
             {/* Stats */}
             <div className="grid grid-cols-2 gap-6">
               {[
-                { value: "17+", label: "Developers" },
+                { value: "12+", label: "UI/UX Designer" },
                 { value: "165+", label: "Projects Delivered" },
                 // { value: "3+", label: "Years Of Experience" },
                 { value: "64+", label: "Clients" },
@@ -79,7 +79,7 @@ const AboutCompanySection = () => {
             {/* Collage Image */}
             <div className="flex justify-center">
               <img
-                src="https://res.cloudinary.com/dxpxcptn4/image/upload/v1754221817/programming-background-with-person-working-with-codes-computer_iykczp.jpg" 
+                src="https://res.cloudinary.com/dxpxcptn4/image/upload/v1754223266/5815495_kvx2aq.jpg"
                 alt="Work showcase"
                 className="rounded-lg max-w-full h-auto"
               />
