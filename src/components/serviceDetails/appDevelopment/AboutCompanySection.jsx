@@ -20,17 +20,12 @@ const AboutCompanySection = () => {
             {/* Text Content */}
             <div>
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold mb-4">
-                ALGOTWIST – Expert Website Development Company Driving Digital
-                Innovation
+                ALGOTWIST – Expert App Development Company Empowering Digital Experiences
               </h2>
               <p className="text-textSecondary mb-6 leading-relaxed">
-                At AlgoTwist, we blend innovation, creativity, and advanced
-                technology to craft high-performing websites aligned with your
-                business objectives. Our focus goes beyond web development - we
-                create powerful digital growth engines that drive success for
-                startups, enterprises, and global brands. Partner with us to
-                transform your online presence and achieve lasting digital
-                impact.
+               At AlgoTwist, we design and build cutting-edge mobile applications tailored to your business goals.
+                Our team combines intuitive UX, robust architecture, and the latest technologies to deliver apps that engage users and scale with your growth. From concept to deployment,
+                we create seamless digital experiences that empower startups, enterprises, and global brands to thrive in the mobile-first world.
               </p>
 
               <ul className="space-y-2 text-sm sm:text-base mb-6">

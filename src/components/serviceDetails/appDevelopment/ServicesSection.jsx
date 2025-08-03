@@ -1,87 +1,88 @@
 import React from "react";
 import Heading from "../../common/Heading";
-import {
-  FaLaptopCode,
-  FaShoppingCart,
+  import {
   FaMobileAlt,
+  FaApple,
+  FaAndroid,
+  FaLayerGroup,
   FaCogs,
-  FaProjectDiagram,
   FaTools,
   FaUserShield,
   FaKey,
-  FaPlug 
+  FaPlug
 } from "react-icons/fa";
 
 const servicesData = [
   {
-    title: "Custom Website Development",
+    title: "Custom Mobile App Development",
     description:
-      "We design tailor-made websites that reflect your brand identity with built-in admin panels, role-based access, and secure authentication systems using modern front-end and back-end technologies.",
-    icon: <FaLaptopCode className="text-4xl text-highlightText mb-4" />,
-  },
-  {
-    title: "eCommerce Website Development",
-    description:
-      "From advanced product catalogs to admin dashboards, payment gateways, and user authentication, we build scalable eCommerce solutions optimized for performance and security.",
-    icon: <FaShoppingCart className="text-4xl text-highlightText mb-4" />,
-  },
-  {
-    title: "Responsive Web Design",
-    description:
-      "Your website will look stunning and function flawlessly on every device. All layouts are admin-editable and support authentication-aware experiences.",
+      "We design and build high-performance mobile applications that align with your business goals. From planning to deployment, we ensure secure, scalable, and engaging experiences.",
     icon: <FaMobileAlt className="text-4xl text-highlightText mb-4" />,
   },
   {
-    title: "CMS Development",
+    title: "iOS App Development",
     description:
-      "Manage dynamic content with ease using CMS platforms enhanced with user permissions, login access control, and personalized admin dashboards.",
-    icon: <FaCogs className="text-4xl text-highlightText mb-4" />,
+      "We create sleek, user-centric iOS applications using Swift and the latest Apple technologies, fully optimized for performance, security, and App Store guidelines.",
+    icon: <FaApple className="text-4xl text-highlightText mb-4" />,
   },
   {
-    title: "Web Application Development",
+    title: "Android App Development",
     description:
-      "We build complex web apps with secure login/signup, JWT or OAuth authentication, multi-role dashboards (admin, user, staff), and real-time data using React, Node.js, or Laravel.",
-    icon: <FaProjectDiagram className="text-4xl text-highlightText mb-4" />,
+      "From modern UI/UX to robust backend integration, we develop Android apps with native performance using Kotlin, optimized for all major devices and OS versions.",
+    icon: <FaAndroid className="text-4xl text-highlightText mb-4" />,
   },
   {
-    title: "Website Maintenance",
+    title: "Cross-Platform App Development",
     description:
-      "From admin panel support to database backups and security updates, our maintenance plans ensure your platform runs smoothly and securely 24/7.",
-    icon: <FaTools className="text-4xl text-highlightText mb-4" />,
+      "Reach both iOS and Android users with a single codebase. We use Flutter and React Native to build efficient cross-platform apps with a native look and feel.",
+    icon: <FaLayerGroup className="text-4xl text-highlightText mb-4" />,
+  },
+  {
+    title: "App Backend & API Integration",
+    description:
+      "We build powerful backends and REST/GraphQL APIs for real-time data sync, authentication, and third-party integrations across mobile ecosystems.",
+    icon: <FaPlug className="text-4xl text-highlightText mb-4" />,
   },
   {
     title: "Authentication & Security",
     description:
-      "Implement secure user login, two-factor authentication, encrypted sessions, and permission control using modern auth systems like Firebase Auth, OAuth2, and JWT.",
+      "Secure your apps with modern authentication systems including biometrics, 2FA, token-based auth (JWT, OAuth2), and role-based permission control.",
     icon: <FaKey className="text-4xl text-highlightText mb-4" />,
   },
   {
     title: "Admin Panel & Role Management",
     description:
-      "We create intuitive admin dashboards with analytics, content controls, user management, and role-based access for seamless operations.",
+      "We develop admin dashboards for mobile apps to manage users, content, analytics, and access control with multi-role support.",
     icon: <FaUserShield className="text-4xl text-highlightText mb-4" />,
   },
   {
-  title: "API Development & Integration",
-  description:
-    "We build and integrate robust RESTful and GraphQL APIs to connect your website with third-party services, admin panels, mobile apps, and secure external systems.",
-  icon: <FaPlug className="text-4xl text-highlightText mb-4" />,
-}
+    title: "Maintenance & App Updates",
+    description:
+      "Keep your app running at its best with ongoing updates, bug fixes, performance monitoring, and OS compatibility support.",
+    icon: <FaTools className="text-4xl text-highlightText mb-4" />,
+  },
+  {
+    title: "App Performance Optimization",
+    description:
+      "We fine-tune mobile apps for speed, memory usage, and responsiveness to ensure a smooth experience across devices.",
+    icon: <FaCogs className="text-4xl text-highlightText mb-4" />,
+  },
 ];
+
+
 
 const ServicesSection = () => {
   return (
     <section className="bg-backgroundPrimary py-12 px-4 text-textPrimary">
       <div className="max-w-7xl mx-auto text-center">
-        <Heading children="Our Website Development Services" />
+     <Heading children="Our Mobile App Development Services" />
 
-        <p className="text-lg mb-10 max-w-3xl mx-auto text-textSecondary">
-          Transform your online presence with a leading web development company
-          in India. We craft stunning, high-performing websites with seamless
-          user experiences, cutting-edge designs, and SEO optimization to boost
-          engagement, drive conversions, and establish your brand’s digital
-          success.
-        </p>
+<p className="text-lg mb-10 max-w-3xl mx-auto text-textSecondary">
+  Launch powerful, user-focused mobile apps with a trusted app development company in India. 
+  We specialize in building secure, high-performance iOS, Android, and cross-platform apps that 
+  drive user engagement, streamline operations, and scale effortlessly with your business.
+</p>
+
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {servicesData.map((service, index) => (

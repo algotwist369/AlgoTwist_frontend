@@ -1,47 +1,47 @@
 import {
-  FaLaptopCode,
-  FaShoppingCart,
   FaMobileAlt,
+  FaApple,
+  FaAndroid,
+  FaLayerGroup,
   FaCogs,
-  FaProjectDiagram,
   FaTools,
 } from "react-icons/fa";
 
 const servicesData = [
   {
-    title: "Custom Website Development",
+    title: "Custom Mobile App Development",
     description:
-      "We design tailor-made websites that reflect your brand identity and deliver unique user experiences using the latest front-end and back-end technologies.",
-    icon: <FaLaptopCode className="text-4xl text-white mb-4" />,
-  },
-  {
-    title: "eCommerce Website Development",
-    description:
-      "From intuitive product catalogs to seamless payment integrations, our eCommerce web solutions are conversion-driven and mobile-ready.",
-    icon: <FaShoppingCart className="text-4xl text-white mb-4" />,
-  },
-  {
-    title: "Responsive Web Design",
-    description:
-      "Your website will look stunning on every device. We use responsive frameworks to ensure pixel-perfect visuals across desktops, tablets, and mobiles.",
+      "We build tailored mobile applications that align with your business goals, offering engaging user experiences and top-tier performance.",
     icon: <FaMobileAlt className="text-4xl text-white mb-4" />,
   },
   {
-    title: "CMS Development",
+    title: "iOS App Development",
     description:
-      "Manage your content easily with CMS-based websites that are flexible, scalable, and easy to maintain.",
+      "Our experts craft sleek, high-performance iOS apps using Swift and modern Apple frameworks, optimized for App Store success.",
+    icon: <FaApple className="text-4xl text-white mb-4" />,
+  },
+  {
+    title: "Android App Development",
+    description:
+      "We deliver fast, scalable Android apps compatible with the latest devices and OS versions, built with Kotlin and robust architecture.",
+    icon: <FaAndroid className="text-4xl text-white mb-4" />,
+  },
+  {
+    title: "Cross-Platform App Development",
+    description:
+      "Reach more users with cross-platform solutions built on Flutter or React Native — one codebase, multiple platforms, same great experience.",
+    icon: <FaLayerGroup className="text-4xl text-white mb-4" />,
+  },
+  {
+    title: "App Backend & API Integration",
+    description:
+      "We develop secure, scalable app backends with custom APIs and real-time functionalities to power your mobile ecosystem.",
     icon: <FaCogs className="text-4xl text-white mb-4" />,
   },
   {
-    title: "Web Application Development",
+    title: "App Maintenance & Support",
     description:
-      "Build custom web apps with real-time features, complex logic, or third-party integrations using tech like React, Node.js, Laravel, and more.",
-    icon: <FaProjectDiagram className="text-4xl text-white mb-4" />,
-  },
-  {
-    title: "Website Maintenance",
-    description:
-      "Keep your site running smoothly with regular updates, security patches, and performance monitoring from our expert support team.",
+      "Keep your apps running smoothly with proactive monitoring, updates, bug fixes, and performance enhancements.",
     icon: <FaTools className="text-4xl text-white mb-4" />,
   },
 ];

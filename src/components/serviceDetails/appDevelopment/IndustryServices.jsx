@@ -5,56 +5,55 @@ const industries = [
   {
     title: "Healthcare",
     image:
-      "https://res.cloudinary.com/dxpxcptn4/image/upload/v1754132980/ChatGPT_Image_Aug_2_2025_04_37_08_PM_syogol.png", // Replace with your own
+      "https://res.cloudinary.com/dzkrytdjx/image/upload/v1754221603/healthcare_dra8pf.jpg", // Replace with your own
   },
 
   {
     title: "Retail & E-commerce",
     image:
-      "https://res.cloudinary.com/dxpxcptn4/image/upload/v1754132980/ChatGPT_Image_Aug_2_2025_04_37_11_PM_jdgmzs.png",
+      "https://res.cloudinary.com/dzkrytdjx/image/upload/v1754221630/Retails_ltvflj.jpg",
   },
 
   {
     title: "Education & E-Learning",
     image:
-      "https://res.cloudinary.com/dxpxcptn4/image/upload/v1754132979/ChatGPT_Image_Aug_2_2025_04_37_18_PM_jgfync.png",
+      "https://res.cloudinary.com/dzkrytdjx/image/upload/v1754222132/education_rilvrp.jpg",
   },
   {
     title: "Real Estate & PropTech",
     image:
-      "https://res.cloudinary.com/dxpxcptn4/image/upload/v1754132980/ChatGPT_Image_Aug_2_2025_04_37_15_PM_eiqj2y.png",
+      "https://res.cloudinary.com/dzkrytdjx/image/upload/v1754221609/realstates_bybqsa.jpg",
   },
   {
     title: "Manufacturing & Sales",
     image:
-      "https://res.cloudinary.com/dxpxcptn4/image/upload/v1754134586/ChatGPT_Image_Aug_2_2025_05_05_49_PM_qb5sty.png",
+      "https://res.cloudinary.com/dzkrytdjx/image/upload/v1754221601/manufactures_no7hcg.jpg",
   },
   {
     title: "Logistics",
     image:
-      "https://res.cloudinary.com/dxpxcptn4/image/upload/v1754134637/ChatGPT_Image_Aug_2_2025_05_06_55_PM_bvfbg0.png",
+      "https://res.cloudinary.com/dzkrytdjx/image/upload/v1754221600/logistics_b4dr1z.jpg",
   },
   {
     title: "Finance & Banking",
     image:
-      "https://res.cloudinary.com/dxpxcptn4/image/upload/v1754133826/ChatGPT_Image_Aug_2_2025_04_53_16_PM_zrgemq.png",
+      "https://res.cloudinary.com/dzkrytdjx/image/upload/v1754221604/bankingfinance_ougf0s.jpg",
   },
   {
-    title: "NGO",
+    title: "Travel and Booking App",
     image:
-      "https://res.cloudinary.com/dxpxcptn4/image/upload/v1754135161/ChatGPT_Image_Aug_2_2025_05_13_34_PM_tmxlwz.png",
+      "https://res.cloudinary.com/dzkrytdjx/image/upload/v1754221599/travelui_hcmk0p.jpg",
   },
 ];
 
 const IndustryServices = () => {
   return (
     <section className="max-w-[87rem] mx-auto py-16 px-4 text-center">
-      <Heading children={`Web-Dev Services For All Industries`} />
+      <Heading children={`App Development Services for All Industries`} />
       <p className="max-w-3xl mx-auto text-textSecondary mb-12">
-        We deliver customized website development solutions tailored to your
-        industry's unique needs. From healthcare to finance, retail to real
-        estate, our expert developers ensure performance-driven, secure, and
-        scalable websites that help your business grow and thrive online.
+        We build custom mobile applications designed to meet the unique demands of your industry. Whether it’s healthcare, finance, education,
+         retail, or logistics — our expert team delivers secure, high-performance apps that drive engagement, streamline operations, and scale
+          with your business in today’s mobile-first world.
       </p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
