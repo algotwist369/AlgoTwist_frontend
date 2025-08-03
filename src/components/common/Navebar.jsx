@@ -2,15 +2,6 @@ import React, { useState, useEffect, useRef } from "react";
 import {
   Menu,
   X,
-  Code,
-  Globe,
-  Rocket,
-  TrendingUp,
-  Users,
-  Layers,
-  Search,
-  BarChart3,
-  Palette,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import WhatsAppButton from "./WhatsAppButton";
