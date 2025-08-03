@@ -11,7 +11,7 @@ const AboutCompanySection = () => {
             {/* Image */}
             <div className="flex justify-center">
               <img
-                src="https://img.freepik.com/premium-photo/tablet-laptop-mobile-phone-top-view-responsive-website-3d-rendering-wooden-desktop_72104-3750.jpg" 
+                src="https://res.cloudinary.com/dxpxcptn4/image/upload/v1754225516/1720_ky5ivw.jpg" 
                 alt="Devices showing website"
                 className="rounded-lg max-w-full h-auto"
               />
@@ -74,7 +74,7 @@ const AboutCompanySection = () => {
             {/* Collage Image */}
             <div className="flex justify-center">
               <img
-                src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/wp-content/uploads/2025/05/16171834/Untitled-500-x-300-px.webp" // replace with your actual image path
+                src="https://res.cloudinary.com/dxpxcptn4/image/upload/v1754225643/2209.i201.039.F.m004.c9.mobile_app_development_isometric_b2vo9m.jpg" // replace with your actual image path
                 alt="Work showcase"
                 className="rounded-lg max-w-full h-auto"
               />

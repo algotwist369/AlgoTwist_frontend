@@ -3,7 +3,6 @@ import FormInput from "../../common/FormInput";
 import Button from "../../common/Button";
 import Heading from "../../common/Heading";
 
-
 const ProposalForm = () => {
   return (
     <div className="w-full lg:w-1/2 bg-backgroundSecondary p-6 rounded-lg shadow-md">
