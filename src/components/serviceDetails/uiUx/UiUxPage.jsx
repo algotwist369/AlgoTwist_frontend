@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
 import GoBack from "../../common/GoBack";
 import Heading from "../../common/Heading";
-import ProposalForm from "./ProposalForm";
+import ProposalForm from "../../common/ProposalForm";
+
 import WhatsAppButton from "../../common/WhatsAppButton";
-import ServicesSection from "./ServicesSection";
+
 import AboutCompanySection from "./AboutCompanySection";
-import IndustryServices from "./IndustryServices";
-import Technologies from "./CoreTechnologies";
+
 import OurClient from "../../client/OurClient";
 
 const UiUxPage = () => {

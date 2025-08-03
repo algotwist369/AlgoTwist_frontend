@@ -1,7 +1,7 @@
 import React from "react";
-import FormInput from "../../common/FormInput";
-import Button from "../../common/Button";
-import Heading from "../../common/Heading";
+import FormInput from "./FormInput";
+import Button from "./Button";
+import Heading from "./Heading";
 
 const ProposalForm = () => {
   return (
