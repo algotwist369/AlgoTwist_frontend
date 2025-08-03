@@ -1,24 +1,24 @@
 // components/CapabilityCard.jsx
 import {
-  FaReact,
+  FaMobileAlt,
+  FaApple,
+  FaAndroid,
   FaServer,
-  FaDatabase,
-  FaCloud,
-  FaBolt,
+  FaKey,
+  FaBell,
   FaStream,
-  FaSlidersH,
-  FaBrain,
+  FaVial,
 } from "react-icons/fa";
 
 const iconMap = {
-  frontend: <FaReact className="text-sky-500 text-3xl" />,
+  mobile: <FaMobileAlt className="text-sky-500 text-3xl" />,
+  ios: <FaApple className="text-gray-600 text-3xl" />,
+  android: <FaAndroid className="text-green-600 text-3xl" />,
   backend: <FaServer className="text-rose-500 text-3xl" />,
-  database: <FaDatabase className="text-green-500 text-3xl" />,
-  devops: <FaCloud className="text-indigo-500 text-3xl" />,
-  realtime: <FaStream className="text-orange-500 text-3xl" />,
-  state: <FaSlidersH className="text-yellow-600 text-3xl" />,
-  media: <FaBolt className="text-purple-500 text-3xl" />,
-  ai: <FaBrain className="text-pink-600 text-3xl" />,
+  auth: <FaKey className="text-yellow-500 text-3xl" />,
+  notifications: <FaBell className="text-orange-500 text-3xl" />,
+  realtime: <FaStream className="text-blue-500 text-3xl" />,
+  testing: <FaVial className="text-purple-600 text-3xl" />,
 };
 
 const CapabilityCard = ({ data }) => {

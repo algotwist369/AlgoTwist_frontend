@@ -22,15 +22,14 @@ const AppServiceDetailPage = () => {
         <section className="flex flex-col lg:flex-row gap-14 py-10">
           <div className="w-full lg:w-1/2 space-y-4">
             <Heading
-              children={`Web Development that Drives Results`}
+              children={`App Development that Delivers Impact`}
               style={""}
             />
             <p className="text-textSecondary leading-relaxed max-w-[550px]">
-              At AlgoTwist, we craft high-performing websites that help brands
-              stand out online. Whether you need a sleek corporate presence, a
-              dynamic eCommerce store, or a custom web solution, we build
-              secure, scalable, and SEO-friendly platforms that grow with your
-              business.
+              At AlgoTwist, we create intuitive, high-performance mobile apps that bring your ideas to life. 
+              From iOS to Android and cross-platform solutions, our apps are built for speed, security,
+               and seamless user experience. Whether you're launching a startup or scaling your enterprise, 
+               we develop smart, scalable apps that keep your users engaged and your business ahead.
             </p>
             <div className="py-2"></div>
             <WhatsAppButton
