@@ -21,29 +21,16 @@ import SocialMediaMarketing from "./components/pricing/SocialMediaMarketing";
 import UiUxDesign from "./components/pricing/UiUxDesign";
 import NotFound from "./components/common/NotFound";
 import ServicePopup from "./components/pricing/common/ServicePopup";
-import StartAnimation from "./components/common/StartAnimation";
+
+//Service details page
+import WedServiceDetailPage from "./components/serviceDetails/wevDevelopment/WedServiceDetailPage";
+import AppServiceDetailPage from "./components/serviceDetails/appDevelopment/AppServiceDetailPage";
 
 const AppContent = () => {
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    // Show loading for 5 seconds
-    const timer = setTimeout(() => setLoading(false), 3000);
-    return () => clearTimeout(timer);
-  }, []);
-
-  if (loading) {
-    return (
-      <div className="bg-backgroundPrimary h-screen w-full flex items-center justify-center">
-        <StartAnimation />
-      </div>
-    );
-  }
-
   return (
-    <div className="min-h-screen bg-backgroundPrimary">
+    <div className="bg-backgroundPrimary">
       <Navebar />
-      <ServicePopup />
+      {/* <ServicePopup /> */}
       <Routes>
         {/* Home and Main Pages */}
         <Route path="/" element={<HomePage />} />
@@ -74,6 +61,10 @@ const AppContent = () => {
         />
         <Route path="/pricing/ui-ux-design" element={<UiUxDesign />} />
         <Route path="/pricing" element={<DigitalServicesTable />} />
+
+        {/* Service Details route */}
+        <Route path="/servie/web-development" element={<WedServiceDetailPage />} />
+        <Route path="/servie/app-development" element={<AppServiceDetailPage />} />
 
         <Route path="*" element={<NotFound />} />
       </Routes>

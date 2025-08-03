@@ -1,9 +1,8 @@
 import React from "react";
-import { FaWhatsapp } from "react-icons/fa";
 
 const WhatsAppButton = ({
-  phone = "7388480128",
-  message = "Hello, I'm interested in your services!",
+  phone = "918591659477", // ✅ No + or spaces
+  message = "Hello, I'm interested in your services!", // ✅ Default message
   text,
   active = true,
 }) => {
@@ -16,13 +15,14 @@ const WhatsAppButton = ({
       href={whatsappLink}
       target="_blank"
       rel="noopener noreferrer"
+      aria-label="Chat on WhatsApp"
       className={`inline-flex items-center gap-2 px-6 py-3 ${
         active
           ? "bg-buttonPrimary text-textPrimary hover:bg-buttonHover"
-          : "border-2  border-buttonPrimary text-textPrimary hover:bg-buttonPrimary"
+          : "border-2 border-buttonPrimary text-textPrimary hover:bg-buttonPrimary"
       } font-semibold rounded-full`}
     >
-      {text ? text : "Chat on WhatsApp"}
+      {text || "Chat on WhatsApp"}
     </a>
   );
 };

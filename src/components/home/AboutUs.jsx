@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import MouseGlowCard from "../common/MouseGlowCard";
 
 const AboutUs = () => {
-  // Disable copy/selection and right-click
   const noCopyStyle = {
     userSelect: "none",
     WebkitUserSelect: "none",
@@ -13,7 +12,7 @@ const AboutUs = () => {
 
   return (
     <section
-      className="relative bg-backgroundPrimary text-textPrimary py-20 px-4 md:px-16 overflow-hidden"
+      className="relative bg-backgroundPrimary text-textPrimary py-16 px-4 sm:px-6 lg:px-12 overflow-hidden"
       style={noCopyStyle}
       onContextMenu={(e) => e.preventDefault()}
     >
@@ -25,7 +24,7 @@ const AboutUs = () => {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, ease: "easeOut" }}
-        className="relative z-10 max-w-6xl mx-auto grid md:grid-cols-2 items-center gap-16"
+        className="relative z-10 max-w-[90rem] w-full mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-10 md:gap-16"
         style={noCopyStyle}
       >
         {/* Text Content */}
@@ -34,8 +33,7 @@ const AboutUs = () => {
             initial={{ opacity: 0, x: -40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3, duration: 0.8 }}
-            className="text-4xl md:text-5xl font-bold leading-tight mb-6 text-textPrimary"
-            style={noCopyStyle}
+            className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-6 text-textPrimary"
           >
             Who We Are
           </motion.h2>
@@ -44,8 +42,7 @@ const AboutUs = () => {
             initial={{ opacity: 0, x: -40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.5, duration: 0.8 }}
-            className="text-textSecondary text-lg mb-4"
-            style={noCopyStyle}
+            className="text-textSecondary text-base sm:text-lg mb-4"
           >
             AlgoTwist is a leading digital agency marketing powered by a team of{" "}
             <span className="text-highlightText font-semibold">
@@ -61,11 +58,12 @@ const AboutUs = () => {
               initial={{ opacity: 0, x: -40 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.7, duration: 0.8 }}
-              className="p-5 shadow-[5px_5px_rgba(0,_98,_90,_0.4),_10px_10px_rgba(0,_98,_90,_0.3),_15px_15px_rgba(0,_98,_90,_0.2),_20px_20px_rgba(0,_98,_90,_0.1),_25px_25px_rgba(0,_98,_90,_0.05)]"
-              style={noCopyStyle}
+              className="p-5 bg-backgroundSecondary/10 rounded-xl shadow-[5px_5px_rgba(0,_98,_90,_0.4),_10px_10px_rgba(0,_98,_90,_0.3),_15px_15px_rgba(0,_98,_90,_0.2),_20px_20px_rgba(0,_98,_90,_0.1),_25px_25px_rgba(0,_98,_90,_0.05)]"
             >
-              <h3 className="text-2xl font-semibold mb-2">Why Choose Us?</h3>
-              <ul className="list-disc list-inside text-textSecondary text-md space-y-1">
+              <h3 className="text-xl sm:text-2xl font-semibold mb-2">
+                Why Choose Us?
+              </h3>
+              <ul className="list-disc list-inside text-textSecondary text-sm sm:text-base space-y-1">
                 <li>
                   Our team consists of industry veterans with experience at top
                   MNCs and global brands.
@@ -101,8 +99,7 @@ const AboutUs = () => {
             initial={{ opacity: 0, x: -40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.9, duration: 0.8 }}
-            className="text-disabledText text-md mb-2"
-            style={noCopyStyle}
+            className="text-disabledText text-sm sm:text-base mt-4"
           >
             Whether you're a startup aiming to disrupt the market or an
             enterprise scaling new heights, our tailored solutions ensure your
@@ -113,30 +110,27 @@ const AboutUs = () => {
             initial={{ opacity: 0, x: -40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 1.1, duration: 0.8 }}
-            className="text-textPrimary text-md font-semibold"
-            style={noCopyStyle}
+            className="text-textPrimary text-sm sm:text-base font-semibold mt-2"
           >
-            Partner with the best-partner with AlgoTwist. Experience the
+            Partner with the best — partner with AlgoTwist. Experience the
             difference of working with true digital experts.
           </motion.p>
         </div>
 
-        {/* Image */}
+        {/* Image Section */}
         <motion.div
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="relative rounded-xl overflow-hidden shadow-[5px_5px_rgba(255,_0,_0,_0.2),_10px_10px_rgba(255,_0,_0,_0.15),_15px_15px_rgba(255,_0,_0,_0.1),_20px_20px_rgba(255,_0,_0,_0.08),_25px_25px_rgba(255,_0,_0,_0.05),_0_0_30px_rgba(255,_0,_0,_0.1)]"
-          style={noCopyStyle}
+          className="relative rounded-xl overflow-hidden shadow-[5px_5px_rgba(255,_0,_0,_0.2),_10px_10px_rgba(255,_0,_0,_0.15),_15px_15px_rgba(255,_0,_0,_0.1),_20px_20px_rgba(255,_0,_0,_0.08),_25px_25px_rgba(255,_0,_0,_0.05),_0_0_30px_rgba(255,_0,_0,_0.1)] max-w-full w-full"
         >
           <img
             src="https://res.cloudinary.com/djdrpfhdz/image/upload/v1753622172/ChatGPT_Image_Jul_27_2025_06_45_29_PM_x77udo.png"
             alt="Our Team"
-            className="w-full h-full object-cover"
+            className="w-full h-auto object-cover"
             draggable={false}
           />
-          {/* Badge or overlay for credibility */}
-          <div className="absolute bottom-4 left-4 bg-backgroundMuted/90 text-textPrimary px-4 py-1 rounded-full text-sm font-semibold shadow-md border border-white">
+          <div className="absolute bottom-4 left-4 bg-backgroundMuted/90 text-textPrimary px-4 py-1 rounded-full text-xs sm:text-sm font-semibold shadow-md border border-white">
             MNC Experts
           </div>
         </motion.div>

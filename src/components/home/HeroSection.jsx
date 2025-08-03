@@ -7,7 +7,7 @@ const heroSlide = {
     "https://res.cloudinary.com/djdrpfhdz/image/upload/v1751890178/computer-8779040_frd1az.jpg",
   title: "All-in-one IT services for the modern enterprise",
   description:
-    "Empower your business with future-ready digital solutions. From automation to cloud integration, we deliver strategies that scale.",
+    "Empower your business with future-ready digital solutions. From automation to web integration, we deliver strategies that scale.",
   cta: { text: "Get Started" },
 };
 
