@@ -21,7 +21,9 @@ import SocialMediaMarketing from "./components/pricing/SocialMediaMarketing";
 import UiUxDesign from "./components/pricing/UiUxDesign";
 import NotFound from "./components/common/NotFound";
 import ServicePopup from "./components/pricing/common/ServicePopup";
-import ServiceDetailPage from "./components/serviceDetails/ServiceDetailPage";
+
+//Service details page
+import WedServiceDetailPage from "./components/serviceDetails/wevDevelopment/WedServiceDetailPage";
 
 const AppContent = () => {
   return (
@@ -60,7 +62,7 @@ const AppContent = () => {
         <Route path="/pricing" element={<DigitalServicesTable />} />
 
         {/* Service Details route */}
-        <Route path="/servie/web-development" element={<ServiceDetailPage />} />
+        <Route path="/servie/web-development" element={<WedServiceDetailPage />} />
 
         <Route path="*" element={<NotFound />} />
       </Routes>
