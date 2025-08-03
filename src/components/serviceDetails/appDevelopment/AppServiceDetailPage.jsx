@@ -9,7 +9,7 @@ import IndustryServices from "./IndustryServices";
 import Technologies from "./CoreTechnologies";
 import OurClient from "../../client/OurClient";
 
-const ServiceDetailPage = () => {
+const AppServiceDetailPage = () => {
   useEffect(() => {
     window.scroll(0, 0);
   }, []);
@@ -51,4 +51,4 @@ const ServiceDetailPage = () => {
   );
 };
 
-export default ServiceDetailPage;
+export default AppServiceDetailPage;
