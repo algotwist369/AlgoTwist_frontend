@@ -12,6 +12,7 @@ import WorkflowSteps from "../ourWorkFlow/WorkflowSteps";
 import AboutUs from "./AboutUs";
 import SocialMedia from "../social/SocialMedia";
 import ClientsReview from "./ClientsReview";
+import ProposalForm from "../common/ProposalForm";
 
 const Home = () => {
   useEffect(() => {
@@ -24,7 +25,10 @@ const Home = () => {
       <AboutUs />
       <Services />
       <WorkflowSteps />
-      <OurClient />
+      <div className="max-w-7xl mx-auto">
+        <ProposalForm widh={"max-w-7xl"} />
+      </div>
+      {/* <OurClient /> */}
       <SocialMedia />
       <Blog data={blogData} />
       <ClientsReview />

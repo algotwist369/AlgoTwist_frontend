@@ -1,13 +1,14 @@
 import React from "react";
 
 const logos = [
-  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHKEIyz_zzsKW6fJQ5lpla5IBTsJRWj9exNA&s",
-  "https://static.wixstatic.com/media/7a486b_bf09a3c5beaa436ba832c629837bf1a0~mv2.png/v1/fit/w_2500,h_1330,al_c/7a486b_bf09a3c5beaa436ba832c629837bf1a0~mv2.png",
-  "https://apnaparcha.com/opengraph-image.png?abcf978297f36095",
+  // "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHKEIyz_zzsKW6fJQ5lpla5IBTsJRWj9exNA&s",
+  // "https://static.wixstatic.com/media/7a486b_bf09a3c5beaa436ba832c629837bf1a0~mv2.png/v1/fit/w_2500,h_1330,al_c/7a486b_bf09a3c5beaa436ba832c629837bf1a0~mv2.png",
   "https://savemax.in/staticfiles/upload/builderlogo/OMAXE_srst098.png",
   "https://eldecogroup.com/assests/uploads/project/logo/15822781501407518180.png",
   "https://www.shootic.com/images/shootic-logo.png",
-  "https://janpadnewstimes.com/logo.png",
+  "https://thedigitalmentor.online/wp-content/uploads/2025/01/1-edited.jpg"
+  // "https://apnaparcha.com/opengraph-image.png?abcf978297f36095",
+  // "https://janpadnewstimes.com/logo.png",
 ];
 
 const getAltFromUrl = (url) => {

@@ -22,7 +22,7 @@ const FormInput = ({
       required={required}
       autoComplete={autoComplete}
       placeholder={placeholder}
-      className="w-full bg-backgroundHover border border-borderColor rounded-md px-4 py-3 text-sm sm:text-base text-textPrimary focus:outline-none focus:ring-2 focus:ring-highlightText/50"
+      className="w-full bg-backgroundSecondary border border-borderColor rounded-md px-4 py-3 text-sm sm:text-base text-textPrimary focus:outline-none focus:ring-2 focus:ring-highlightText/50"
     />
   </div>
 );

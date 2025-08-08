@@ -64,7 +64,7 @@ const services = [
 
 const ServicesPage = () => {
   return (
-    <section className="min-h-screen bg-backgroundPrimary text-textPrimary px-6 py-24 md:px-20 overflow-hidden relative">
+    <section className="min-h-screen bg-backgroundPrimary text-textPrimary px-6 pt-24 md:px-20 overflow-hidden relative">
       <motion.div
         initial={{ opacity: 0, y: -40 }}
         animate={{ opacity: 1, y: 0 }}

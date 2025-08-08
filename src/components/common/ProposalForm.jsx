@@ -3,9 +3,13 @@ import FormInput from "./FormInput";
 import Button from "./Button";
 import Heading from "./Heading";
 
-const ProposalForm = () => {
+const ProposalForm = ({ widh }) => {
   return (
-    <div className="w-full lg:w-1/2 bg-backgroundSecondary p-6 rounded-lg shadow-md">
+    <div
+      className={`${
+        widh ? widh : "max-w-full lg:w-1/2 mx-auto"
+      }bg-backgroundPrimary border border-borderColor p-6 rounded-lg shadow-md`}
+    >
       <Heading
         children={`Request for a proposal`}
         style={"md:text-[30px] mb-8"}
@@ -45,7 +49,7 @@ const ProposalForm = () => {
             <select
               name="budget"
               required
-              className="w-full bg-backgroundHover border border-borderColor rounded-md px-4 py-3 text-sm text-textPrimary focus:outline-none focus:ring-2 focus:ring-highlightText/50"
+              className="w-full bg-backgroundSecondary border border-borderColor rounded-md px-4 py-3 text-sm text-textPrimary focus:outline-none focus:ring-2 focus:ring-highlightText/50"
             >
               <option value="">Select budget range</option>
               <option value="₹5,000 - ₹15,000">₹5,000 - ₹15,000</option>
@@ -66,7 +70,7 @@ const ProposalForm = () => {
             name="description"
             required
             rows="5"
-            className="w-full bg-backgroundHover border border-borderColor rounded-md px-4 py-3 text-sm text-textPrimary focus:outline-none focus:ring-2 focus:ring-highlightText/50"
+            className="w-full bg-backgroundSecondary border border-borderColor rounded-md px-4 py-3 text-sm text-textPrimary focus:outline-none focus:ring-2 focus:ring-highlightText/50"
             placeholder="Please share your detailed requirements..."
           />
         </div>

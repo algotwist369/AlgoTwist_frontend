@@ -45,7 +45,7 @@ const capabilities = [
 
 const CoreTechnologies = () => {
   return (
-    <section className="max-w-7xl mx-auto px-4 py-20">
+    <section className="max-w-[85rem] mx-auto py-20">
       <h2 className="text-4xl font-bold text-center text-textPrimary mb-4">
         Our Core Capabilities
       </h2>

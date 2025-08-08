@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import {
-  websiteTypes,
   servicePricing,
   mergedWebsitePackages,
 } from "../../data/pricingData";
