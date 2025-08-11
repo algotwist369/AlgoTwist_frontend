@@ -12,6 +12,9 @@ import WorkflowSteps from "../ourWorkFlow/WorkflowSteps";
 import AboutUs from "./AboutUs";
 import SocialMedia from "../social/SocialMedia";
 import ClientsReview from "./ClientsReview";
+import ServicePopup from "../pricing/common/ServicePopup";
+import FormPopup from "../common/FormPopup";
+
 
 const Home = () => {
   useEffect(() => {
@@ -20,13 +23,18 @@ const Home = () => {
 
   return (
     <div>
+      <ServicePopup />
+      <FormPopup  />
       <HeroSection />
       <AboutUs />
       <Services />
       <WorkflowSteps />
+
       <OurClient />
+
       <SocialMedia />
       <Blog data={blogData} />
+
       <ClientsReview />
       <Contact data={contactData} />
     </div>
