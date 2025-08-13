@@ -6,10 +6,11 @@ import {
   FaLinkedinIn,
 } from "react-icons/fa";
 import { FaArrowUpLong } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#1F1F1F] text-white pt-12 pb-8">
+    <footer className="bg-backgroundSecondary text-textPrimary pt-12 pb-8">
       <div className="w-11/12 max-w-7xl mx-auto px-4 sm:px-6">
         {/* Logo & Description */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-6 mb-10">
@@ -20,64 +21,45 @@ const Footer = () => {
               className="h-12 sm:h-16 w-auto object-contain"
             />
           </div>
-          <p className="text-center md:text-left text-gray-400 text-sm max-w-xl leading-relaxed">
+          <p className="text-center md:text-left text-disabledText text-sm max-w-xl leading-relaxed">
             We craft scalable, secure, and high-performance digital services to
             grow your brand and business globally.
           </p>
         </div>
 
-        {/* Links & Social */}
-        {/* <div className="flex flex-col md:flex-row justify-between items-center border-t border-gray-700 pt-6 pb-6 gap-6">
-          <div className="flex space-x-6 text-sm">
-            {["Privacy", "Terms", "Security", "Contact"].map((link, i) => (
-              <a
-                key={i}
-                href="#"
-                className="text-gray-400 hover:text-white transition-colors duration-200"
-              >
-                {link}
-              </a>
-            ))}
-          </div>
-
-          <div className="flex space-x-4">
-            <a
-              href="#"
-              className="text-gray-400 hover:text-[#E1306C] transition duration-300"
-              aria-label="Instagram"
-            >
-              <FaInstagram size={20} />
-            </a>
-            <a
-              href="#"
-              className="text-gray-400 hover:text-[#1DA1F2] transition duration-300"
-              aria-label="Twitter"
-            >
-              <FaTwitter size={20} />
-            </a>
-            <a
-              href="#"
-              className="text-gray-400 hover:text-[#1877F2] transition duration-300"
-              aria-label="Facebook"
-            >
-              <FaFacebookF size={20} />
-            </a>
-            <a
-              href="#"
-              className="text-gray-400 hover:text-[#0A66C2] transition duration-300"
-              aria-label="LinkedIn"
-            >
-              <FaLinkedinIn size={20} />
-            </a>
-          </div>
-        </div> */}
-
         {/* Bottom Bar */}
-        <div className="border-t border-gray-700 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-gray-500 text-center">
-            &copy; 2025 <span className="font-semibold">AlgoTwist</span>. All
-            rights reserved.
-          </p>
+        <div className="border-t border-borderColor pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className="flex flex-col md:flex-row md:items-center gap-3">
+            <p className="text-sm text-gray-500">
+              &copy; 2025 <span className="font-semibold">AlgoTwist</span>. All rights reserved.
+            </p>
+
+            {/* Inline Links */}
+            <div className="flex gap-4 text-sm text-gray-400">
+              <Link to="/spa-review-generator" className="hover:text-white transition">s-review gen</Link>
+              <Link to="/finance-review-generator" className="hover:text-white transition">finance-review</Link>
+              {/* <a href="/projects" className="hover:text-white transition">Projects</a>
+              <a href="/contact" className="hover:text-white transition">Contact</a> */}
+            </div>
+          </div>
+
+          {/* Social Media */}
+          <div className="flex space-x-4">
+            <a href="https://www.facebook.com/people/AlgoTwist/61579430124404/" target="_blank" rel="noreferrer" className="hover:text-blue-500 transition">
+              <FaFacebookF />
+            </a>
+            <a href="https://www.facebook.com/people/AlgoTwist/61579430124404/" target="_blank" rel="noreferrer" className="hover:text-sky-400 transition">
+              <FaTwitter />
+            </a>
+            <a href="https://www.instagram.com/accounts/login/?next=%2Falgotwist_%2F&source=omni_redirect" target="_blank" rel="noreferrer" className="hover:text-pink-500 transition">
+              <FaInstagram />
+            </a>
+            <a href="https://www.linkedin.com/in/algotwist-software-and-digital-solutions-45ba35376/?originalSubdomain=in" target="_blank" rel="noreferrer" className="hover:text-blue-400 transition">
+              <FaLinkedinIn />
+            </a>
+          </div>
+
+          {/* Back to top */}
           <a
             href="#top"
             className="flex items-center text-sm text-gray-400 hover:text-white scroll-smooth transition"

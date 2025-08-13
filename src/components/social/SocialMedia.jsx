@@ -18,7 +18,7 @@ const socialLinks = [
     icon: <FaFacebookF />,
     embedUrl:
       "https://widgets.sociablekit.com/facebook-profile/iframe/25582857",
-    profileUrl: "https://www.facebook.com/profile.php?id=61578878790687",
+    profileUrl: "https://www.facebook.com/profile.php?id=61579430124404",
     type: "iframe",
     color: "bg-blue-600 ",
   },

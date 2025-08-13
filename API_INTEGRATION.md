@@ -9,10 +9,10 @@ The proposal form has been integrated with your backend API. Here's what you nee
 Create a `.env` file in your project root and add:
 
 ```env
-VITE_API_BASE_URL=http://localhost:5000
+VITE_API_BASE_URL=https://algotwist.onrender.com
 ```
 
-Replace `http://localhost:5000` with your actual backend URL.
+Replace `https://algotwist.onrender.com` with your actual backend URL.
 
 ### API Endpoint
 

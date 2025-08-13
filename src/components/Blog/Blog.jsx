@@ -51,7 +51,7 @@ export default function Blog() {
 
   return (
     <section id="blog" className="py-20 bg-backgroundPrimary">
-      <div className="w-11/12 mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-6">
         {/* Recent Posts Carousel */}
         <div className="relative">
           {/* Carousel Header */}

@@ -20,7 +20,6 @@ import Photography from "./components/pricing/Photography";
 import SocialMediaMarketing from "./components/pricing/SocialMediaMarketing";
 import UiUxDesign from "./components/pricing/UiUxDesign";
 import NotFound from "./components/common/NotFound";
-import ServicePopup from "./components/pricing/common/ServicePopup";
 
 //Service details page
 import WedServiceDetailPage from "./components/serviceDetails/wevDevelopment/WedServiceDetailPage";
@@ -31,6 +30,7 @@ import UiUxPage from "./components/serviceDetails/uiUx/UiUxPage";
 import GraphicDesignPage from "./components/serviceDetails/GraphicDesignPage/GraphicDesignPage";
 
 const AppContent = () => {
+  
   return (
     <div className="bg-backgroundPrimary">
       <Navebar />

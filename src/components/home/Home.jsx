@@ -12,8 +12,7 @@ import WorkflowSteps from "../ourWorkFlow/WorkflowSteps";
 import AboutUs from "./AboutUs";
 import SocialMedia from "../social/SocialMedia";
 import ClientsReview from "./ClientsReview";
-import ServicePopup from "../pricing/common/ServicePopup";
-import FormPopup from "../common/FormPopup";
+import PopupController from "../common/PopupController";
 
 
 const Home = () => {
@@ -23,8 +22,7 @@ const Home = () => {
 
   return (
     <div>
-      <ServicePopup />
-      <FormPopup  />
+      <PopupController />
       <HeroSection />
       <AboutUs />
       <Services />

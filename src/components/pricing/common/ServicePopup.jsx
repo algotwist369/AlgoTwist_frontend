@@ -1,27 +1,16 @@
 import React, { useEffect, useState } from "react";
 import WhatsAppButton from "../../common/WhatsAppButton";
 
-const ServicePopup = () => {
-  const [showPopup, setShowPopup] = useState(false);
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-    const timer = setTimeout(() => {
-      setShowPopup(true);
-    }, 10000);
-    return () => clearTimeout(timer);
-  }, []);
-
-  if (!showPopup) return null;
+const ServicePopup = ({ onClose }) => {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-40 p-4 sm:p-6">
       <div className="bg-backgroundSecondary rounded-2xl shadow-2xl w-full max-w-lg sm:max-w-xl text-center relative border border-borderColor p-6 sm:p-10 animate-fadeIn">
-        
+
         {/* Close Button */}
         <button
           className="absolute top-3 right-3 text-textPrimary hover:text-highlightText text-2xl font-bold focus:outline-none"
-          onClick={() => setShowPopup(false)}
+          onClick={onClose}
           aria-label="Close"
         >
           &times;

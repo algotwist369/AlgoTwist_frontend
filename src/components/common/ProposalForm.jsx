@@ -101,7 +101,7 @@ const ProposalForm = ({width}) => {
             required
           />
           <div>
-            <label className="block text-sm font-medium mb-2">
+            <label className="block text-textPrimary text-sm font-medium mb-2">
               Budget Range
             </label>
             <select
@@ -123,7 +123,7 @@ const ProposalForm = ({width}) => {
 
         {/* Project Description */}
         <div>
-          <label className="block text-sm font-medium mb-2">
+          <label className="block text-textPrimary text-sm font-medium mb-2">
             Project Description
           </label>
           <textarea
