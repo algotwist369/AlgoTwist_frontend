@@ -24,6 +24,7 @@
     "react-slideshow-image": "^4.3.2",
     "react-social-media-embed": "^2.5.18",
     "react-toastify": "^11.0.5",
+    "react-twitter-embed": "^4.0.4",
     "swiper": "^11.2.10"
   },
   "devDependencies": {

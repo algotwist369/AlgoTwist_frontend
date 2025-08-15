@@ -28,6 +28,8 @@ import DigitalMarketingPage from "./components/serviceDetails/DigitalMarketing/D
 import SocialMediaPage from "./components/serviceDetails/SocialMedia/SocialMediaPage";
 import UiUxPage from "./components/serviceDetails/uiUx/UiUxPage";
 import GraphicDesignPage from "./components/serviceDetails/GraphicDesignPage/GraphicDesignPage";
+import FinanceReviewGenerator from "./components/GenerateReview/FinanceReview/FinanceReviewGenerator";
+import SpaReviewGenerator from "./components/GenerateReview/SpaReview/SpaReviewGenerator";
 
 const AppContent = () => {
   
@@ -73,6 +75,12 @@ const AppContent = () => {
         <Route path="/servie/social-media-marketing" element={<SocialMediaPage />} />
         <Route path="/servie/ui-ux-design" element={<UiUxPage />} />
         <Route path="/servie/graphic-designing" element={<GraphicDesignPage />} />
+
+        {/* Review generator routes */}
+
+        <Route path="/finance-review-generator" element={<FinanceReviewGenerator />} />
+        <Route path="/spa-review-generator" element={<SpaReviewGenerator />} />
+
 
         <Route path="*" element={<NotFound />} />
       </Routes>

@@ -36,8 +36,8 @@ const Footer = () => {
 
             {/* Inline Links */}
             <div className="flex gap-4 text-sm text-gray-400">
-              <Link to="/spa-review-generator" className="hover:text-white transition">s-review gen</Link>
-              <Link to="/finance-review-generator" className="hover:text-white transition">finance-review</Link>
+              <Link to="/spa-review-generator" className="hover:text-white transition">spa-review gen</Link>
+              <Link to="/finance-review-generator" className="hover:text-white transition">finance-review gen</Link>
               {/* <a href="/projects" className="hover:text-white transition">Projects</a>
               <a href="/contact" className="hover:text-white transition">Contact</a> */}
             </div>

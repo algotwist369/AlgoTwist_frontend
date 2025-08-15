@@ -1,6 +1,6 @@
 import React, { useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
-import { FaInstagram, FaFacebookF, FaPinterestP } from "react-icons/fa";
+import { FaInstagram, FaFacebookF, FaPinterestP, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { MdSkipNext, MdSkipPrevious } from "react-icons/md";
 
@@ -13,15 +13,15 @@ const socialLinks = [
     type: "iframe",
     color: "bg-pink-500 ",
   },
-  {
-    name: "Facebook",
-    icon: <FaFacebookF />,
-    embedUrl:
-      "https://widgets.sociablekit.com/facebook-profile/iframe/25582857",
-    profileUrl: "https://www.facebook.com/profile.php?id=61579430124404",
-    type: "iframe",
-    color: "bg-blue-600 ",
-  },
+ {
+  name: "Facebook",
+  icon: <FaFacebookF />,
+  embedUrl: "https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D61579430124404&tabs=timeline&width=380&height=360&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true",
+  profileUrl: "https://www.facebook.com/profile.php?id=61579430124404",
+  type: "iframe",
+  color: "bg-blue-600 ",
+},
+
   {
     name: "Twitter (X)",
     icon: <FaXTwitter />,
@@ -30,6 +30,9 @@ const socialLinks = [
     type: "iframe",
     color: "bg-backgroundPrimary ",
   },
+
+
+
   // {
   //   name: "Pinterest",
   //   icon: <FaPinterestP />,
@@ -135,3 +138,4 @@ const SocialMedia = () => {
 };
 
 export default SocialMedia;
+
