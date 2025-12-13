@@ -49,7 +49,7 @@ const WorkflowPage = () => {
   }, []);
 
   return (
-    <section className="py-20 relative overflow-hidden bg-[#0e0e10] text-white">
+    <section className="pb-40 relative overflow-hidden bg-[#0e0e10] text-white">
       {/* Background shapes that follow the mouse */}
       <div
         ref={bgRef}

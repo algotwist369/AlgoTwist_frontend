@@ -14,6 +14,7 @@ import SocialMedia from "../social/SocialMedia";
 import ClientsReview from "./ClientsReview";
 import ProposalForm from "../common/ProposalForm";
 
+
 const Home = () => {
   useEffect(() => {
     window.scroll(0, 0);

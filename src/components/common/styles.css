@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  margin: 80px;
+}
+
+.svg-border {
+  position: absolute;
+}
+
+.neon {
+  filter: url(#neon);
+}
