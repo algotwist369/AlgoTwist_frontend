@@ -20,30 +20,23 @@ import Photography from "./components/pricing/Photography";
 import SocialMediaMarketing from "./components/pricing/SocialMediaMarketing";
 import UiUxDesign from "./components/pricing/UiUxDesign";
 import NotFound from "./components/common/NotFound";
-import ServicePopup from "./components/pricing/common/ServicePopup";
-import StartAnimation from "./components/common/StartAnimation";
+
+//Service details page
+import WedServiceDetailPage from "./components/serviceDetails/wevDevelopment/WedServiceDetailPage";
+import AppServiceDetailPage from "./components/serviceDetails/appDevelopment/AppServiceDetailPage";
+import DigitalMarketingPage from "./components/serviceDetails/DigitalMarketing/DigitalMarketingPage";
+import SocialMediaPage from "./components/serviceDetails/SocialMedia/SocialMediaPage";
+import UiUxPage from "./components/serviceDetails/uiUx/UiUxPage";
+import GraphicDesignPage from "./components/serviceDetails/GraphicDesignPage/GraphicDesignPage";
+import FinanceReviewGenerator from "./components/GenerateReview/FinanceReview/FinanceReviewGenerator";
+import SpaReviewGenerator from "./components/GenerateReview/SpaReview/SpaReviewGenerator";
 
 const AppContent = () => {
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    // Show loading for 5 seconds
-    const timer = setTimeout(() => setLoading(false), 3000);
-    return () => clearTimeout(timer);
-  }, []);
-
-  if (loading) {
-    return (
-      <div className="bg-backgroundPrimary h-screen w-full flex items-center justify-center">
-        <StartAnimation />
-      </div>
-    );
-  }
-
+  
   return (
-    <div className="min-h-screen bg-backgroundPrimary">
+    <div className="bg-backgroundPrimary">
       <Navebar />
-      <ServicePopup />
+      
       <Routes>
         {/* Home and Main Pages */}
         <Route path="/" element={<HomePage />} />
@@ -74,6 +67,20 @@ const AppContent = () => {
         />
         <Route path="/pricing/ui-ux-design" element={<UiUxDesign />} />
         <Route path="/pricing" element={<DigitalServicesTable />} />
+
+        {/* Service Details route */}
+        <Route path="/servie/web-development" element={<WedServiceDetailPage />} />
+        <Route path="/servie/app-development" element={<AppServiceDetailPage />} />
+        <Route path="/servie/digital-marketing" element={<DigitalMarketingPage />} />
+        <Route path="/servie/social-media-marketing" element={<SocialMediaPage />} />
+        <Route path="/servie/ui-ux-design" element={<UiUxPage />} />
+        <Route path="/servie/graphic-designing" element={<GraphicDesignPage />} />
+
+        {/* Review generator routes */}
+
+        <Route path="/finance-review-generator" element={<FinanceReviewGenerator />} />
+        <Route path="/spa-review-generator" element={<SpaReviewGenerator />} />
+
 
         <Route path="*" element={<NotFound />} />
       </Routes>

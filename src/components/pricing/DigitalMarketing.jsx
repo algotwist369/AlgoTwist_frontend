@@ -60,11 +60,11 @@ const digitalMarketingPlans = [
 ];
 
 const DigitalMarketingPricing = () => {
-    useEffect(() => {
-      window.scrollTo(0, 0);
-    }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
-    <div className="bg-[#0c0c0c] text-white min-h-screen py-32 px-4 sm:px-10 lg:px-20">
+    <div className="bg-[#0c0c0c] text-white min-h-screen pt-32 px-4 sm:px-10 lg:px-20">
       <div className="max-w-7xl mx-auto">
         <h1 className="text-4xl md:text-5xl font-bold text-center mb-4 text-textPrimary">
           Digital Marketing Services
@@ -78,28 +78,29 @@ const DigitalMarketingPricing = () => {
           {digitalMarketingPlans.map((plan, idx) => (
             <div
               key={idx}
-              className="bg-gradient-to-br from-[#1a1a1a] to-[#131313] border border-borderColor shadow-md rounded-2xl p-6 hover:shadow-blue-600 transition"
+              className="bg-backgroundSecondary border border-borderColor shadow-md rounded-2xl p-6 shadow-highlightText transition"
             >
-              <h3 className="text-xl font-semibold text-blue-400 mb-2">
+              <h3 className="text-xl font-semibold text-textPrimary mb-2">
                 {plan.type}
               </h3>
-              <p className="text-green-400 font-bold text-lg mb-3">
+              {/* <p className="text-green-400 font-bold text-lg mb-3">
                 {plan.price}
-              </p>
-              <ul className="list-disc list-inside text-sm text-gray-300 mb-4 space-y-1">
+              </p> */}
+              <ul className="list-disc list-inside text-sm text-textPrimary mb-4 space-y-1 marker:text-highlightText">
                 {plan.features.map((feature, i) => (
                   <li key={i}>{feature}</li>
                 ))}
               </ul>
-              <p className="text-sm italic text-textPrimary">
-                Ideal for: <span className="text-white">{plan.idealFor}</span>
+
+              <p className="text-sm italic text-textSecondary">
+                Ideal for: <span>{plan.idealFor}</span>
               </p>
             </div>
           ))}
         </div>
 
-        <div className="mt-20 bg-[#1a1a1a] border border-blue-700 rounded-xl p-8 text-center">
-          <h2 className="text-2xl font-bold text-blue-400 mb-2">
+        <div className="mt-20 bg-backgroundSecondary border border-borderColor rounded-xl p-8 text-center">
+          <h2 className="text-2xl font-bold text-textPrimary mb-2">
             Why Choose Our Marketing Team?
           </h2>
           <p className="text-gray-300 max-w-3xl mx-auto mb-6">
@@ -116,10 +117,7 @@ const DigitalMarketingPricing = () => {
         </div>
 
         <div className="mt-16 text-center">
-          <h3 className="text-xl font-semibold mb-2">
-            Let's build your brand together
-          </h3>
-          <WhatsAppButton text={"Book a Free Design Consultation"} />
+          <WhatsAppButton active={0} text={"Let's build your brand together"} />
         </div>
       </div>
     </div>
